@@ -1,12 +1,8 @@
 @font-face {
-  font-family: TitilliumWeb-Black;
-  src: url("../assets/Font/Titillium_Web/TitilliumWeb-Light.ttf");
-  font-family: TitilliumWeb-1eq2;
-  src: url("../assets/Font/TitilliumWeb-1eq2.ttf");
   font-family: "Titillium Web";
   src: url("../assets/font/TitilliumWeb-Regular.ttf");
-  font-family: "Titillium Web";
-  src: url("../assets/font/TitilliumWeb-Regular.ttf");
+  font-family: "Titillium Web - Semi";
+  src: url("../assets/font/TitilliumWeb-SemiBold.ttf");
 }
 html {
   font-family: "Titillium Web", sans-serif;

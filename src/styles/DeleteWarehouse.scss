@@ -32,7 +32,7 @@
     width: 672px;
     margin: auto;
   }
-  font-family: TitilliumWeb-1eq2;
+  font-family: Titillium Web;
   box-sizing: border-box;
   &__close-button-top {
     @include mobilePadding();
@@ -40,11 +40,15 @@
     justify-content: end;
     align-items: flex-end;
     cursor: pointer;
+    &:hover {
+      color: $Instock-Black;
+    }
     @include tablet() {
       padding-top: 10px;
     }
   }
   &__heading {
+    font-family: Titillium Web - Semi;
     @include mobilePageHeader();
     @include mobilePadding();
     @include tablet() {
@@ -79,6 +83,10 @@
     cursor: pointer;
     @include mobileBodyMedium();
     text-align: center;
+    &:hover {
+      background-color: $Red;
+    }
+
     @include tablet() {
       width: 71px;
       height: 38px;
@@ -93,7 +101,9 @@
     @include mobileBodyMedium();
     text-align: center;
 
-    background: $Red;
+    &:hover {
+      background-color: $Red;
+    }
     @include tablet() {
       width: 71px;
       height: 38px;
