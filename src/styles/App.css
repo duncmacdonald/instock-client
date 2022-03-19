@@ -1,6 +1,11 @@
 @font-face {
+<<<<<<< HEAD
   font-family: TitilliumWeb-Black;
   src: url("../assets/Font/Titillium_Web/TitilliumWeb-Light.ttf");
+=======
+  font-family: TitilliumWeb-1eq2;
+  src: url("../assets/Font/TitilliumWeb-1eq2.ttf");
+>>>>>>> parthipan
 }
 html {
   font-family: TitilliumWeb;

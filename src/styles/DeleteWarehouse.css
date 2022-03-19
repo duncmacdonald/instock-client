@@ -1,0 +1,56 @@
+@font-face {
+  font-family: TitilliumWeb-1eq2;
+  src: url("../assets/Font/TitilliumWeb-1eq2.ttf");
+}
+html {
+  font-family: TitilliumWeb-1eq2;
+}
+
+.delete-warehouse {
+  font-family: TitilliumWeb-1eq2;
+  box-sizing: border-box;
+}
+.delete-warehouse__close-button-top {
+  margin: 16px;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  cursor: pointer;
+}
+.delete-warehouse__heading {
+  font-size: 28px;
+  line-height: 36px;
+  margin: 16px;
+}
+.delete-warehouse__confirmation-message {
+  font-size: 15px;
+  line-height: 26px;
+  margin: 16px;
+}
+.delete-warehouse__button-container {
+  margin: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.delete-warehouse__cancel-button {
+  width: 163px;
+  height: 36px;
+  border: 1px solid #bdc5d5;
+  border-radius: 20px;
+  margin-right: 17px;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+}
+.delete-warehouse__delete-button {
+  width: 163px;
+  height: 36px;
+  border: 1px solid #bdc5d5;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+  background: #c94515;
+}/*# sourceMappingURL=DeleteWarehouse.css.map */

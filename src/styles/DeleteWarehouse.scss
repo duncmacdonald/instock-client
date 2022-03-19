@@ -1,0 +1,47 @@
+@import "./App.scss";
+
+.delete-warehouse {
+  font-family: TitilliumWeb-1eq2;
+  box-sizing: border-box;
+  &__close-button-top {
+    @include mobilePadding();
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    cursor: pointer;
+  }
+  &__heading {
+    @include mobilePageHeader();
+    @include mobilePadding();
+  }
+  &__confirmation-message {
+    @include mobileBodyLarge();
+    @include mobilePadding();
+  }
+  &__button-container {
+    @include mobilePadding();
+    display: flex;
+    justify-content: space-between;
+  }
+  &__cancel-button {
+    width: 163px;
+    height: 36px;
+    border: 1px solid $Cloud;
+    border-radius: 20px;
+    margin-right: 17px;
+    cursor: pointer;
+    @include mobileBodyMedium();
+    text-align: center;
+  }
+  &__delete-button {
+    width: 163px;
+    height: 36px;
+    border: 1px solid $Cloud;
+    border-radius: 20px;
+    cursor: pointer;
+    @include mobileBodyMedium();
+    text-align: center;
+
+    background: $Red;
+  }
+}
