@@ -1,15 +1,14 @@
 import React from "react";
+import logo from "../assets/images/InStock-Logo.svg";
 export default function Header() {
   return (
     <section className="headerSection">
-      <img
-        className="logoImg"
-        src="instock-client/src/assets/images/InStock-Logo.svg"
-        alt="logo"
-      />
-      <div className="directoryContainer">
-        <h3>Warehouses</h3>
-        <h3>Inventory</h3>
+      <div className="topClump">
+        <img className="logoImg" src={logo} alt="logo" />
+        <div className="directoryContainer">
+          <h3 className="directoryLink warehouses">Warehouses</h3>
+          <h3 className="directoryLink inventory">Inventory</h3>
+        </div>
       </div>
     </section>
   );

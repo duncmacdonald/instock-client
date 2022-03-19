@@ -1,18 +1,27 @@
 @font-face {
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-family: TitilliumWeb-Black;
   src: url("../assets/Font/Titillium_Web/TitilliumWeb-Light.ttf");
 =======
   font-family: TitilliumWeb-1eq2;
   src: url("../assets/Font/TitilliumWeb-1eq2.ttf");
 >>>>>>> parthipan
+=======
+  font-family: "Titillium Web";
+  src: url("../assets/font/TitilliumWeb-Regular.ttf");
+>>>>>>> 5631f807365c13de4acac3b4c2affb59451a463b
 }
 html {
-  font-family: TitilliumWeb;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f8f9;
 }
 
 .headerSection {
-  background-color: #13182c;
+  background-color: #232940;
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25,11 +34,26 @@ html {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  height: 200px;
 }
-.headerSection .logoImg {
+.headerSection .topClump {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.headerSection .topClump .logoImg {
   height: 45px;
+  margin: 16px;
 }
-.headerSection .directoryContainer {
+.headerSection .topClump .directoryContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,14 +61,22 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
-  height: 50%;
-  padding: 0 16px;
 }
-.headerSection .directoryContainer h3 {
-  font-size: 20px;
-  line-height: 28px;
+.headerSection .topClump .directoryContainer .directoryLink {
+  font-size: 15px;
+  line-height: 26px;
+  text-align: center;
+  padding: 12px;
+  margin: 0;
+  width: 40%;
+  font-family: "Titillium Web";
+  font-weight: 600;
+}
+.headerSection .topClump .directoryContainer .directoryLink:hover {
+  background-color: #13182c;
+  border-radius: 50px;
 }/*# sourceMappingURL=App.css.map */
