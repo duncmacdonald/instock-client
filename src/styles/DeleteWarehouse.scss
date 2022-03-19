@@ -1,6 +1,37 @@
 @import "./App.scss";
 
+@mixin tablet {
+  @media (min-width: $tablet-lower) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $tablet-lower) {
+    @content;
+  }
+}
+
 .delete-warehouse {
+  &-tablet {
+    @include tablet() {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding-top: 185px;
+      background-color: rgba(19, 24, 24, 0.7);
+    }
+  }
+
+  @include tablet() {
+    background: white;
+
+    height: 262px;
+    width: 672px;
+    margin: auto;
+  }
   font-family: TitilliumWeb-1eq2;
   box-sizing: border-box;
   &__close-button-top {
@@ -9,19 +40,35 @@
     justify-content: end;
     align-items: flex-end;
     cursor: pointer;
+    @include tablet() {
+      padding-top: 10px;
+    }
   }
   &__heading {
     @include mobilePageHeader();
     @include mobilePadding();
+    @include tablet() {
+      @include pageHeader();
+      margin-left: 48px;
+      margin-right: 48px;
+    }
   }
   &__confirmation-message {
     @include mobileBodyLarge();
     @include mobilePadding();
+    @include tablet() {
+      @include bodyLarge();
+      margin-left: 48px;
+      margin-right: 48px;
+    }
   }
   &__button-container {
     @include mobilePadding();
     display: flex;
     justify-content: space-between;
+    @include tablet() {
+      justify-content: end;
+    }
   }
   &__cancel-button {
     width: 163px;
@@ -32,6 +79,10 @@
     cursor: pointer;
     @include mobileBodyMedium();
     text-align: center;
+    @include tablet() {
+      width: 71px;
+      height: 38px;
+    }
   }
   &__delete-button {
     width: 163px;
@@ -43,5 +94,10 @@
     text-align: center;
 
     background: $Red;
+    @include tablet() {
+      width: 71px;
+      height: 38px;
+      margin-right: 30px;
+    }
   }
 }
