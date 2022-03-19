@@ -1,8 +1,8 @@
 //Variables, Mixins, etc.
 //Font-Face
 @font-face {
-  font-family: TitilliumWeb-1eq2;
-  src: url("instock-client/src/assets/Font/TitilliumWeb-1eq2.ttf");
+  font-family: Titillium_Web;
+  src: url("../../assets/Font/Titillium_Web/TitilliumWeb-Black.ttf");
 }
 //Primary Colors
 $Instock-Black: #13182c;
@@ -63,7 +63,7 @@ $tablet-higher: 1279px;
 $desktop-lower: 1280px;
 //General Styling
 html {
-  font-family: TitilliumWeb-1eq2;
+  font-family: Titillium_Web;
 }
 @media (min-width: $tablet-lower) and (max-width: $tablet-higher) {
 }
