@@ -1,16 +1,12 @@
 @font-face {
-<<<<<<< HEAD
-<<<<<<< HEAD
   font-family: TitilliumWeb-Black;
   src: url("../assets/Font/Titillium_Web/TitilliumWeb-Light.ttf");
-=======
   font-family: TitilliumWeb-1eq2;
   src: url("../assets/Font/TitilliumWeb-1eq2.ttf");
->>>>>>> parthipan
-=======
   font-family: "Titillium Web";
   src: url("../assets/font/TitilliumWeb-Regular.ttf");
->>>>>>> 5631f807365c13de4acac3b4c2affb59451a463b
+  font-family: "Titillium Web";
+  src: url("../assets/font/TitilliumWeb-Regular.ttf");
 }
 html {
   font-family: "Titillium Web", sans-serif;
@@ -23,47 +19,26 @@ html {
 .headerSection {
   background-color: #232940;
   color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column wrap;
+  align-items: center;
   width: 100%;
   height: 200px;
 }
 .headerSection .topClump {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column wrap;
+  align-items: center;
 }
 .headerSection .topClump .logoImg {
   height: 45px;
   margin: 16px;
 }
 .headerSection .topClump .directoryContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-flow: row wrap;
+  justify-content: center;
   width: 100%;
 }
 .headerSection .topClump .directoryContainer .directoryLink {
