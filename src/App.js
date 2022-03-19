@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Component } from "react";
+
+export default class App extends Component {
+  render() {
+    return (
+      <Router>
+        <Switch>
+          <Header />
+          <Route exact path="/" component={WareHouse} />
+=======
 import logo from "./logo.svg";
 import "./styles/App.scss";
 import "./styles/partials/_breakpoints.scss";
@@ -9,5 +22,17 @@ function App() {
     </div>
   );
 }
+>>>>>>> 3b85e06f6436576006dd70a03db31bd46b9138f4
 
-export default App;
+          <Route
+            path="/:warehouseid/inventory"
+            render={(RouterProps) => {
+              return <Inventory match={RouterProps} />;
+            }}
+          />
+        </Switch>
+        <Footer />
+      </Router>
+    );
+  }
+}
