@@ -134,9 +134,9 @@ html {
   flex-wrap: wrap;
 }
 .topClump {
-  width: 100%;
   display: flex;
   flex-flow: column wrap;
+  width: 100%;
   align-items: center;
   .logoImg {
     height: 45px;
@@ -161,4 +161,32 @@ html {
 .directoryLink:hover {
   background-color: $Instock-Black;
   border-radius: 50px;
+}
+//Warehouse Details/Form Styling
+.details {
+  height: 300px;
+}
+.warehouseDetails,
+.contactDetails {
+  font-family: "Titillium Web";
+  @include mobilePaddingSides();
+}
+.whDetailsForm,
+.cDForm {
+  display: flex;
+  flex-flow: column wrap;
+}
+label {
+  @include labelsEtc();
+  font-weight: 600;
+}
+input {
+  border: $Cloud 1px solid;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+hr {
+  color: $Cloud;
 }

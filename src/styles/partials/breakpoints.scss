@@ -79,33 +79,58 @@ $desktop-lower: 1280px;
 //General Styling
 @media (min-width: $tablet-lower) and (max-width: $tablet-higher) {
   .headerSection {
-    padding: 0 32px;
     overflow: hidden;
     display: flex;
     margin: 0;
-    width: 90%;
   }
   .topClump {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    @include tabletPaddingSides();
     @include bodyLarge();
     .logoImg {
-      width: 25%;
-      margin: 16px;
+      width: 30%;
       margin: 16px 0;
     }
   }
   .directoryContainer {
-    width: 40%;
+    width: 45%;
     display: flex;
     flex-direction: row;
+    margin: 16px 0;
     .directoryLink {
-      width: 50%;
-      padding: 0;
+      width: 40%;
+      padding: 8px 16px;
     }
   }
 }
 
 @media (min-width: $desktop-lower) {
+  .headerSection {
+    overflow: hidden;
+    display: flex;
+    margin: 0;
+  }
+  .topClump {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    @include desktopPaddingSides();
+    @include bodyLarge();
+    .logoImg {
+      width: 30%;
+      margin: 16px 0;
+    }
+  }
+  .directoryContainer {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0;
+    .directoryLink {
+      width: 40%;
+      padding: 8px 16px;
+    }
+  }
 }
