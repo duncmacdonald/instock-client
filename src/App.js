@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Component } from "react";
 import DeleteWarehouse from "./components/Component/DeleteWarehouse";
+import DeleteInventory from "./components/Component/DeleteInventory";
 
 export default class App extends Component {
   render() {
@@ -10,9 +11,9 @@ export default class App extends Component {
           <Route exact path="/" component={DeleteWarehouse} />
 
           <Route
-            path="/:warehouseid/inventory"
+            path="/inventory"
             render={(RouterProps) => {
-              return <DeleteWarehouse match={RouterProps} />;
+              return <DeleteInventory match={RouterProps} />;
             }}
           />
         </Switch>
@@ -20,8 +21,3 @@ export default class App extends Component {
     );
   }
 }
-
-/*
-
-      
-      */

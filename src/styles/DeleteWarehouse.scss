@@ -13,6 +13,11 @@
 }
 
 .delete-warehouse {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+
   &-tablet {
     @include tablet() {
       position: absolute;
@@ -20,7 +25,6 @@
       width: 100%;
       top: 0;
       left: 0;
-      padding-top: 185px;
       background-color: rgba(19, 24, 24, 0.7);
     }
   }
@@ -31,9 +35,19 @@
     height: 262px;
     width: 672px;
     margin: auto;
+    margin-top: 185px;
   }
   font-family: Titillium Web;
   box-sizing: border-box;
+
+  &__top-section {
+    height: 50px;
+    margin-bottom: 85vh;
+    @include tablet() {
+      height: 0;
+      margin-bottom: 0;
+    }
+  }
   &__close-button-top {
     @include mobilePadding();
     display: flex;
@@ -70,6 +84,7 @@
     @include mobilePadding();
     display: flex;
     justify-content: space-between;
+
     @include tablet() {
       justify-content: end;
     }
@@ -83,9 +98,7 @@
     cursor: pointer;
     @include mobileBodyMedium();
     text-align: center;
-    &:hover {
-      background-color: $Red;
-    }
+    font-family: Titillium Web - Semi;
 
     @include tablet() {
       width: 71px;
@@ -100,11 +113,13 @@
     cursor: pointer;
     @include mobileBodyMedium();
     text-align: center;
+    font-family: Titillium Web - Semi;
 
-    &:hover {
-      background-color: $Red;
-    }
+    background-color: $Red;
+    color: white;
+
     @include tablet() {
+      margin-bottom: 0;
       width: 71px;
       height: 38px;
       margin-right: 30px;
