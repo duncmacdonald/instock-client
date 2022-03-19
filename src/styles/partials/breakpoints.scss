@@ -1,9 +1,4 @@
 //Variables, Mixins, etc.
-//Font-Face
-@font-face {
-  font-family: "Titillium Web";
-  src: url("../../assets/font/TitilliumWeb-Regular.ttf");
-}
 //Primary Colors
 $Instock-Black: #13182c;
 $Instock-Indigo: #2e66e5;
@@ -61,11 +56,56 @@ $Red: #c94515;
 $tablet-lower: 768px;
 $tablet-higher: 1279px;
 $desktop-lower: 1280px;
+//Convenience
+@mixin mobilePaddingSides {
+  padding: 0 16px;
+}
+@mixin tabletPaddingSides {
+  padding: 0 32px;
+}
+@mixin desktopPaddingSides {
+  margin: 0 63px;
+}
+@mixin clearVertPadding {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@mixin clearTopPadding {
+  margin-top: 0;
+}
+@mixin clearBottomPadding {
+  margin-bottom: 0;
+}
 //General Styling
-html {
-  font-family: Titillium_Web;
-}
 @media (min-width: $tablet-lower) and (max-width: $tablet-higher) {
+  .headerSection {
+    padding: 0 32px;
+    overflow: hidden;
+    display: flex;
+    margin: 0;
+    width: 90%;
+  }
+  .topClump {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    @include bodyLarge();
+    .logoImg {
+      width: 25%;
+      margin: 16px;
+      margin: 16px 0;
+    }
+  }
+  .directoryContainer {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    .directoryLink {
+      width: 50%;
+      padding: 0;
+    }
+  }
 }
+
 @media (min-width: $desktop-lower) {
 }
