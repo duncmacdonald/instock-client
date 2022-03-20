@@ -3,9 +3,11 @@
 @font-face {
   font-family: "Titillium Web";
   src: url("../assets/font/TitilliumWeb-Regular.ttf");
+  font-weight: 400;
 
   font-family: "Titillium Web - Semi";
   src: url("../assets/font/TitilliumWeb-SemiBold.ttf");
+  font-weight: 600;
 }
 //Primary Colors
 $Instock-Black: #13182c;

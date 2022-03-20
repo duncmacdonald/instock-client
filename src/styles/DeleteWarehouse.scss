@@ -1,5 +1,11 @@
 @import "./App.scss";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @mixin tablet {
   @media (min-width: $tablet-lower) {
     @content;
@@ -17,6 +23,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-content: space-between;
+  height: 100vh;
 
   &-tablet {
     @include tablet() {
@@ -37,7 +44,6 @@
     margin-top: 185px;
   }
   font-family: Titillium Web;
-  box-sizing: border-box;
 
   &__top-section {
     height: 50px;
