@@ -53,13 +53,20 @@ html {
 }
 
 .details {
-  height: 300px;
+  height: 700px;
+  background-color: #ffffff;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .warehouseDetails,
 .contactDetails {
   font-family: "TitilliumWeb";
   margin: 0 16px;
+}
+
+.warehouseDetails {
+  border-bottom: solid 1px #bdc5d5;
 }
 
 .whDetailsForm,

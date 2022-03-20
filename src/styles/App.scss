@@ -171,12 +171,18 @@ html {
 }
 //Warehouse Details/Form Styling
 .details {
-  height: 300px;
+  height: 700px;
+  background-color: $White;
+  width: 80%;
+  margin: 0 auto;
 }
 .warehouseDetails,
 .contactDetails {
   font-family: "TitilliumWeb";
   @include mobilePaddingSides();
+}
+.warehouseDetails {
+  border-bottom: solid 1px $Cloud;
 }
 .whDetailsForm,
 .cDForm {
