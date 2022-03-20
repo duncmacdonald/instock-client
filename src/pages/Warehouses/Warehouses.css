@@ -44,4 +44,25 @@ html {
 .headerSection .topClump .directoryContainer .directoryLink:hover {
   background-color: #13182c;
   border-radius: 50px;
-}/*# sourceMappingURL=App.css.map */
+}
+
+.Page {
+  margin: 2rem;
+  background-color: #ffffff;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(19, 24, 44, 0.1);
+}
+
+.TitleBlock {
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.TitleBlock h1 {
+  padding: 0;
+  margin-right: auto;
+}/*# sourceMappingURL=Warehouses.css.map */

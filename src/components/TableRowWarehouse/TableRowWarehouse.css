@@ -44,4 +44,31 @@ html {
 .headerSection .topClump .directoryContainer .directoryLink:hover {
   background-color: #13182c;
   border-radius: 50px;
-}/*# sourceMappingURL=App.css.map */
+}
+
+.TableRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 14px;
+  line-height: 22px;
+  background-color: transparent;
+  border-bottom: 1px solid #bdc5d5;
+}
+.TableRow:hover {
+  background-color: rgba(189, 197, 213, 0.7);
+}
+.TableRow__stacked {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.TableRow__button {
+  padding: 0.5rem;
+}
+.TableRow > * {
+  background-color: transparent;
+}/*# sourceMappingURL=TableRowWarehouse.css.map */

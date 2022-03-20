@@ -1,18 +1,18 @@
 //Variables, Mixins, etc.
 //Font-Face
-@font-face {
-  font-family: TitilliumWeb-Black;
-  src: url("../assets/Font/Titillium_Web/TitilliumWeb-Light.ttf");
+// @font-face {
+//   font-family: TitilliumWeb-Black;
+//   src: url("./assets/font/Titillium_Web/TitilliumWeb-Light.ttf");
 
-  font-family: TitilliumWeb-1eq2;
-  src: url("../assets/Font/TitilliumWeb-1eq2.ttf");
+//   font-family: TitilliumWeb-1eq2;
+//   src: url("./assets/font/TitilliumWeb-1eq2.ttf");
 
-  font-family: "Titillium Web";
-  src: url("../assets/font/TitilliumWeb-Regular.ttf");
+//   font-family: "Titillium Web";
+//   src: url("../assets/font/TitilliumWeb-Regular.ttf") format('truetype');
 
-  font-family: "Titillium Web";
-  src: url("../assets/font/TitilliumWeb-Regular.ttf");
-}
+//   font-family: "Titillium Web";
+//   src: url("../assets/font/TitilliumWeb-Regular.ttf") format('truetype');
+// }
 //Primary Colors
 $Instock-Black: #13182c;
 $Instock-Indigo: #2e66e5;
@@ -107,6 +107,11 @@ $Red: #c94515;
 @mixin clearBottomPadding {
   margin-bottom: 0;
 }
+
+@mixin twoRemPadding {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
 //Screen-Sizing
 $mobile-lower: 320px;
 $mobile-higher: 767px;
@@ -167,3 +172,4 @@ html {
     }
   }
 }
+

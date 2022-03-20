@@ -44,4 +44,26 @@ html {
 .headerSection .topClump .directoryContainer .directoryLink:hover {
   background-color: #13182c;
   border-radius: 50px;
-}/*# sourceMappingURL=App.css.map */
+}
+
+.TableTitles {
+  display: flex;
+  justify-content: space-between;
+  height: 2.5rem;
+  background-color: #f7f8f9;
+}
+.TableTitles div {
+  display: flex;
+  align-items: center;
+}
+.TableTitles div span {
+  text-transform: uppercase;
+}
+
+.TableTitles > *, .TableRow > * {
+  width: 16.6%;
+}
+
+.TableRow:last-of-type {
+  border-bottom: none;
+}/*# sourceMappingURL=WarehousesTable.css.map */

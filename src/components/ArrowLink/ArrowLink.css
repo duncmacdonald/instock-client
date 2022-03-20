@@ -1,3 +1,13 @@
+/* @font-face {
+  font-family: TitilliumWeb-Black;
+  src: url("./assets/font/Titillium_Web/TitilliumWeb-Light.ttf");
+  font-family: TitilliumWeb-1eq2;
+  src: url("./assets/font/TitilliumWeb-1eq2.ttf");
+  font-family: "Titillium Web";
+  src: url("../assets/font/TitilliumWeb-Regular.ttf") format("truetype");
+  font-family: "Titillium Web";
+  src: url("../assets/font/TitilliumWeb-Regular.ttf") format("truetype");
+} */
 html {
   font-family: "Titillium Web", sans-serif;
   font-weight: 400;
@@ -44,4 +54,23 @@ html {
 .headerSection .topClump .directoryContainer .directoryLink:hover {
   background-color: #13182c;
   border-radius: 50px;
-}/*# sourceMappingURL=App.css.map */
+}
+
+.ArrowLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #2e66e5;
+}
+.ArrowLink span {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+}
+.ArrowLink img {
+  position: relative;
+  transition-duration: 0.5s;
+}
+.ArrowLink:hover :nth-child(2) {
+  transform: translateX(4px);
+}/*# sourceMappingURL=ArrowLink.css.map */
