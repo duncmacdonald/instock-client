@@ -7,7 +7,7 @@ export default class Details extends Component {
     return (
       <section className="details">
         <WareHouseDetails />
-        <hr />
+
         <ContactDetails />
       </section>
     );
