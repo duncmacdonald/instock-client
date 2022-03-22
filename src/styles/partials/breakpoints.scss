@@ -77,7 +77,7 @@ $desktop-lower: 1280px;
   margin-bottom: 0;
 }
 //General Styling
-@media (min-width: $tablet-lower) and (max-width: $tablet-higher) {
+@media (min-width: $tablet-lower) {
   .headerSection {
     overflow: hidden;
     display: flex;
@@ -116,6 +116,7 @@ $desktop-lower: 1280px;
       width: 40%;
       margin: 0;
       border-right: solid 1px $Cloud;
+      border-bottom: none;
       padding: 0 16px;
     }
     .contactDetails {
@@ -125,6 +126,16 @@ $desktop-lower: 1280px;
     }
     form {
       background-color: $White;
+    }
+    .submissionSection {
+      background-color: $Light-Grey;
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-end;
+      button {
+        width: 15%;
+      }
     }
   }
 }
@@ -178,6 +189,7 @@ $desktop-lower: 1280px;
       width: 40%;
       margin: 0;
       border-right: solid 1px $Cloud;
+      border-bottom: none;
       padding: 0 16px;
     }
     .contactDetails {

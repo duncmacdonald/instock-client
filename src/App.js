@@ -9,7 +9,7 @@ export default class App extends Component {
     return (
       <Router>
         <Switch>
-          <div>
+          <div className="bigContainer">
             <Header />
             <Details />
           </div>

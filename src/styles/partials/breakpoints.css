@@ -1,4 +1,4 @@
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) {
   .headerSection {
     overflow: hidden;
     display: -webkit-box;
@@ -63,6 +63,7 @@
     width: 40%;
     margin: 0;
     border-right: solid 1px #bdc5d5;
+    border-bottom: none;
     padding: 0 16px;
   }
   .details .contactDetails {
@@ -72,6 +73,23 @@
   }
   .details form {
     background-color: #ffffff;
+  }
+  .details .submissionSection {
+    background-color: #f7f8f9;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .details .submissionSection button {
+    width: 15%;
   }
 }
 @media (min-width: 1280px) {
@@ -155,6 +173,7 @@
     width: 40%;
     margin: 0;
     border-right: solid 1px #bdc5d5;
+    border-bottom: none;
     padding: 0 16px;
   }
   .details .contactDetails {
