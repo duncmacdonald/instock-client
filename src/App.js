@@ -12,9 +12,9 @@ export default class App extends Component {
         <Switch>
           <Route exact path="/" component={Warehouses} />
           <Route path="/details" component={Details} />
-          {/* <Header />
-            <Details /> */}
-          {/* </div> */}
+          <div className="bigContainer">
+            <Details />
+          </div>
         </Switch>
       </Router>
     );

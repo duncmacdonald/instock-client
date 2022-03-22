@@ -175,6 +175,7 @@ html {
   background-color: $White;
   width: 80%;
   margin: 0 auto;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
 }
 .warehouseDetails,
 .contactDetails {
@@ -202,4 +203,27 @@ input {
 }
 hr {
   color: $Cloud;
+}
+.submissionSection {
+  background-color: $Light-Grey;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  button {
+    margin: 8px;
+    border-radius: 20px;
+    font-family: "Titillium Web";
+    width: 35%;
+  }
+  .saveButton {
+    background-color: $Instock-Indigo;
+    color: $White;
+    border: solid 1px $Instock-Indigo;
+  }
+  .cancelButton {
+    background-color: $White;
+    color: $Instock-Black;
+    border: solid 1px $Cloud;
+  }
 }
