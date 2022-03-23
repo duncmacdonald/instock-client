@@ -4,11 +4,7 @@ import pencil from "../../assets/Icons/edit-24px.svg";
 import "./TableRowWarehouse.css";
 import "../../index.css";
 
-export default function TableRowWarehouse({
-  warehouse,
-  warehouseSelector,
-  modalClicker,
-}) {
+export default function TableRowWarehouse({ warehouse, warehouseSelector }) {
   return (
     <div className="TableRow">
       <ArrowLink text={warehouse.name} action={() => console.log("hi")} />
@@ -23,8 +19,7 @@ export default function TableRowWarehouse({
       <div>
         <img
           onClick={() => {
-            warehouseSelector(warehouse);
-            modalClicker(true);
+            warehouseSelector(warehouse, true);
           }}
           src={trash}
           alt="delete"

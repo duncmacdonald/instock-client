@@ -7,7 +7,7 @@ export class DeleteWarehouse extends Component {
       <div className="delete-warehouse-tablet">
         <div className="delete-warehouse">
           <p
-            onClick={() => this.props.clicker(false)}
+            onClick={() => this.props.clicker()}
             className="delete-warehouse__close-button-top"
           >
             X
@@ -23,12 +23,20 @@ export class DeleteWarehouse extends Component {
 
           <div className="delete-warehouse__button-container">
             <button
-              onClick={() => this.props.clicker(false)}
+              onClick={() => this.props.clicker()}
               className="delete-warehouse__cancel-button"
             >
               Cancel
             </button>
-            <button className="delete-warehouse__delete-button">Delete</button>
+            <button
+              onClick={() => {
+                this.props.deleteCall(this.props.selectedWarehouse.id);
+                this.props.clicker();
+              }}
+              className="delete-warehouse__delete-button"
+            >
+              Delete
+            </button>
           </div>
         </div>
       </div>

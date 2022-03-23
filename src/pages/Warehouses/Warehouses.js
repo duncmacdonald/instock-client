@@ -1,10 +1,12 @@
 import React from "react";
+import axios from "axios";
 import Button from "../../components/Button/Button";
 import WarehousesTable from "../../components/WarehousesTable/WarehousesTable";
 import Search from "../../components/Search/Search";
 import "./Warehouses.css";
 import "../../index.css";
 import DeleteWarehouse from "../../components/DeleteWarehouse/warehouseComponents/DeleteWarehouse";
+const URL = "http://localhost:8080/warehouse/";
 
 export default class Warehouses extends React.Component {
   state = {
@@ -118,14 +120,24 @@ export default class Warehouses extends React.Component {
     selectedWarehouse: "",
   };
 
-  modalClicker = (value) => {
-    this.setState({ deleteModal: value });
+  modalClicker = () => {
+    this.setState({ deleteModal: false });
   };
 
   currentWarehouseSelection = (warehouse) => {
     this.setState({
+      deleteModal: true,
       selectedWarehouse: warehouse,
     });
+  };
+
+  deleteCall = (warehouseID) => {
+    axios
+      .delete(URL + warehouseID)
+      .then((success) => {
+        console.log(success);
+      })
+      .catch((error) => console.log(error));
   };
 
   render() {
@@ -147,12 +159,12 @@ export default class Warehouses extends React.Component {
           ]}
           contentArray={this.state.data}
           warehouseSelector={this.currentWarehouseSelection}
-          modalClicker={this.modalClicker}
         />
         {this.state.deleteModal ? (
           <DeleteWarehouse
             clicker={this.modalClicker}
             selectedWarehouse={this.state.selectedWarehouse}
+            deleteCall={this.deleteCall}
           />
         ) : (
           ""
