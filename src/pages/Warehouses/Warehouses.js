@@ -114,6 +114,18 @@ export default class Warehouses extends React.Component {
         },
       },
     ],
+    deleteModal: false,
+    selectedWarehouse: "",
+  };
+
+  modalClicker = (value) => {
+    this.setState({ deleteModal: value });
+  };
+
+  currentWarehouseSelection = (warehouse) => {
+    this.setState({
+      selectedWarehouse: warehouse,
+    });
   };
 
   render() {
@@ -134,9 +146,14 @@ export default class Warehouses extends React.Component {
             "Actions",
           ]}
           contentArray={this.state.data}
+          warehouseSelector={this.currentWarehouseSelection}
+          modalClicker={this.modalClicker}
         />
-        {this.state.data ? (
-          <DeleteWarehouse warehouseInfo={this.state.data} />
+        {this.state.deleteModal ? (
+          <DeleteWarehouse
+            clicker={this.modalClicker}
+            selectedWarehouse={this.state.selectedWarehouse}
+          />
         ) : (
           ""
         )}

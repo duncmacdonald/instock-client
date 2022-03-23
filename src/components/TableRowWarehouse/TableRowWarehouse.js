@@ -3,9 +3,12 @@ import trash from "../../assets/Icons/delete_outline-24px.svg";
 import pencil from "../../assets/Icons/edit-24px.svg";
 import "./TableRowWarehouse.css";
 import "../../index.css";
-import DeleteWarehouse from "../DeleteWarehouse/warehouseComponents/DeleteWarehouse";
 
-export default function TableRowWarehouse({ warehouse }) {
+export default function TableRowWarehouse({
+  warehouse,
+  warehouseSelector,
+  modalClicker,
+}) {
   return (
     <div className="TableRow">
       <ArrowLink text={warehouse.name} action={() => console.log("hi")} />
@@ -18,7 +21,15 @@ export default function TableRowWarehouse({ warehouse }) {
         <span>{warehouse.contact.email}</span>
       </div>
       <div>
-        <img src={trash} alt="delete" className="TableRow__button"></img>
+        <img
+          onClick={() => {
+            warehouseSelector(warehouse);
+            modalClicker(true);
+          }}
+          src={trash}
+          alt="delete"
+          className="TableRow__button"
+        ></img>
         <img src={pencil} alt="edit" className="TableRow__button"></img>
       </div>
     </div>

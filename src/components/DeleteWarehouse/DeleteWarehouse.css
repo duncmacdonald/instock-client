@@ -148,6 +148,8 @@ hr {
 @media (min-width: 768px) {
   .delete-warehouse__close-button-top {
     padding-top: 10px;
+    width: 10px;
+    margin-left: 90%;
   }
 }
 .delete-warehouse__heading {

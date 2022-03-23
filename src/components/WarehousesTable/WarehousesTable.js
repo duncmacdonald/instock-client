@@ -3,10 +3,21 @@ import TableRowWarehouse from "../TableRowWarehouse/TableRowWarehouse";
 import "./WarehousesTable.css";
 import "../../index.css";
 
-export default function WarehousesTable({ titles, contentArray }) {
+export default function WarehousesTable({
+  titles,
+  contentArray,
+  warehouseSelector,
+  modalClicker,
+}) {
   //Rows
   const rowsJSX = contentArray.map((row) => {
-    return <TableRowWarehouse warehouse={row} />;
+    return (
+      <TableRowWarehouse
+        warehouseSelector={warehouseSelector}
+        warehouse={row}
+        modalClicker={modalClicker}
+      />
+    );
   });
 
   return (
