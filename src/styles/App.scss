@@ -1,18 +1,12 @@
+
 //Variables, Mixins, etc.
-//Font-Face
-// @font-face {
-//   font-family: TitilliumWeb-Black;
-//   src: url("./assets/font/Titillium_Web/TitilliumWeb-Light.ttf");
+@font-face {
+  font-family: "TitilliumWeb";
+  src: local("TitilliumWeb"),url("../assets/font/TitilliumWeb-Regular.ttf") format("truetype");
+  font-family: "TitilliumWeb";
+  src: local("TitilliumWeb"),url("../assets/font/TitilliumWeb-Regular.ttf") format("truetype");
+}
 
-//   font-family: TitilliumWeb-1eq2;
-//   src: url("./assets/font/TitilliumWeb-1eq2.ttf");
-
-//   font-family: "Titillium Web";
-//   src: url("../assets/font/TitilliumWeb-Regular.ttf") format('truetype');
-
-//   font-family: "Titillium Web";
-//   src: url("../assets/font/TitilliumWeb-Regular.ttf") format('truetype');
-// }
 //Primary Colors
 $Instock-Black: #13182c;
 $Instock-Indigo: #2e66e5;
@@ -97,6 +91,12 @@ $Red: #c94515;
 @mixin mobilePaddingSides {
   margin: 0 16px;
 }
+@mixin tabletPaddingSides {
+  margin: 0 32px;
+}
+@mixin desktopPaddingSides {
+  margin: 0 63px;
+}
 @mixin clearVertPadding {
   margin-top: 0;
   margin-bottom: 0;
@@ -122,14 +122,11 @@ $desktop-lower: 1280px;
 //-----------------------------------------------------------
 //General Styling
 html {
-  font-family: "Titillium Web", sans-serif;
+  font-family: "TitilliumWeb", sans-serif;
   font-weight: 400;
   margin: 0;
   padding: 0;
   background-color: $Light-Grey;
-
-  //   display: flex;
-  //   flex-wrap: wrap;
 }
 
 //Header Component Styling
@@ -141,35 +138,63 @@ html {
   align-items: center;
   width: 100%;
   height: 200px;
-  .topClump {
-    width: 100%;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    .logoImg {
-      height: 45px;
-      @include mobilePadding();
-    }
-    .directoryContainer {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
-      width: 100%;
-
-      .directoryLink {
-        @include mobileBodyLarge();
-        text-align: center;
-        padding: 12px;
-        margin: 0;
-        width: 40%;
-        font-family: "Titillium Web";
-        font-weight: 600;
-      }
-      .directoryLink:hover {
-        background-color: $Instock-Black;
-        border-radius: 50px;
-      }
-    }
+  display: flex;
+  flex-wrap: wrap;
+}
+.topClump {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  align-items: center;
+  .logoImg {
+    height: 45px;
+    @include mobilePadding();
   }
 }
-
+.directoryContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+}
+.directoryLink {
+  @include mobileBodyLarge();
+  text-align: center;
+  padding: 8px 16px;
+  margin: 0;
+  width: 35%;
+  font-family: "TitilliumWeb";
+  font-weight: 600;
+}
+.directoryLink:hover {
+  background-color: $Instock-Black;
+  border-radius: 50px;
+}
+//Warehouse Details/Form Styling
+.details {
+  height: 300px;
+}
+.warehouseDetails,
+.contactDetails {
+  font-family: "TitilliumWeb";
+  @include mobilePaddingSides();
+}
+.whDetailsForm,
+.cDForm {
+  display: flex;
+  flex-flow: column wrap;
+}
+label {
+  @include labelsEtc();
+  font-weight: 600;
+}
+input {
+  border: $Cloud 1px solid;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+hr {
+  color: $Cloud;
+}
