@@ -1,20 +1,11 @@
-
 //Variables, Mixins, etc.
 @font-face {
-<<<<<<< HEAD
-  font-family: "Titillium Web";
-  src: url("../assets/font/TitilliumWeb-Regular.ttf");
-  font-weight: 400;
-
-  font-family: "Titillium Web - Semi";
-  src: url("../assets/font/TitilliumWeb-SemiBold.ttf");
-  font-weight: 600;
-=======
   font-family: "TitilliumWeb";
-  src: local("TitilliumWeb"),url("../assets/font/TitilliumWeb-Regular.ttf") format("truetype");
+  src: local("TitilliumWeb"),
+    url("../assets/font/TitilliumWeb-Regular.ttf") format("truetype");
   font-family: "TitilliumWeb";
-  src: local("TitilliumWeb"),url("../assets/font/TitilliumWeb-Regular.ttf") format("truetype");
->>>>>>> 3a87e8b91be85607bc5afef00f9e301818d26113
+  src: local("TitilliumWeb"),
+    url("../assets/font/TitilliumWeb-Regular.ttf") format("truetype");
 }
 
 //Primary Colors
