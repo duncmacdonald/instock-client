@@ -1,8 +1,10 @@
 @font-face {
   font-family: "Titillium Web";
   src: url("../assets/font/TitilliumWeb-Regular.ttf");
+  font-weight: 400;
   font-family: "Titillium Web - Semi";
   src: url("../assets/font/TitilliumWeb-SemiBold.ttf");
+  font-weight: 600;
 }
 html {
   font-family: "Titillium Web", sans-serif;
@@ -15,35 +17,20 @@ html {
 .headerSection {
   background-color: #232940;
   color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column wrap;
+  align-items: center;
   width: 100%;
   height: 200px;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .topClump {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+  flex-flow: column wrap;
   width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .topClump .logoImg {
   height: 45px;
@@ -51,16 +38,9 @@ html {
 }
 
 .directoryContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-flow: row wrap;
+  justify-content: center;
   width: 100%;
 }
 
@@ -92,13 +72,8 @@ html {
 
 .whDetailsForm,
 .cDForm {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+  flex-flow: column wrap;
 }
 
 label {
@@ -110,8 +85,7 @@ label {
 input {
   border: #bdc5d5 1px solid;
   border-radius: 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 8px;
   margin-bottom: 16px;
 }
