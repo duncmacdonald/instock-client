@@ -72,8 +72,8 @@
     @include mobilePadding();
     @include tablet() {
       @include pageHeader();
-      margin-left: 48px;
-      margin-right: 48px;
+
+      margin: 0 48px;
     }
   }
   &__confirmation-message {
