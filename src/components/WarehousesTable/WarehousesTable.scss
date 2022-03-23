@@ -1,0 +1,26 @@
+@import  "../../styles/app.scss";
+
+.TableTitles{
+    display: flex;
+    justify-content: space-between;
+    
+    height: 2.5rem;
+    background-color: $Light-Grey;
+
+    div{
+        display: flex;
+        align-items: center;
+
+        span{
+            text-transform: uppercase;
+        }
+    }
+}
+
+.TableTitles > *, .TableRow > * {
+    width: 16.6%;
+}
+
+.TableRow:last-of-type {
+    border-bottom: none;
+}

@@ -1,5 +1,7 @@
 import React from "react";
-import logo from "../assets/images/InStock-Logo.svg";
+import "../../styles/App.css"
+import "../../index.css";
+import logo from "../../assets/Images/InStock-Logo.svg";
 export default function Header() {
   return (
     <section className="headerSection">

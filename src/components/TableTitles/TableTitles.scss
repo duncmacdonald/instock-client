@@ -1,0 +1,25 @@
+@import  "../../styles/app.scss";
+
+.TableTitles{
+    display: flex;
+    justify-content: space-between;
+    @include twoRemPadding;
+    
+    height: 2.5rem;
+    background-color: $Light-Grey;
+
+    div{
+        display: flex;
+        align-items: center;
+
+        span{
+            text-transform: uppercase;
+            color: $Slate;
+            @include bodySmall;
+        }
+    }
+}
+
+.TableTitles > *, .TableRow > * {
+    width: 16.6%;
+}

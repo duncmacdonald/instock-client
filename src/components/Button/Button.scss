@@ -1,0 +1,33 @@
+@import "../../styles/app.scss";
+
+//default blue
+.Button{
+    font-family: "TitilliumWeb";
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: $Instock-Indigo;
+    border: 1px solid $Instock-Indigo;
+    color: white;
+    padding: 1rem 2rem;
+
+    // width: 168px;
+    height: 40px;
+    border-radius: 20px;
+
+
+}
+
+.red{
+    background-color: $Red;
+    border: 1px solid $Red;
+}
+
+.white{
+    background-color: $White;
+    border: 1px solid $Cloud;
+
+    color: $Slate
+}

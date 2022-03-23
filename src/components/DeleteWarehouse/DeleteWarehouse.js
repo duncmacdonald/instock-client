@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../../styles/DeleteWarehouse.scss";
+import "./DeleteWarehouse.scss";
 
 export class DeleteWarehouse extends Component {
   render() {
