@@ -1,0 +1,24 @@
+@import '../../styles/App.scss';
+
+.Page{
+    margin: 2rem;
+    background-color: $White;
+
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba($color: $Instock-Black, $alpha: .1);
+}
+
+.TitleBlock {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    @include twoRemPadding;
+    
+
+    h1{
+        padding: 0;
+        margin-right: auto;
+    }
+}

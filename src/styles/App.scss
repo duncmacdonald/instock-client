@@ -1,6 +1,7 @@
+
 //Variables, Mixins, etc.
-//Font-Face
 @font-face {
+<<<<<<< HEAD
   font-family: "Titillium Web";
   src: url("../assets/font/TitilliumWeb-Regular.ttf");
   font-weight: 400;
@@ -8,7 +9,14 @@
   font-family: "Titillium Web - Semi";
   src: url("../assets/font/TitilliumWeb-SemiBold.ttf");
   font-weight: 600;
+=======
+  font-family: "TitilliumWeb";
+  src: local("TitilliumWeb"),url("../assets/font/TitilliumWeb-Regular.ttf") format("truetype");
+  font-family: "TitilliumWeb";
+  src: local("TitilliumWeb"),url("../assets/font/TitilliumWeb-Regular.ttf") format("truetype");
+>>>>>>> 3a87e8b91be85607bc5afef00f9e301818d26113
 }
+
 //Primary Colors
 $Instock-Black: #13182c;
 $Instock-Indigo: #2e66e5;
@@ -109,6 +117,11 @@ $Red: #c94515;
 @mixin clearBottomPadding {
   margin-bottom: 0;
 }
+
+@mixin twoRemPadding {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
 //Screen-Sizing
 $mobile-lower: 320px;
 $mobile-higher: 767px;
@@ -119,7 +132,7 @@ $desktop-lower: 1280px;
 //-----------------------------------------------------------
 //General Styling
 html {
-  font-family: "Titillium Web", sans-serif;
+  font-family: "TitilliumWeb", sans-serif;
   font-weight: 400;
   margin: 0;
   padding: 0;
@@ -160,7 +173,7 @@ html {
   padding: 8px 16px;
   margin: 0;
   width: 35%;
-  font-family: "Titillium Web";
+  font-family: "TitilliumWeb";
   font-weight: 600;
 }
 .directoryLink:hover {
@@ -173,7 +186,7 @@ html {
 }
 .warehouseDetails,
 .contactDetails {
-  font-family: "Titillium Web";
+  font-family: "TitilliumWeb";
   @include mobilePaddingSides();
 }
 .whDetailsForm,

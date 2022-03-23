@@ -1,0 +1,34 @@
+@import "../../styles/app.scss";
+
+.TableRow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5rem;
+    @include twoRemPadding;
+    @include bodyMedium;
+
+    background-color: transparent;
+    border-bottom: 1px solid $Cloud;
+    
+    &:hover{
+        background-color: rgba($Cloud,0.7);
+        
+    }
+
+    &__stacked{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__button {
+        padding: 0.5rem;
+    }
+
+    & > * {
+        background-color: transparent;
+    }
+
+
+}

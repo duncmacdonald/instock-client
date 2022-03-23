@@ -1,0 +1,70 @@
+html {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f8f9;
+}
+
+.headerSection {
+  background-color: #232940;
+  color: #ffffff;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+}
+.headerSection .topClump {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.headerSection .topClump .logoImg {
+  height: 45px;
+  margin: 16px;
+}
+.headerSection .topClump .directoryContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+}
+.headerSection .topClump .directoryContainer .directoryLink {
+  font-size: 15px;
+  line-height: 26px;
+  text-align: center;
+  padding: 12px;
+  margin: 0;
+  width: 40%;
+  font-family: "Titillium Web";
+  font-weight: 600;
+}
+.headerSection .topClump .directoryContainer .directoryLink:hover {
+  background-color: #13182c;
+  border-radius: 50px;
+}
+
+.TableTitles {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 2.5rem;
+  background-color: #f7f8f9;
+}
+.TableTitles div {
+  display: flex;
+  align-items: center;
+}
+.TableTitles div span {
+  text-transform: uppercase;
+  color: #5c667e;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.TableTitles > *, .TableRow > * {
+  width: 16.6%;
+}/*# sourceMappingURL=TableTitles.css.map */

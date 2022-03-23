@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "TitilliumWeb";
+  src: local("TitilliumWeb"),url("./assets/font/TitilliumWeb-Regular.ttf") format("truetype");
+  font-family: "TitilliumWeb";
+  src: local("TitilliumWeb"),url("./assets/font/TitilliumWeb-Regular.ttf") format("truetype");
+}
