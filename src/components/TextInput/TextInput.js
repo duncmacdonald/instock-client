@@ -13,7 +13,7 @@ import exclaim from "../../assets/Icons/error-24px.svg";
 export default function TextInput({ name, value, label, placeholder, listener, error }) {
   let inputClass = error ? "error" : "";
 
-  let errorNotification = error ? "" : "hidden";
+  let errorNotification = error ? "ErrorNotification" : "ErrorNotification hidden";
 
   return (
     <div className="TextInput">
@@ -28,7 +28,7 @@ export default function TextInput({ name, value, label, placeholder, listener, e
           listener(event);
         }}
       ></input>
-      <div className="ErrorNotification">
+      <div className={errorNotification}>
         <img src={exclaim} alt="error"></img>
         <span>This field is required</span>
       </div>

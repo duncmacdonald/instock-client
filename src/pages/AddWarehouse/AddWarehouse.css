@@ -148,36 +148,89 @@ hr {
     padding: 8px 16px;
   }
 }
-.Button {
-  font-family: "TitilliumWeb";
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  background-color: #2e66e5;
-  border: 1px solid #2e66e5;
-  color: white;
-  height: 40px;
-  border-radius: 20px;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 20px;
+.Page-AddWarehouse {
+  margin: 2rem;
+  background-color: #ffffff;
+  margin-top: 0;
+  position: relative;
+  top: -60px;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(19, 24, 44, 0.1);
 }
 @media (min-width: 768px) {
-  .Button {
-    font-size: 14px;
-    line-height: 22px;
+  .Page-AddWarehouse {
+    top: -100px;
   }
 }
-
-.red {
-  background-color: #c94515;
-  border: 1px solid #c94515;
+.Page-AddWarehouse .TitleBlock {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 24px;
+  border-bottom: 1px solid #bdc5d5;
+}
+.Page-AddWarehouse .TitleBlock h1 {
+  padding-bottom: 0;
 }
 
-.white {
-  background-color: #ffffff;
-  border: 1px solid #bdc5d5;
-  color: #5c667e;
-}/*# sourceMappingURL=Button.css.map */
+@media (min-width: 768px) {
+  .WarehouseData {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  .WarehouseData > section {
+    width: 50%;
+  }
+}
+.WarehouseData section {
+  padding: 16px 24px 24px 24px;
+}
+@media (min-width: 768px) {
+  .WarehouseData section {
+    padding: 0 24px 0 24px;
+    margin: 24px 0;
+  }
+}
+.WarehouseData section:first-child {
+  border-bottom: 1px solid #bdc5d5;
+}
+@media (min-width: 768px) {
+  .WarehouseData section:first-child {
+    border-bottom: none;
+    border-right: 1px solid #bdc5d5;
+  }
+}
+.WarehouseData section h2 {
+  padding-bottom: 1.5rem;
+}
+
+.ButtonFlex {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  background: #F7F8F9B2;
+  border-radius: 0px 0px 3px 3px;
+}
+@media (min-width: 768px) {
+  .ButtonFlex {
+    justify-content: flex-end;
+  }
+}
+.ButtonFlex .Button {
+  width: 50%;
+}
+@media (min-width: 768px) {
+  .ButtonFlex .Button {
+    max-width: 138px;
+  }
+  .ButtonFlex .Button:first-of-type {
+    max-width: 75px;
+  }
+}/*# sourceMappingURL=AddWarehouse.css.map */
