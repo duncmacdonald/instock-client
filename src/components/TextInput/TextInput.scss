@@ -2,6 +2,16 @@
 @import "../../styles/partials/breakpoints.scss";
 
 .TextInput {
+    
+
+  label {
+    color: $Instock-Black;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 0.25rem;
+  }
+
+  input {
     border: 1px solid $Cloud;
     border-radius: 20px;
     height: 40px;
@@ -11,40 +21,39 @@
     padding: 0 1rem;
     margin-bottom: 0.25rem;
     width: 100%;
-    
-    
+
     &:focus {
-        border: 1px solid $Instock-Indigo;
-        outline: none;
+      border: 1px solid $Instock-Indigo;
+      outline: none;
     }
+  }
 }
 
-.ErrorNotification{
-    color: $Red;
-    display: flex;
-    align-items: center;
-    
-    img{
-        height: 13px;
-        padding-right: 0.25rem;
-    }
+.ErrorNotification {
+  color: $Red;
+  display: flex;
+  align-items: center;
 
-    span{
-        font-size: 11px;
-        line-height: 16px;
+  img {
+    height: 13px;
+    padding-right: 0.25rem;
+  }
 
-        @include tablet {
-            font-size: 12px;
-            line-height: 18px;
-        }
+  span {
+    font-size: 11px;
+    line-height: 16px;
+
+    @include tablet {
+      font-size: 12px;
+      line-height: 18px;
     }
+  }
 }
 
 .error {
-    border: 1px solid $Red;
+  border: 1px solid $Red;
 }
 
-.hidden{
-    visibility: hidden;
+.hidden {
+  visibility: hidden;
 }
-
