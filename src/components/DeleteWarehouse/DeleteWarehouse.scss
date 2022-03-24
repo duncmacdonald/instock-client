@@ -1,27 +1,113 @@
 @import "../../styles/App.scss";
 
-.delete-warehouse {
-  font-family: TitilliumWeb-1eq2;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-lower) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $tablet-lower) {
+    @content;
+  }
+}
+
+.delete-warehouse {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+
+  &-tablet {
+    @include tablet() {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+
+      top: 0;
+      left: 0;
+      background-color: rgba(19, 24, 24, 0.7);
+      padding: 50%;
+    }
+  }
+
+  @include tablet() {
+    background: white;
+    height: 262px;
+    width: 672px;
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  font-family: Titillium Web;
+
+  &__top-section {
+    height: 50px;
+    margin-bottom: 85vh;
+    @include tablet() {
+      height: 0;
+      margin-bottom: 0;
+    }
+  }
   &__close-button-top {
     @include mobilePadding();
     display: flex;
     justify-content: end;
     align-items: flex-end;
     cursor: pointer;
+    &:hover {
+      color: $Instock-Black;
+    }
+    @include tablet() {
+      padding-top: 10px;
+      width: 10px;
+      margin-left: 90%;
+    }
   }
   &__heading {
+    font-family: Titillium Web - Semi;
+
     @include mobilePageHeader();
     @include mobilePadding();
+    @include tablet() {
+      @include pageHeader();
+      min-height: 0%;
+      margin: 0 48px;
+    }
   }
   &__confirmation-message {
     @include mobileBodyLarge();
     @include mobilePadding();
+
+    @include tablet() {
+      @include bodyLarge();
+      min-height: 0%;
+      margin-left: 48px;
+      margin-right: 48px;
+    }
   }
   &__button-container {
     @include mobilePadding();
     display: flex;
     justify-content: space-between;
+
+    @include tablet() {
+      justify-content: end;
+    }
   }
   &__cancel-button {
     width: 163px;
@@ -32,6 +118,12 @@
     cursor: pointer;
     @include mobileBodyMedium();
     text-align: center;
+    font-family: Titillium Web - Semi;
+
+    @include tablet() {
+      width: 71px;
+      height: 38px;
+    }
   }
   &__delete-button {
     width: 163px;
@@ -41,7 +133,19 @@
     cursor: pointer;
     @include mobileBodyMedium();
     text-align: center;
+    font-family: Titillium Web - Semi;
 
-    background: $Red;
+    background-color: $Red;
+    color: white;
+
+    @include tablet() {
+      margin-bottom: 0;
+      width: 71px;
+      height: 38px;
+      margin-right: 30px;
+    }
+  }
+  &__mobile {
+    height: 80%;
   }
 }

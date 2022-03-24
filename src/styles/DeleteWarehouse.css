@@ -1,14 +1,13 @@
-<<<<<<< HEAD
-=======
 @font-face {
-  font-family: "TitilliumWeb";
-  src: local("TitilliumWeb"), url("../assets/font/TitilliumWeb-Regular.ttf") format("truetype");
-  font-family: "TitilliumWeb";
-  src: local("TitilliumWeb"), url("../assets/font/TitilliumWeb-Regular.ttf") format("truetype");
+  font-family: "Titillium Web";
+  src: url("../assets/font/TitilliumWeb-Regular.ttf");
+  font-weight: 400;
+  font-family: "Titillium Web - Semi";
+  src: url("../assets/font/TitilliumWeb-SemiBold.ttf");
+  font-weight: 600;
 }
->>>>>>> sprint-1
 html {
-  font-family: "TitilliumWeb", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-weight: 400;
   margin: 0;
   padding: 0;
@@ -52,7 +51,7 @@ html {
   padding: 8px 16px;
   margin: 0;
   width: 35%;
-  font-family: "TitilliumWeb";
+  font-family: "Titillium Web";
   font-weight: 600;
 }
 
@@ -67,7 +66,7 @@ html {
 
 .warehouseDetails,
 .contactDetails {
-  font-family: "TitilliumWeb";
+  font-family: "Titillium Web";
   margin: 0 16px;
 }
 
@@ -86,20 +85,6 @@ label {
 input {
   border: #bdc5d5 1px solid;
   border-radius: 20px;
-<<<<<<< HEAD
-  box-sizing: border-box;
-  padding: 8px;
-  margin-bottom: 16px;
-}
-
-hr {
-  color: #bdc5d5;
-}
-
-.delete-warehouse {
-  font-family: TitilliumWeb-1eq2;
-=======
->>>>>>> sprint-1
   box-sizing: border-box;
   padding: 8px;
   margin-bottom: 16px;
@@ -120,12 +105,7 @@ hr {
   flex-direction: column;
   justify-content: space-between;
   align-content: space-between;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: white;
+  height: 100vh;
   font-family: Titillium Web;
 }
 @media (min-width: 768px) {
@@ -136,7 +116,6 @@ hr {
     top: 0;
     left: 0;
     background-color: rgba(19, 24, 24, 0.7);
-    padding: 50%;
   }
 }
 @media (min-width: 768px) {
@@ -144,10 +123,8 @@ hr {
     background: white;
     height: 262px;
     width: 672px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: auto;
+    margin-top: 185px;
   }
 }
 .delete-warehouse__top-section {
@@ -173,8 +150,6 @@ hr {
 @media (min-width: 768px) {
   .delete-warehouse__close-button-top {
     padding-top: 10px;
-    width: 10px;
-    margin-left: 90%;
   }
 }
 .delete-warehouse__heading {
@@ -187,8 +162,8 @@ hr {
   .delete-warehouse__heading {
     font-size: 32px;
     line-height: 40px;
-    min-height: 0%;
-    margin: 0 48px;
+    margin-left: 48px;
+    margin-right: 48px;
   }
 }
 .delete-warehouse__confirmation-message {
@@ -200,7 +175,6 @@ hr {
   .delete-warehouse__confirmation-message {
     font-size: 16px;
     line-height: 28px;
-    min-height: 0%;
     margin-left: 48px;
     margin-right: 48px;
   }
@@ -253,7 +227,4 @@ hr {
     height: 38px;
     margin-right: 30px;
   }
-}
-.delete-warehouse__mobile {
-  height: 80%;
 }/*# sourceMappingURL=DeleteWarehouse.css.map */
