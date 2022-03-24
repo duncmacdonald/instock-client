@@ -35,7 +35,7 @@ export default function TableRowWarehouse({ warehouse, warehouseSelector }) {
 
         <img
           src={trash}
-          onClick={() => warehouseSelector(warehouse)}
+          onClick={() => warehouseSelector(warehouse, true)}
           alt="delete"
           className="TableRow__button"
         ></img>
@@ -61,7 +61,7 @@ export default function TableRowWarehouse({ warehouse, warehouseSelector }) {
             src={trash}
             alt="delete"
             className="TableRow__button"
-            onClick={() => warehouseSelector(warehouse)}
+            onClick={() => warehouseSelector(warehouse, true)}
           ></img>
           <img
             src={pencil}

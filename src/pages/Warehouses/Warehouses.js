@@ -124,9 +124,9 @@ export default class Warehouses extends React.Component {
     this.setState({ deleteModal: false });
   };
 
-  currentWarehouseSelection = (warehouse) => {
+  currentWarehouseSelection = (warehouse, value) => {
     this.setState({
-      deleteModal: true,
+      deleteModal: value,
       selectedWarehouse: warehouse,
     });
   };
@@ -173,7 +173,7 @@ export default class Warehouses extends React.Component {
         </section>
         {this.state.deleteModal ? (
           <DeleteWarehouse
-            clicker={this.modalClicker}
+            clicker={this.currentWarehouseSelection}
             selectedWarehouse={this.state.selectedWarehouse}
             deleteCall={this.deleteCall}
           />
