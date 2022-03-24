@@ -1,9 +1,3 @@
-@font-face {
-  font-family: "TitilliumWeb";
-  src: local("TitilliumWeb"), url("../assets/font/TitilliumWeb-Regular.ttf") format("truetype");
-  font-family: "TitilliumWeb";
-  src: local("TitilliumWeb"), url("../assets/font/TitilliumWeb-Regular.ttf") format("truetype");
-}
 html {
   font-family: "TitilliumWeb", sans-serif;
   font-weight: 400;

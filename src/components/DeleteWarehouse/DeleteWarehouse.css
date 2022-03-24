@@ -1,9 +1,12 @@
+<<<<<<< HEAD
+=======
 @font-face {
   font-family: "TitilliumWeb";
   src: local("TitilliumWeb"), url("../assets/font/TitilliumWeb-Regular.ttf") format("truetype");
   font-family: "TitilliumWeb";
   src: local("TitilliumWeb"), url("../assets/font/TitilliumWeb-Regular.ttf") format("truetype");
 }
+>>>>>>> sprint-1
 html {
   font-family: "TitilliumWeb", sans-serif;
   font-weight: 400;
@@ -83,6 +86,20 @@ label {
 input {
   border: #bdc5d5 1px solid;
   border-radius: 20px;
+<<<<<<< HEAD
+  box-sizing: border-box;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+hr {
+  color: #bdc5d5;
+}
+
+.delete-warehouse {
+  font-family: TitilliumWeb-1eq2;
+=======
+>>>>>>> sprint-1
   box-sizing: border-box;
   padding: 8px;
   margin-bottom: 16px;
