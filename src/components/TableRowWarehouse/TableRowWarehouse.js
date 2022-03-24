@@ -4,7 +4,7 @@ import pencil from "../../assets/Icons/edit-24px.svg";
 import "./TableRowWarehouse.css";
 import "../../index.css";
 
-export default function TableRowWarehouse({ warehouse }) {
+export default function TableRowWarehouse({ warehouse, warehouseSelector }) {
   return (
     <>
       <div className="TableRow-Mobile">
@@ -33,13 +33,21 @@ export default function TableRowWarehouse({ warehouse }) {
           </div>
         </div>
 
-        <img src={trash} alt="delete" className="TableRow__button"></img>
-        
+        <img
+          src={trash}
+          onClick={() => warehouseSelector(warehouse)}
+          alt="delete"
+          className="TableRow__button"
+        ></img>
+
         <img src={pencil} alt="edit" className="TableRow__button"></img>
       </div>
 
       <div className="TableRow-Tablet">
-        <ArrowLink text={warehouse.name} action={() => console.log(`Link to ${warehouse.id}`)} />
+        <ArrowLink
+          text={warehouse.name}
+          action={() => console.log(`Link to ${warehouse.id}`)}
+        />
         <span>
           {warehouse.address}, {warehouse.city}, {warehouse.country}
         </span>
@@ -49,8 +57,18 @@ export default function TableRowWarehouse({ warehouse }) {
           <span>{warehouse.contact.email}</span>
         </div>
         <div className="narrow">
-          <img src={trash} alt="delete" className="TableRow__button" onClick={() => console.log(`Delete ${warehouse.id}`)}></img>
-          <img src={pencil} alt="edit" className="TableRow__button" onClick={() => console.log(`Edit ${warehouse.id}`)}></img>
+          <img
+            src={trash}
+            alt="delete"
+            className="TableRow__button"
+            onClick={() => warehouseSelector(warehouse)}
+          ></img>
+          <img
+            src={pencil}
+            alt="edit"
+            className="TableRow__button"
+            onClick={() => console.log(`Edit ${warehouse.id}`)}
+          ></img>
         </div>
       </div>
     </>

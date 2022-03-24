@@ -32,7 +32,7 @@ export class DeleteWarehouse extends Component {
             </button>
             <button
               onClick={() => {
-                this.props.deleteCall(this.props.selectedWarehouse.id);
+                this.props.deleteCall(this.props.selectedWarehouse.id, false);
                 this.props.clicker();
               }}
               className="delete-warehouse__delete-button"

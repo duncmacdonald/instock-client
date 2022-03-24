@@ -140,44 +140,47 @@ export default class Warehouses extends React.Component {
       .catch((error) => console.log(error));
   };
 
-  render(){
-    return(
+  render() {
+    return (
       <>
-        <section className='Page'>
-            <section className="TitleBlock">
-               <h1>Warehouses</h1>
-               <Search />
-               <Button color="blue" text="+ Add New Warehouse" action={() => console.log("New Warehouse")}/>
-             </section>        
-            
-             {/* <WarehousesTable 
+        <section className="Page">
+          <section className="TitleBlock">
+            <h1>Warehouses</h1>
+            <Search />
+            <Button
+              color="blue"
+              text="+ Add New Warehouse"
+              action={() => console.log("New Warehouse")}
+            />
+          </section>
+
+          {/* <WarehousesTable 
                  titles={["Warehouse", "Address", "Contact Name", "Contact Information", "Actions"]} 
                  contentArray={data} 
              /> */}
-        
 
-         <WarehousesTable
-           titles={[
-             "Warehouse",
-             "Address",
-             "Contact Name",
-             "Contact Information",
-             "Actions",
-           ]}
-           contentArray={this.state.data}
-           warehouseSelector={this.currentWarehouseSelection}
-         />
-         </section>
-         {this.state.deleteModal ? (
-           <DeleteWarehouse
-             clicker={this.modalClicker}
-             selectedWarehouse={this.state.selectedWarehouse}
-             deleteCall={this.deleteCall}
-           />
-         ) : (
-           ""
-         )}
-    </>
+          <WarehousesTable
+            titles={[
+              "Warehouse",
+              "Address",
+              "Contact Name",
+              "Contact Information",
+              "Actions",
+            ]}
+            contentArray={this.state.data}
+            warehouseSelector={this.currentWarehouseSelection}
+          />
+        </section>
+        {this.state.deleteModal ? (
+          <DeleteWarehouse
+            clicker={this.modalClicker}
+            selectedWarehouse={this.state.selectedWarehouse}
+            deleteCall={this.deleteCall}
+          />
+        ) : (
+          ""
+        )}
+      </>
     );
   }
 }
