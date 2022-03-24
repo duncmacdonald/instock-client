@@ -1,5 +1,5 @@
 html {
-  font-family: "Titillium Web", sans-serif;
+  font-family: "TitilliumWeb", sans-serif;
   font-weight: 400;
   margin: 0;
   padding: 0;
@@ -14,61 +14,220 @@ html {
   align-items: center;
   width: 100%;
   height: 200px;
+  display: flex;
+  flex-wrap: wrap;
 }
-.headerSection .topClump {
-  width: 100%;
+
+.topClump {
   display: flex;
   flex-flow: column wrap;
+  width: 100%;
   align-items: center;
 }
-.headerSection .topClump .logoImg {
+.topClump .logoImg {
   height: 45px;
   margin: 16px;
 }
-.headerSection .topClump .directoryContainer {
+
+.directoryContainer {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   width: 100%;
 }
-.headerSection .topClump .directoryContainer .directoryLink {
+
+.directoryLink {
   font-size: 15px;
   line-height: 26px;
   text-align: center;
-  padding: 12px;
+  padding: 8px 16px;
   margin: 0;
-  width: 40%;
-  font-family: "Titillium Web";
+  width: 35%;
+  font-family: "TitilliumWeb";
   font-weight: 600;
 }
-.headerSection .topClump .directoryContainer .directoryLink:hover {
+
+.directoryLink:hover {
   background-color: #13182c;
   border-radius: 50px;
 }
 
-.TableRow {
+.details {
+  height: 300px;
+}
+
+.warehouseDetails,
+.contactDetails {
+  font-family: "TitilliumWeb";
+  margin: 0 16px;
+}
+
+.whDetailsForm,
+.cDForm {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+label {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+input {
+  border: #bdc5d5 1px solid;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+hr {
+  color: #bdc5d5;
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .headerSection {
+    overflow: hidden;
+    display: flex;
+    margin: 0;
+  }
+
+  .topClump {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 0 32px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .topClump .logoImg {
+    width: 30%;
+    margin: 16px 0;
+  }
+
+  .directoryContainer {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0;
+  }
+  .directoryContainer .directoryLink {
+    width: 40%;
+    padding: 8px 16px;
+  }
+}
+@media (min-width: 1280px) {
+  .headerSection {
+    overflow: hidden;
+    display: flex;
+    margin: 0;
+  }
+
+  .topClump {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 63px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .topClump .logoImg {
+    width: 30%;
+    margin: 16px 0;
+  }
+
+  .directoryContainer {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0;
+  }
+  .directoryContainer .directoryLink {
+    width: 40%;
+    padding: 8px 16px;
+  }
+}
+.TableRow-Tablet {
+  display: none;
+}
+@media (min-width: 768px) {
+  .TableRow-Tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 14px;
+    line-height: 22px;
+    background-color: transparent;
+    border-bottom: 1px solid #bdc5d5;
+  }
+}
+.TableRow-Tablet:hover {
+  background-color: rgba(189, 197, 213, 0.7);
+}
+.TableRow-Tablet__stacked {
+  display: none;
+}
+@media (min-width: 768px) {
+  .TableRow-Tablet__stacked {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.TableRow-Tablet__button {
+  padding: 0.5rem;
+}
+.TableRow-Tablet > * {
+  background-color: transparent;
+}
+
+.TableRow-Mobile {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-  height: 4.5rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 16px 24px 24px 24px;
   font-size: 14px;
   line-height: 22px;
   background-color: transparent;
   border-bottom: 1px solid #bdc5d5;
 }
-.TableRow:hover {
+.TableRow-Mobile > div {
+  width: 49%;
+  padding-bottom: 1rem;
+}
+.TableRow-Mobile span {
+  font-size: 13px;
+  line-height: 20px;
+}
+@media (min-width: 768px) {
+  .TableRow-Mobile {
+    display: none;
+  }
+}
+.TableRow-Mobile:hover {
   background-color: rgba(189, 197, 213, 0.7);
 }
-.TableRow__stacked {
+.TableRow-Mobile__stacked {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.TableRow__button {
-  padding: 0.5rem;
+@media (min-width: 768px) {
+  .TableRow-Mobile__stacked {
+    display: none;
+  }
 }
-.TableRow > * {
-  background-color: transparent;
+
+h4 {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 16px;
+  color: #5c667e;
+  padding: 0;
+  margin: 0;
 }/*# sourceMappingURL=TableRowWarehouse.css.map */

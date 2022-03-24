@@ -1,5 +1,5 @@
 html {
-  font-family: "Titillium Web", sans-serif;
+  font-family: "TitilliumWeb", sans-serif;
   font-weight: 400;
   margin: 0;
   padding: 0;
@@ -14,56 +14,95 @@ html {
   align-items: center;
   width: 100%;
   height: 200px;
+  display: flex;
+  flex-wrap: wrap;
 }
-.headerSection .topClump {
-  width: 100%;
+
+.topClump {
   display: flex;
   flex-flow: column wrap;
+  width: 100%;
   align-items: center;
 }
-.headerSection .topClump .logoImg {
+.topClump .logoImg {
   height: 45px;
   margin: 16px;
 }
-.headerSection .topClump .directoryContainer {
+
+.directoryContainer {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   width: 100%;
 }
-.headerSection .topClump .directoryContainer .directoryLink {
+
+.directoryLink {
   font-size: 15px;
   line-height: 26px;
   text-align: center;
-  padding: 12px;
+  padding: 8px 16px;
   margin: 0;
-  width: 40%;
-  font-family: "Titillium Web";
+  width: 35%;
+  font-family: "TitilliumWeb";
   font-weight: 600;
 }
-.headerSection .topClump .directoryContainer .directoryLink:hover {
+
+.directoryLink:hover {
   background-color: #13182c;
   border-radius: 50px;
 }
 
-.TableTitles {
-  display: flex;
-  justify-content: space-between;
-  height: 2.5rem;
-  background-color: #f7f8f9;
-}
-.TableTitles div {
-  display: flex;
-  align-items: center;
-}
-.TableTitles div span {
-  text-transform: uppercase;
+.details {
+  height: 300px;
 }
 
-.TableTitles > *, .TableRow > * {
+.warehouseDetails,
+.contactDetails {
+  font-family: "TitilliumWeb";
+  margin: 0 16px;
+}
+
+.whDetailsForm,
+.cDForm {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+label {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+input {
+  border: #bdc5d5 1px solid;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+hr {
+  color: #bdc5d5;
+}
+
+.TableTitles > *, .TableRow-Tablet > * {
   width: 16.6%;
 }
 
-.TableRow:last-of-type {
+.wide {
+  min-width: 160px;
+}
+
+.narrow {
+  max-width: 75px;
+  text-align: end;
+  justify-content: end;
+}
+.narrow > img {
+  padding-left: 0.5rem;
+}
+
+.TableRow-Tablet:last-of-type {
   border-bottom: none;
 }/*# sourceMappingURL=WarehousesTable.css.map */

@@ -119,7 +119,7 @@ export default function Warehouses(){
             <section className="TitleBlock">
               <h1>Warehouses</h1>
               <Search />
-              <Button color="blue" text="+ Add New Warehouse" />
+              <Button color="blue" text="+ Add New Warehouse" action={() => console.log("New Warehouse")}/>
             </section>        
             
             <WarehousesTable 

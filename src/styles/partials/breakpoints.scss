@@ -56,6 +56,23 @@ $Red: #c94515;
 $tablet-lower: 768px;
 $tablet-higher: 1279px;
 $desktop-lower: 1280px;
+
+// Tablet+ sized screens
+@mixin tablet {
+  @media (min-width: $tablet-lower) {
+      @content;
+  }
+}
+
+// Desktop sized screens
+@mixin desktop {
+  @media (min-width: $desktop-lower) {
+      @content;
+  }
+}
+
+
+
 //Convenience
 @mixin mobilePaddingSides {
   padding: 0 16px;
@@ -134,3 +151,5 @@ $desktop-lower: 1280px;
     }
   }
 }
+
+

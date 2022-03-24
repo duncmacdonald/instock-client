@@ -1,25 +1,29 @@
 @import  "../../styles/app.scss";
+@import '../../styles/partials/breakpoints.scss';
 
 .TableTitles{
-    display: flex;
-    justify-content: space-between;
-    @include twoRemPadding;
-    
-    height: 2.5rem;
-    background-color: $Light-Grey;
+    display: none;
 
-    div{
+    @include tablet{
         display: flex;
-        align-items: center;
-
-        span{
-            text-transform: uppercase;
-            color: $Slate;
-            @include bodySmall;
+        justify-content: space-between;
+        @include twoRemPadding;
+        
+        height: 2.5rem;
+        background-color: $Light-Grey;
+    
+        div{
+            display: flex;
+            align-items: center;
+    
+            span{
+                text-transform: uppercase;
+                color: $Slate;
+                @include bodySmall;
+            }
         }
+
     }
+    
 }
 
-.TableTitles > *, .TableRow > * {
-    width: 16.6%;
-}
