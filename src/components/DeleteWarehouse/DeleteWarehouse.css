@@ -103,7 +103,12 @@ hr {
   flex-direction: column;
   justify-content: space-between;
   align-content: space-between;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
   font-family: Titillium Web;
 }
 @media (min-width: 768px) {
@@ -114,6 +119,7 @@ hr {
     top: 0;
     left: 0;
     background-color: rgba(19, 24, 24, 0.7);
+    padding: 50%;
   }
 }
 @media (min-width: 768px) {
@@ -121,8 +127,10 @@ hr {
     background: white;
     height: 262px;
     width: 672px;
-    margin: auto;
-    margin-top: 185px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 .delete-warehouse__top-section {
@@ -162,6 +170,7 @@ hr {
   .delete-warehouse__heading {
     font-size: 32px;
     line-height: 40px;
+    min-height: 0%;
     margin: 0 48px;
   }
 }
@@ -174,6 +183,7 @@ hr {
   .delete-warehouse__confirmation-message {
     font-size: 16px;
     line-height: 28px;
+    min-height: 0%;
     margin-left: 48px;
     margin-right: 48px;
   }
@@ -226,4 +236,7 @@ hr {
     height: 38px;
     margin-right: 30px;
   }
+}
+.delete-warehouse__mobile {
+  height: 80%;
 }/*# sourceMappingURL=DeleteWarehouse.css.map */

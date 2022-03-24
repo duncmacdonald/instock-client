@@ -12,14 +12,16 @@ export class DeleteWarehouse extends Component {
           >
             X
           </p>
-          <h1 className="delete-warehouse__heading">
-            Delete {this.props.selectedWarehouse.name} warehouse
-          </h1>
-          <p className="delete-warehouse__confirmation-message">
-            Please confirm that you’d like to delete the{" "}
-            {this.props.selectedWarehouse.name} from the list of warehouses. You
-            won’t be able to undo this action.
-          </p>
+          <div className="delete-warehouse__mobile">
+            <h1 className="delete-warehouse__heading">
+              Delete {this.props.selectedWarehouse.name} warehouse
+            </h1>
+            <p className="delete-warehouse__confirmation-message">
+              Please confirm that you’d like to delete the{" "}
+              {this.props.selectedWarehouse.name} from the list of warehouses.
+              You won’t be able to undo this action.
+            </p>
+          </div>
 
           <div className="delete-warehouse__button-container">
             <button
