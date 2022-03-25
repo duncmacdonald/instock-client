@@ -1,9 +1,9 @@
 import "./styles/App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Component } from "react";
-import Header from "./components/Header/Header";
-import Details from "./components/DeleteWarehouse/warehouseComponents/Details";
-import Warehouses from "./pages/Warehouses/Warehouses";
+import Header from "./components/Header";
+import Details from "./components/Component/warehouseComponents/Details";
+import Footer from "./components/Component/Footer";
 export default class App extends Component {
   render() {
     return (
@@ -16,6 +16,7 @@ export default class App extends Component {
             <Details />
           </div>
         </Switch>
+            <Footer/>
       </Router>
     );
   }

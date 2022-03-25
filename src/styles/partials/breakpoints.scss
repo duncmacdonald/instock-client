@@ -155,6 +155,9 @@ $desktop-lower: 1280px;
       }
     }
   }
+  .instockFooter {
+    @include bodySmall()
+  }
 }
 
 @media (min-width: $desktop-lower) {
