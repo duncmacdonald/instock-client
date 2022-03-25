@@ -91,6 +91,11 @@
   .details .submissionSection button {
     width: 15%;
   }
+
+  .instockFooter {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
 @media (min-width: 1280px) {
   .headerSection {
