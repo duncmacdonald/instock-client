@@ -148,36 +148,83 @@ hr {
     padding: 8px 16px;
   }
 }
-.Button {
-  font-family: "TitilliumWeb";
-  box-sizing: border-box;
+.TableRow-Tablet {
+  display: none;
+}
+@media (min-width: 768px) {
+  .TableRow-Tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 14px;
+    line-height: 22px;
+    background-color: transparent;
+    border-bottom: 1px solid #bdc5d5;
+  }
+}
+.TableRow-Tablet:hover {
+  background-color: rgba(189, 197, 213, 0.7);
+}
+.TableRow-Tablet__stacked {
+  display: none;
+}
+@media (min-width: 768px) {
+  .TableRow-Tablet__stacked {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.TableRow-Tablet__button {
+  padding: 0.5rem;
+}
+
+.TableRow-Mobile {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  background-color: #2e66e5;
-  border: 1px solid #2e66e5;
-  color: white;
-  height: 40px;
-  border-radius: 20px;
-  font-weight: 600;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 16px 24px 24px 24px;
+  font-size: 14px;
+  line-height: 22px;
+  background-color: transparent;
+  border-bottom: 1px solid #bdc5d5;
+}
+.TableRow-Mobile > div {
+  width: 49%;
+  padding-bottom: 1rem;
+}
+.TableRow-Mobile span {
   font-size: 13px;
   line-height: 20px;
 }
 @media (min-width: 768px) {
-  .Button {
-    font-size: 14px;
-    line-height: 22px;
+  .TableRow-Mobile {
+    display: none;
+  }
+}
+.TableRow-Mobile:hover {
+  background-color: rgba(189, 197, 213, 0.7);
+}
+.TableRow-Mobile__stacked {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media (min-width: 768px) {
+  .TableRow-Mobile__stacked {
+    display: none;
   }
 }
 
-.red {
-  background-color: #c94515;
-  border: 1px solid #c94515;
-}
-
-.white {
-  background-color: #ffffff;
-  border: 1px solid #bdc5d5;
+h4 {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 16px;
   color: #5c667e;
-}/*# sourceMappingURL=Button.css.map */
+  padding: 0;
+  margin: 0;
+}/*# sourceMappingURL=TableRowInventory.css.map */

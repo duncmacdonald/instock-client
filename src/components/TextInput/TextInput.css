@@ -148,36 +148,52 @@ hr {
     padding: 8px 16px;
   }
 }
-.Button {
-  font-family: "TitilliumWeb";
-  box-sizing: border-box;
+.TextInput label {
+  color: #13182c;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 0.25rem;
+}
+.TextInput input {
+  border: 1px solid #bdc5d5;
+  border-radius: 20px;
+  height: 40px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  background-color: #2e66e5;
+  justify-content: space-between;
+  padding: 0 1rem;
+  margin-bottom: 0.25rem;
+  width: 100%;
+}
+.TextInput input:focus {
   border: 1px solid #2e66e5;
-  color: white;
-  height: 40px;
-  border-radius: 20px;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 20px;
+  outline: none;
+}
+
+.ErrorNotification {
+  color: #c94515;
+  display: flex;
+  align-items: center;
+}
+.ErrorNotification img {
+  height: 13px;
+  padding-right: 0.25rem;
+}
+.ErrorNotification span {
+  font-size: 11px;
+  line-height: 16px;
 }
 @media (min-width: 768px) {
-  .Button {
-    font-size: 14px;
-    line-height: 22px;
+  .ErrorNotification span {
+    font-size: 12px;
+    line-height: 18px;
   }
 }
 
-.red {
-  background-color: #c94515;
+.error {
   border: 1px solid #c94515;
 }
 
-.white {
-  background-color: #ffffff;
-  border: 1px solid #bdc5d5;
-  color: #5c667e;
-}/*# sourceMappingURL=Button.css.map */
+.hidden {
+  visibility: hidden;
+}/*# sourceMappingURL=TextInput.css.map */

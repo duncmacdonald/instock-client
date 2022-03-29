@@ -1,0 +1,108 @@
+html {
+  font-family: "TitilliumWeb", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f8f9;
+}
+
+.headerSection {
+  background-color: #232940;
+  color: #ffffff;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.topClump {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  align-items: center;
+}
+.topClump .logoImg {
+  height: 45px;
+  margin: 16px;
+}
+
+.directoryContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.directoryLink {
+  font-size: 15px;
+  line-height: 26px;
+  text-align: center;
+  padding: 8px 16px;
+  margin: 0;
+  width: 35%;
+  font-family: "TitilliumWeb";
+  font-weight: 600;
+}
+
+.directoryLink:hover {
+  background-color: #13182c;
+  border-radius: 50px;
+}
+
+.details {
+  height: 300px;
+}
+
+.warehouseDetails,
+.contactDetails {
+  font-family: "TitilliumWeb";
+  margin: 0 16px;
+}
+
+.whDetailsForm,
+.cDForm {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+label {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+input {
+  border: #bdc5d5 1px solid;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+hr {
+  color: #bdc5d5;
+}
+
+.TableTitles > *, .TableRow-Tablet > * {
+  width: 16.6%;
+}
+
+.wide {
+  min-width: 160px;
+}
+
+.narrow {
+  max-width: 75px;
+  text-align: end;
+  justify-content: end;
+}
+.narrow > img {
+  padding-left: 0.5rem;
+}
+
+.TableRow-Tablet:last-of-type {
+  border-bottom: none;
+}/*# sourceMappingURL=InventoryTable.css.map */
