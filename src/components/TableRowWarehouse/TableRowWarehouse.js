@@ -33,16 +33,21 @@ export default function TableRowWarehouse({ warehouse, warehouseSelector }) {
           </div>
         </div>
 
-        <img src={trash} alt="delete" className="TableRow__button" onClick={() => {
-          console.log(`Delete ${warehouse.id}`);
-          warehouseSelector(warehouse.id);
-        }}></img>
-        
+        <img
+          src={trash}
+          onClick={() => warehouseSelector(warehouse, true)}
+          alt="delete"
+          className="TableRow__button"
+        ></img>
+
         <img src={pencil} alt="edit" className="TableRow__button"></img>
       </div>
 
       <div className="TableRow-Tablet">
-        <ArrowLink text={warehouse.name} action={() => console.log(`Link to ${warehouse.id}`)} />
+        <ArrowLink
+          text={warehouse.name}
+          action={() => console.log(`Link to ${warehouse.id}`)}
+        />
         <span>
           {warehouse.address}, {warehouse.city}, {warehouse.country}
         </span>
@@ -52,11 +57,18 @@ export default function TableRowWarehouse({ warehouse, warehouseSelector }) {
           <span>{warehouse.contact.email}</span>
         </div>
         <div className="narrow">
-          <img src={trash} alt="delete" className="TableRow__button" onClick={() => {
-            console.log(`Delete ${warehouse.id}`);
-            warehouseSelector(warehouse.id);
-            }}></img>
-          <img src={pencil} alt="edit" className="TableRow__button" onClick={() => console.log(`Edit ${warehouse.id}`)}></img>
+          <img
+            src={trash}
+            alt="delete"
+            className="TableRow__button"
+            onClick={() => warehouseSelector(warehouse, true)}
+          ></img>
+          <img
+            src={pencil}
+            alt="edit"
+            className="TableRow__button"
+            onClick={() => console.log(`Edit ${warehouse.id}`)}
+          ></img>
         </div>
       </div>
     </>

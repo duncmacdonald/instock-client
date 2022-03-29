@@ -20,9 +20,9 @@ export default class Warehouses extends React.Component {
     this.setState({ deleteModal: false });
   };
 
-  currentWarehouseSelection = (warehouse) => {
+  currentWarehouseSelection = (warehouse, value) => {
     this.setState({
-      deleteModal: true,
+      deleteModal: value,
       selectedWarehouse: warehouse,
     });
   };
@@ -31,7 +31,7 @@ export default class Warehouses extends React.Component {
     axios
       .delete(URL + warehouseID)
       .then((success) => {
-        console.log(success);
+        this.updateTable();
       })
       .catch((error) => console.log(error));
   };
@@ -47,38 +47,41 @@ export default class Warehouses extends React.Component {
     this.updateTable();
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <>
-        <section className='Page'>
-            <section className="TitleBlock">
-               <h1>Warehouses</h1>
-               <Search />
-               <Link to="/AddWarehouse"><Button color="blue" text="+ Add New Warehouse"/></Link>
-             </section>        
-         
-         <WarehousesTable
-           titles={[
-             "Warehouse",
-             "Address",
-             "Contact Name",
-             "Contact Information",
-             "Actions",
-           ]}
-           contentArray={this.state.data}
-           warehouseSelector={this.currentWarehouseSelection}
-         />
-         </section>
-         {this.state.deleteModal ? (
-           <DeleteWarehouse
-             clicker={this.modalClicker}
-             selectedWarehouse={this.state.selectedWarehouse}
-             deleteCall={this.deleteCall}
-           />
-         ) : (
-           ""
-         )}
-    </>
+        <section className="Page">
+          <section className="TitleBlock">
+            <h1>Warehouses</h1>
+            <Search />
+            <Link to="/AddWarehouse" ><Button
+              color="blue"
+              text="+ Add New Warehouse"
+            /></Link>
+          </section>
+
+          <WarehousesTable
+            titles={[
+              "Warehouse",
+              "Address",
+              "Contact Name",
+              "Contact Information",
+              "Actions",
+            ]}
+            contentArray={this.state.data}
+            warehouseSelector={this.currentWarehouseSelection}
+          />
+        </section>
+        {this.state.deleteModal ? (
+          <DeleteWarehouse
+            clicker={this.currentWarehouseSelection}
+            selectedWarehouse={this.state.selectedWarehouse}
+            deleteCall={this.deleteCall}
+          />
+        ) : (
+          ""
+        )}
+      </>
     );
   }
 }
