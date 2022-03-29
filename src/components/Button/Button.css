@@ -164,6 +164,9 @@ hr {
   font-size: 13px;
   line-height: 20px;
 }
+.Button:hover, .Button:active {
+  background-color: #232940;
+}
 @media (min-width: 768px) {
   .Button {
     font-size: 14px;
@@ -180,4 +183,9 @@ hr {
   background-color: #ffffff;
   border: 1px solid #bdc5d5;
   color: #5c667e;
+}
+.white:hover, .white:active {
+  background-color: #ffffff;
+  color: #2e66e5;
+  border-color: #2e66e5;
 }/*# sourceMappingURL=Button.css.map */
