@@ -95,6 +95,9 @@ hr {
   justify-content: space-between;
   padding: 0 1rem;
 }
+.Search:focus-within {
+  border-color: #2e66e5;
+}
 .Search input {
   border: 0px;
   outline: none;
