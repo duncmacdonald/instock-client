@@ -32,6 +32,13 @@
         }
     }
 
+    .Button{
+        @include tablet{
+            width: 168px;
+        }
+        
+    }
+
     @include tablet {
         flex-direction: row;
         justify-content: flex-end;

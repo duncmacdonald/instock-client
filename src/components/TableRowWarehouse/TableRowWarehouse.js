@@ -4,7 +4,7 @@ import pencil from "../../assets/Icons/edit-24px.svg";
 import "./TableRowWarehouse.css";
 import "../../index.css";
 
-export default function TableRowWarehouse({ warehouse }) {
+export default function TableRowWarehouse({ warehouse, warehouseSelector }) {
   return (
     <>
       <div className="TableRow-Mobile">
@@ -33,7 +33,10 @@ export default function TableRowWarehouse({ warehouse }) {
           </div>
         </div>
 
-        <img src={trash} alt="delete" className="TableRow__button"></img>
+        <img src={trash} alt="delete" className="TableRow__button" onClick={() => {
+          console.log(`Delete ${warehouse.id}`);
+          warehouseSelector(warehouse.id);
+        }}></img>
         
         <img src={pencil} alt="edit" className="TableRow__button"></img>
       </div>
@@ -49,7 +52,10 @@ export default function TableRowWarehouse({ warehouse }) {
           <span>{warehouse.contact.email}</span>
         </div>
         <div className="narrow">
-          <img src={trash} alt="delete" className="TableRow__button" onClick={() => console.log(`Delete ${warehouse.id}`)}></img>
+          <img src={trash} alt="delete" className="TableRow__button" onClick={() => {
+            console.log(`Delete ${warehouse.id}`);
+            warehouseSelector(warehouse.id);
+            }}></img>
           <img src={pencil} alt="edit" className="TableRow__button" onClick={() => console.log(`Edit ${warehouse.id}`)}></img>
         </div>
       </div>

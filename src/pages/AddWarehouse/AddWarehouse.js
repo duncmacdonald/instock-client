@@ -117,7 +117,7 @@ export default class AddWarehouse extends React.Component {
     return (
       <section className="Page-AddWarehouse">
         <section className="TitleBlock">
-          <img src={back} alt={back}></img>
+        <Link to='/'><img src={back} alt="back"></img></Link>
           <h1>Add New Warehouse</h1>
         </section>
         <form className="WarehouseData">
@@ -192,7 +192,7 @@ export default class AddWarehouse extends React.Component {
             />
           </section>
           <div className="ButtonFlex">
-            <Button color="white" text="Cancel" />
+            <Link to='/'><Button color="white" text="Cancel" /></Link>
             <Button
               color="blue"
               text="+ Add Warehouse"

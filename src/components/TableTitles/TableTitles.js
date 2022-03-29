@@ -3,7 +3,7 @@ import "./TableTitles.css";
 
 export default function TableTitles({ titles }) {
   let columns = [...titles];
-  console.log(columns);
+
   //Row Headings
   const titlesJSX = columns.map((title, i) => {
     if (i + 1 < columns.length) {

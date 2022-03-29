@@ -85,14 +85,18 @@
     @include tablet{
         justify-content: flex-end;
     }
-    .Button{
+    & > *{
         width: 50%;
 
         @include tablet {
             max-width: 138px;
-            &:first-of-type {
+            &:first-child {
                 max-width: 75px;
             }
         }
     }
+}
+
+a {
+    text-decoration: none;
 }

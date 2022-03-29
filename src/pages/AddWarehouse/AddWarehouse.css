@@ -223,14 +223,18 @@ hr {
     justify-content: flex-end;
   }
 }
-.ButtonFlex .Button {
+.ButtonFlex > * {
   width: 50%;
 }
 @media (min-width: 768px) {
-  .ButtonFlex .Button {
+  .ButtonFlex > * {
     max-width: 138px;
   }
-  .ButtonFlex .Button:first-of-type {
+  .ButtonFlex > *:first-child {
     max-width: 75px;
   }
+}
+
+a {
+  text-decoration: none;
 }/*# sourceMappingURL=AddWarehouse.css.map */
