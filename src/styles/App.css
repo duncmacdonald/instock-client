@@ -9,20 +9,35 @@ html {
 .headerSection {
   background-color: #232940;
   color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column wrap;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 200px;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .topClump {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
   width: 100%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .topClump .logoImg {
   height: 45px;
@@ -30,9 +45,16 @@ html {
 }
 
 .directoryContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
 }
 
@@ -73,8 +95,13 @@ html {
 
 .whDetailsForm,
 .cDForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
 }
 
 label {
@@ -86,7 +113,8 @@ label {
 input {
   border: #bdc5d5 1px solid;
   border-radius: 20px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 8px;
   margin-bottom: 16px;
 }
@@ -147,4 +175,133 @@ hr {
   color: #5c667e;
   font-weight: 400;
   font-size: 11px;
+}
+
+.addNewInventory {
+  background-color: #ffffff;
+  font-family: "TitilliumWeb", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  width: 90%;
+  margin: 16px auto;
+  height: 750px;
+}
+.addNewInventory .titleBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #bdc5d5;
+}
+.addNewInventory .titleBlock .backArrow {
+  height: 30px;
+}
+.addNewInventory .titleBlock .invTitle {
+  display: inline-block;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 600;
+}
+.addNewInventory .formSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  height: 650px;
+}
+.addNewInventory .formSection .inventoryDetailsSection .invDetailsForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  border-bottom: 1px solid #bdc5d5;
+}
+.addNewInventory .formSection .inventoryDetailsSection .invDetailsForm h3 {
+  font-size: 28px;
+  line-height: 36px;
+  padding: 16px 0;
+}
+.addNewInventory .formSection .inventoryDetailsSection .invDetailsForm label {
+  font-size: 20px;
+  line-height: 28px;
+}
+.addNewInventory .formSection .inventoryDetailsSection .invDetailsForm .categorySelection {
+  border: 1px solid #bdc5d5;
+  border-radius: 20px;
+  height: 32px;
+  margin-bottom: 16px;
+}
+.addNewInventory .formSection .inventoryDetailsSection .invDetailsForm textarea {
+  border: 1px solid #bdc5d5;
+  border-radius: 20px;
+  height: 100px;
+  font-family: "TitilliumWeb", sans-serif;
+  resize: none;
+}
+.addNewInventory .formSection .inventoryDetailsSection .availabilityForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+.addNewInventory .formSection .inventoryDetailsSection .availabilityForm h3 {
+  font-size: 28px;
+  line-height: 36px;
+  padding: 16px 0;
+}
+.addNewInventory .formSection .inventoryDetailsSection .availabilityForm label {
+  font-size: 20px;
+  line-height: 28px;
+}
+.addNewInventory .formSection .inventoryDetailsSection .availabilityForm .radio {
+  padding-right: 16px;
+}
+.addNewInventory .formSection .inventoryDetailsSection .availabilityForm .categorySelection {
+  border: 1px solid #bdc5d5;
+  border-radius: 20px;
+  height: 32px;
+  margin-bottom: 16px;
+}
+.addNewInventory .formSection .inventoryDetailsSection .buttonHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.addNewInventory .formSection .inventoryDetailsSection .buttonHolder button {
+  width: 25%;
+  border-radius: 20px;
+  margin: 16px;
+  font-size: 13px;
+}
+.addNewInventory .formSection .inventoryDetailsSection .cancelButton {
+  border: 1px solid #bdc5d5;
+  color: #5c667e;
+}
+.addNewInventory .formSection .inventoryDetailsSection .addItemButton {
+  border: 1px solid #2e66e5;
+  background-color: #2e66e5;
+  color: #ffffff;
 }/*# sourceMappingURL=App.css.map */
