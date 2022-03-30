@@ -6,6 +6,7 @@ import Details from "./components/DeleteWarehouse/warehouseComponents/Details";
 import Warehouses from "./pages/Warehouses/Warehouses";
 import AddWarehouse from "./pages/AddWarehouse/AddWarehouse";
 import Inventory from "./pages/Inventory/Inventory";
+import InventoryDetails from "./pages/InventoryDetails/InventoryDetails";
 export default class App extends Component {
   render() {
     return (
@@ -15,7 +16,17 @@ export default class App extends Component {
           <Route exact path="/" component={Warehouses} />
           <Route path="/details" component={Details} />
           <Route path="/AddWarehouse" component={AddWarehouse} />
-          <Route path="/inventory" component={Inventory} />
+          <Route exact path="/inventory" component={Inventory} />
+          <Route
+            path="/inventory/:inventoryid"
+            render={(RouterProps) => {
+              return (
+                <InventoryDetails
+                  routerprops={RouterProps.match.params.inventoryid}
+                />
+              );
+            }}
+          />
           {/* <Header />
             <Details /> */}
           {/* </div> */}
