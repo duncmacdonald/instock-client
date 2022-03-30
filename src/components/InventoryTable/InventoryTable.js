@@ -1,5 +1,6 @@
 import TableTitles from "../TableTitles/TableTitles";
 import TableRowInventory from "../TableRowInventory/TableRowInventory";
+import { Link } from "react-router-dom";
 import "./InventoryTable.css";
 import "../../index.css";
 
