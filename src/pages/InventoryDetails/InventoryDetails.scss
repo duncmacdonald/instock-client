@@ -30,6 +30,9 @@ a {
   box-shadow: 0px 2px 5px 0px rgba(19, 24, 44, 0.1);
   position: relative;
   top: -60px;
+  @include desktop() {
+    margin: 0 130px;
+  }
   &__header-main {
     display: flex;
     justify-content: space-between;
@@ -39,6 +42,10 @@ a {
     font-weight: 600;
     font-size: 28px;
     line-height: 36px;
+    @include tablet() {
+      font-size: 32px;
+      line-height: 40px;
+    }
   }
   &__left-section {
     margin: 32px 28px 24px 28px;
@@ -85,10 +92,18 @@ a {
     font-weight: 600;
     font-size: 11px;
     line-height: 16px;
+    @include tablet() {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
   &__item-description {
     font-size: 13px;
     line-height: 20px;
+    @include tablet() {
+      font-size: 14px;
+      line-height: 22px;
+    }
   }
   &__category-main {
     margin: 16px 24px;
@@ -101,10 +116,18 @@ a {
     font-weight: 600;
     font-size: 11px;
     line-height: 16px;
+    @include tablet() {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
   &__category-description {
     font-size: 13px;
     line-height: 20px;
+    @include tablet() {
+      font-size: 14px;
+      line-height: 22px;
+    }
   }
   &__status-quantity-container {
     margin: 16px 24px;
@@ -120,6 +143,10 @@ a {
     font-weight: 600;
     font-size: 11px;
     line-height: 16px;
+    @include tablet() {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
   &__status-container {
     margin-right: 25%;
@@ -130,10 +157,18 @@ a {
     font-weight: 600;
     font-size: 11px;
     line-height: 16px;
+    @include tablet() {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
   &__quantity-description {
     font-size: 13px;
     line-height: 20px;
+    @include tablet() {
+      font-size: 14px;
+      line-height: 22px;
+    }
   }
 
   &__warehouse-info-container {
@@ -145,9 +180,17 @@ a {
     font-weight: 600;
     font-size: 11px;
     line-height: 16px;
+    @include tablet() {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
   &__warehouse-description {
     font-size: 13px;
     line-height: 20px;
+    @include tablet() {
+      font-size: 14px;
+      line-height: 22px;
+    }
   }
 }
