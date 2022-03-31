@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import {Link} from 'react-router-dom'
 import Button from "../../components/Button/Button";
 import WarehousesTable from "../../components/WarehousesTable/WarehousesTable";
 import Search from "../../components/Search/Search";
