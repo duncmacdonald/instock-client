@@ -1,0 +1,38 @@
+@import "../../styles/App.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-lower) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $tablet-lower) {
+    @content;
+  }
+}
+
+.inventory-details-main {
+  margin: 0 16px;
+  background-color: white;
+  box-shadow: 0px 2px 5px 0px rgba(19, 24, 44, 0.1);
+  &__header-main {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px $Cloud;
+  }
+  &__left-section {
+    margin: 32px 28px 24px 28px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__back-icon {
+    margin-right: 12px;
+  }
+}

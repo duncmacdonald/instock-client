@@ -13,7 +13,7 @@ export default function InventoryTable({
   //Rows
   const rowsJSX = contentArray.map((row) => {
     return (
-      <Link to={row.id}>
+      <Link to={"/inventory/" + row.id}>
         <TableRowInventory
           key={row.id}
           warehouseSelector={warehouseSelector}
