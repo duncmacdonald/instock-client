@@ -42,47 +42,53 @@ export class InventoryDetails extends Component {
           </div>
           <img src={edit} />
         </div>
-        <div className="inventory-details-main__item-description-main">
-          <h4 className="inventory-details-main__item-description-heading">
-            ITEM DESCRIPTION:
-          </h4>
-          <p2 className="inventory-details-main__item-description">
-            {this.state.data.description}
-          </p2>
-        </div>
-        <div className="inventory-details-main__category-main">
-          <h4 className="inventory-details-main__category-description-heading">
-            CATEGORY:
-          </h4>
-          <p2 className="inventory-details-main__category-description">
-            {this.state.data.category}
-          </p2>
-        </div>
-        <div className="inventory-details-main__status-quantity-container">
-          <div className="inventory-details-main__status-container">
-            <h4 className="inventory-details-main__status-description-heading">
-              STATUS:
-            </h4>
-            <div className="inventory-details-main__status-description">
-              <Status state={this.state.data.status} />
+        <div className="inventory-details-main__tablet-main">
+          <div className="inventory-details-main__tablet-left">
+            <div className="inventory-details-main__item-description-main">
+              <h4 className="inventory-details-main__item-description-heading">
+                ITEM DESCRIPTION:
+              </h4>
+              <p2 className="inventory-details-main__item-description">
+                {this.state.data.description}
+              </p2>
+            </div>
+            <div className="inventory-details-main__category-main">
+              <h4 className="inventory-details-main__category-description-heading">
+                CATEGORY:
+              </h4>
+              <p2 className="inventory-details-main__category-description">
+                {this.state.data.category}
+              </p2>
             </div>
           </div>
-          <div className="inventory-details-main__quantity-container">
-            <h4 className="inventory-details-main__quantity-description-heading">
-              QUANTITY:
-            </h4>
-            <p2 className="inventory-details-main__quantity-description">
-              {this.state.data.quantity}
-            </p2>
+          <div className="inventory-details-main__tablet-right">
+            <div className="inventory-details-main__status-quantity-container">
+              <div className="inventory-details-main__status-container">
+                <h4 className="inventory-details-main__status-description-heading">
+                  STATUS:
+                </h4>
+                <div className="inventory-details-main__status-description">
+                  <Status state={this.state.data.status} />
+                </div>
+              </div>
+              <div className="inventory-details-main__quantity-container">
+                <h4 className="inventory-details-main__quantity-description-heading">
+                  QUANTITY:
+                </h4>
+                <p2 className="inventory-details-main__quantity-description">
+                  {this.state.data.quantity}
+                </p2>
+              </div>
+            </div>
+            <div className="inventory-details-main__warehouse-info-container">
+              <h4 className="inventory-details-main__warehouse-description-heading">
+                WAREHOUSE:
+              </h4>
+              <p2 className="inventory-details-main__warehouse-description">
+                {this.state.data.warehouseName}
+              </p2>
+            </div>
           </div>
-        </div>
-        <div className="inventory-details-main__warehouse-info-container">
-          <h4 className="inventory-details-main__warehouse-description-heading">
-            WAREHOUSE:
-          </h4>
-          <p2 className="inventory-details-main__warehouse-description">
-            {this.state.data.warehouseName}
-          </p2>
         </div>
       </div>
     );
