@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import {Link} from 'react-router-dom'
 import Button from "../../components/Button/Button";
 import WarehousesTable from "../../components/WarehousesTable/WarehousesTable";
 import Search from "../../components/Search/Search";
@@ -147,11 +148,11 @@ export default class Warehouses extends React.Component {
           <section className="TitleBlock">
             <h1>Warehouses</h1>
             <Search />
-            <Button
+            <Link to='/addnewinventory'><Button
               color="blue"
               text="+ Add New Warehouse"
               action={() => console.log("New Warehouse")}
-            />
+            /></Link>
           </section>
 
           {/* <WarehousesTable 
