@@ -1,9 +1,11 @@
 @import "../../styles/App.scss";
+@import "../../styles/partials/breakpoints.scss";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "TitilliumWeb";
 }
 
 @mixin tablet {
@@ -18,14 +20,25 @@
   }
 }
 
+a {
+  display: flex;
+}
+
 .inventory-details-main {
   margin: 0 16px;
   background-color: white;
   box-shadow: 0px 2px 5px 0px rgba(19, 24, 44, 0.1);
+  position: relative;
+  top: -60px;
   &__header-main {
     display: flex;
     justify-content: space-between;
     border-bottom: solid 1px $Cloud;
+  }
+  &__header-name {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
   }
   &__left-section {
     margin: 32px 28px 24px 28px;
@@ -34,5 +47,73 @@
   }
   &__back-icon {
     margin-right: 12px;
+    min-height: 16px;
+    min-width: 16px;
+  }
+  &__item-description-main {
+    margin: 16px 24px;
+  }
+
+  &__item-description-heading {
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+  }
+  &__item-description {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  &__category-main {
+    margin: 16px 24px;
+  }
+  &__category-description-heading {
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+  }
+  &__category-description {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  &__status-quantity-container {
+    margin: 16px 24px;
+    display: flex;
+  }
+  &__status-description-heading {
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+  }
+  &__status-container {
+    margin-right: 25%;
+  }
+
+  &__quantity-description-heading {
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+  }
+  &__quantity-description {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  &__warehouse-info-container {
+    margin: 0 24px;
+    padding-bottom: 16px;
+  }
+  &__warehouse-description-heading {
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+  }
+  &__warehouse-description {
+    font-size: 13px;
+    line-height: 20px;
   }
 }

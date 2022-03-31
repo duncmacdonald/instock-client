@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import Status from "../../components/Status/Status";
 import backicon from "../../assets/Icons/arrow_back-24px.svg";
 import edit from "../../assets/Icons/edit-24px.svg";
@@ -29,7 +30,12 @@ export class InventoryDetails extends Component {
       <div className="inventory-details-main">
         <div className="inventory-details-main__header-main">
           <div className="inventory-details-main__left-section">
-            <img className="inventory-details-main__back-icon" src={backicon} />
+            <Link to="/inventory">
+              <img
+                className="inventory-details-main__back-icon"
+                src={backicon}
+              />
+            </Link>
             <h1 className="inventory-details-main__header-name">
               {this.state.data.itemName}
             </h1>
@@ -48,7 +54,7 @@ export class InventoryDetails extends Component {
           <h4 className="inventory-details-main__category-description-heading">
             CATEGORY:
           </h4>
-          <p2 className="inventory-details-main__item-description">
+          <p2 className="inventory-details-main__category-description">
             {this.state.data.category}
           </p2>
         </div>
