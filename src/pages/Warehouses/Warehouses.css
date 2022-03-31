@@ -406,6 +406,11 @@ hr {
   }
 }
 @media (min-width: 768px) {
+  .TitleBlock .Button {
+    width: 168px;
+  }
+}
+@media (min-width: 768px) {
   .TitleBlock {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

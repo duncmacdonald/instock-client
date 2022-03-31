@@ -152,6 +152,9 @@ hr {
   background-color: #ffffff;
   color: #13182c;
   border: solid 1px #bdc5d5;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-bottom: 16px;
 }
 
 .instockFooter {

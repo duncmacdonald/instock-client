@@ -1,16 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import {Link} from 'react-router-dom'
 import Button from "../../components/Button/Button";
-import WarehousesTable from "../../components/WarehousesTable/WarehousesTable";
+import InventoryTable from "../../components/InventoryTable/InventoryTable";
 import Search from "../../components/Search/Search";
-import "./Warehouses.css";
+import "./Inventory.css";
 import "../../index.css";
 import DeleteWarehouse from "../../components/DeleteWarehouse/warehouseComponents/DeleteWarehouse";
-const URL = "http://localhost:8080/warehouse/";
+const URL = "http://localhost:8080/inventory/";
 
-export default class Warehouses extends React.Component {
+export default class Inventory extends React.Component {
   state = {
     data: [],
     deleteModal: false,
@@ -53,20 +52,21 @@ export default class Warehouses extends React.Component {
       <>
         <section className="Page">
           <section className="TitleBlock">
-            <h1>Warehouses</h1>
+            <h1>Inventory</h1>
             <Search />
-            <Link to="/AddWarehouse" ><Button
+            <Link to="/AddItem" ><Button
               color="blue"
-              text="+ Add New Warehouse"
+              text="+ Add New Item"
             /></Link>
           </section>
 
-          <WarehousesTable
+          <InventoryTable
             titles={[
+              "Inventory Item",
+              "Category",
+              "Status",
+              "QTY",
               "Warehouse",
-              "Address",
-              "Contact Name",
-              "Contact Information",
               "Actions",
             ]}
             contentArray={this.state.data}

@@ -9,35 +9,20 @@ html {
 .headerSection {
   background-color: #232940;
   color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: column wrap;
+  align-items: center;
   width: 100%;
   height: 200px;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .topClump {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+  flex-flow: column wrap;
   width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .topClump .logoImg {
   height: 45px;
@@ -45,16 +30,9 @@ html {
 }
 
 .directoryContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-flow: row wrap;
+  justify-content: center;
   width: 100%;
 }
 
@@ -75,12 +53,7 @@ html {
 }
 
 .details {
-  height: 700px;
-  background-color: #ffffff;
-  width: 80%;
-  margin: 0 auto;
-  -webkit-box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
-          box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  height: 300px;
 }
 
 .warehouseDetails,
@@ -89,19 +62,10 @@ html {
   margin: 0 16px;
 }
 
-.warehouseDetails {
-  border-bottom: solid 1px #bdc5d5;
-}
-
 .whDetailsForm,
 .cDForm {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+  flex-flow: column wrap;
 }
 
 label {
@@ -113,8 +77,7 @@ label {
 input {
   border: #bdc5d5 1px solid;
   border-radius: 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 8px;
   margin-bottom: 16px;
 }
@@ -185,43 +148,52 @@ hr {
     padding: 8px 16px;
   }
 }
-.Button {
-  font-family: "TitilliumWeb";
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  box-sizing: border-box;
-  background-color: #2e66e5;
-  border: 1px solid #2e66e5;
-  color: white;
-  height: 40px;
+.TextInput label {
+  color: #13182c;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 0.25rem;
+}
+.TextInput input {
+  border: 1px solid #bdc5d5;
   border-radius: 20px;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  margin-bottom: 0.25rem;
+  width: 100%;
+}
+.TextInput input:focus {
+  border: 1px solid #2e66e5;
+  outline: none;
+}
+
+.ErrorNotification {
+  color: #c94515;
+  display: flex;
+  align-items: center;
+}
+.ErrorNotification img {
+  height: 13px;
+  padding-right: 0.25rem;
+}
+.ErrorNotification span {
+  font-size: 11px;
+  line-height: 16px;
 }
 @media (min-width: 768px) {
-  .Button {
-    font-size: 14px;
-    line-height: 22px;
+  .ErrorNotification span {
+    font-size: 12px;
+    line-height: 18px;
   }
 }
 
-.red {
-  background-color: #c94515;
+.error {
   border: 1px solid #c94515;
 }
 
-.white {
-  background-color: #ffffff;
-  border: 1px solid #bdc5d5;
-  color: #5c667e;
-}/*# sourceMappingURL=Button.css.map */
+.hidden {
+  visibility: hidden;
+}/*# sourceMappingURL=TextInput.css.map */

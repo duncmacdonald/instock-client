@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-<<<<<<< HEAD:src/components/Component/warehouseComponents/DeleteWarehouse.js
-=======
-import "./DeleteWarehouse.scss";
->>>>>>> 3a87e8b91be85607bc5afef00f9e301818d26113:src/components/DeleteWarehouse/DeleteWarehouse.js
+import "./DeleteWarehouse.css";
+import "../../index.css";
 
 export class DeleteWarehouse extends Component {
   render() {

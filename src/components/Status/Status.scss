@@ -1,0 +1,24 @@
+@import  "../../styles/app.scss";
+
+.Item{
+    border-radius: 50%;
+    height: 26px;
+    border-radius: 20px;
+    padding-top: 0.25rem;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: center;
+}
+
+.greenItem{
+    background-color: rgba($color: $Green, $alpha: 0.07);
+    color: $Green;
+    max-width: 65px;
+}
+
+.redItem{
+    background-color: rgba($color: $Red, $alpha: 0.07);
+    color: $Red;
+    max-width: 92px;
+}
