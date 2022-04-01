@@ -8,8 +8,11 @@ export default class Details extends Component {
     return (
       <section className="details">
         <WareHouseDetails />
-        <hr />
         <ContactDetails />
+        <div className="submissionSection">
+          <button className="saveButton">Submit</button>
+          <button className="cancelButton">Cancel</button>
+        </div>
       </section>
     );
   }

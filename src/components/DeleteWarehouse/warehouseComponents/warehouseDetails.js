@@ -2,9 +2,9 @@ import React from "react";
 
 export default function WareHouseDetails() {
   return (
-    <section className="warehouseDetails">
+    <form className="warehouseDetails">
       <h3>Warehouse Details</h3>
-      <form className="whDetailsForm">
+      <div className="whDetailsForm">
         <label>Warehouse Name</label>
         <input type="text" placeholder="Enter A Name" />
         <label>Street Address</label>
@@ -13,7 +13,7 @@ export default function WareHouseDetails() {
         <input type="text" placeholder="Enter a City" />
         <label>Country</label>
         <input type="text" placeholder="Enter a Country" />
-      </form>
-    </section>
+      </div>
+    </form>
   );
 }
