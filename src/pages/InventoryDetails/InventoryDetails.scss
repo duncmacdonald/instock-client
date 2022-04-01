@@ -30,6 +30,11 @@ a {
   box-shadow: 0px 2px 5px 0px rgba(19, 24, 44, 0.1);
   position: relative;
   top: -60px;
+  border-radius: 3px;
+
+  @include tablet() {
+    top: -100px;
+  }
 
   @include desktop() {
     margin: 0 130px;
