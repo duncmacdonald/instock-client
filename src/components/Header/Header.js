@@ -9,7 +9,7 @@ export default function Header() {
       <div className="topClump">
         <img className="logoImg" src={logo} alt="logo" />
         <div className="directoryContainer">
-          <h3 className="directoryLink warehouses">Warehouses</h3>
+          <Link to ='/'><h3 className="directoryLink warehouses">Warehouses</h3></Link>
           <Link to="/inventory"><h3 className="directoryLink inventory">Inventory</h3></Link>
         </div>
       </div>

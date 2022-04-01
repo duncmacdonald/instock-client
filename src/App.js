@@ -5,7 +5,7 @@ import Header from './components/Header/Header.js'
 import Details from './components/DeleteWarehouse/warehouseComponents/Details.js'
 import Footer from "./components/Footer/Footer";
 import Warehouses from "./pages/Warehouses/Warehouses";
-import AddNewInventory from "./components/AddInventoryItem/AddNewInventory";
+import AddNewInventory from "./pages/AddInventoryItem/AddNewInventory";
 export default class App extends Component {
   render() {
     return (

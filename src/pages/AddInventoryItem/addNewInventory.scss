@@ -158,10 +158,10 @@ html {
             }
           
             .categorySelection {
-                border: 1px solid $Cloud; border-radius: 20px; height: 32px;
+                border: 1px solid $Cloud; border-radius: 20px; height: 40px; padding: 0 1rem; align-items: center;
                 margin-bottom: 16px;
             }
-            textarea {
+            .itemDetailstextarea {
                 border: 1px solid $Cloud; border-radius: 20px; height: 100px;
                 font-family: 'TitilliumWeb', sans-serif; resize: none;
             }
