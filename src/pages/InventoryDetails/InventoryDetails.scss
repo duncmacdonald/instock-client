@@ -15,7 +15,7 @@
 }
 
 @mixin desktop {
-  @media (min-width: $tablet-lower) {
+  @media (min-width: $tablet-higher) {
     @content;
   }
 }
@@ -30,12 +30,14 @@ a {
   box-shadow: 0px 2px 5px 0px rgba(19, 24, 44, 0.1);
   position: relative;
   top: -60px;
+
   @include desktop() {
     margin: 0 130px;
   }
   &__header-main {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-bottom: solid 1px $Cloud;
   }
   &__header-name {
@@ -56,6 +58,38 @@ a {
     margin-right: 12px;
     min-height: 16px;
     min-width: 16px;
+  }
+  &__image-main {
+    background-color: $Instock-Indigo;
+    border-radius: 20px;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    margin: 24px;
+
+    align-items: center;
+
+    @include tablet() {
+      width: 81px;
+      height: 38px;
+    }
+  }
+
+  &__edit-tablet {
+    display: none;
+    @include tablet() {
+      display: flex;
+      color: white;
+      font-size: 14px;
+      line-height: 22px;
+      padding-left: 10px;
+    }
+  }
+
+  &__image {
+    height: 15px;
+    width: 15px;
   }
 
   &__tablet-main {

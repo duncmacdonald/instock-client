@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Status from "../../components/Status/Status";
 import backicon from "../../assets/Icons/arrow_back-24px.svg";
-import edit from "../../assets/Icons/edit-24px.svg";
+import edit from "../../assets/Icons/edit-24px-white.svg";
 import "../../pages/InventoryDetails/InventoryDetails.css";
 const URL = "http://localhost:8080/inventory/";
 export class InventoryDetails extends Component {
@@ -40,7 +40,12 @@ export class InventoryDetails extends Component {
               {this.state.data.itemName}
             </h1>
           </div>
-          <img src={edit} />
+          <Link to="/inventory">
+            <div className="inventory-details-main__image-main">
+              <img className="inventory-details-main__image" src={edit} />
+              <p2 className="inventory-details-main__edit-tablet">Edit</p2>
+            </div>
+          </Link>
         </div>
         <div className="inventory-details-main__tablet-main">
           <div className="inventory-details-main__tablet-left">

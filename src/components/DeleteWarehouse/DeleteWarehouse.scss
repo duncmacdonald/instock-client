@@ -13,7 +13,7 @@
 }
 
 @mixin desktop {
-  @media (min-width: $tablet-lower) {
+  @media (min-width: $tablet-higher) {
     @content;
   }
 }
