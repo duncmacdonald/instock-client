@@ -154,7 +154,7 @@ hr {
 }
 @media (min-width: 768px) {
   .delete-warehouse-tablet {
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     top: 0;
