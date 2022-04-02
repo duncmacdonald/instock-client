@@ -6,7 +6,7 @@ import Status from "../Status/Status";
 import "./TableRowInventory.css";
 import "../../index.css";
 
-export default function TableRowInventory({ warehouse, warehouseSelector }) {
+export default function TableRowInventory({ warehouse, itemSelector }) {
   return (
     <>
       <div className="TableRow-Mobile">
@@ -45,7 +45,7 @@ export default function TableRowInventory({ warehouse, warehouseSelector }) {
 
         <img
           src={trash}
-          onClick={() => warehouseSelector(warehouse, true)}
+          onClick={() => itemSelector(warehouse, true)}
           alt="delete"
           className="TableRow__button"
         ></img>
@@ -54,10 +54,12 @@ export default function TableRowInventory({ warehouse, warehouseSelector }) {
       </div>
 
       <div className="TableRow-Tablet wide">
-        <ArrowLink
-          text={warehouse.itemName}
-          action={() => console.log(`Link to ${warehouse.id}`)}
-        />
+        <Link to={"/inventory/" + warehouse.id}>
+          <ArrowLink
+            text={warehouse.itemName}
+            action={() => console.log(`Link to ${warehouse.id}`)}
+          />
+        </Link>
         <span>{warehouse.category}</span>
 
         <Status state={warehouse.status} />
@@ -69,7 +71,7 @@ export default function TableRowInventory({ warehouse, warehouseSelector }) {
             src={trash}
             alt="delete"
             className="TableRow__button"
-            onClick={() => warehouseSelector(warehouse, true)}
+            onClick={() => itemSelector(warehouse, true)}
           ></img>
           <img
             src={pencil}

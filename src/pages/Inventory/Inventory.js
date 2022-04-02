@@ -13,23 +13,23 @@ export default class Inventory extends React.Component {
   state = {
     data: [],
     deleteModal: false,
-    selectedWarehouse: "",
+    selectedItem: "",
   };
 
   modalClicker = () => {
     this.setState({ deleteModal: false });
   };
 
-  currentWarehouseSelection = (warehouse, value) => {
+  currentItemSelection = (item, value) => {
     this.setState({
       deleteModal: value,
-      selectedWarehouse: warehouse,
+      selectedItem: item,
     });
   };
 
-  deleteCall = (warehouseID) => {
+  deleteCall = (itemID) => {
     axios
-      .delete(URL + warehouseID)
+      .delete(URL + itemID)
       .then((success) => {
         this.updateTable();
       })
@@ -69,13 +69,13 @@ export default class Inventory extends React.Component {
               "Actions",
             ]}
             contentArray={this.state.data}
-            warehouseSelector={this.currentWarehouseSelection}
+            itemSelector={this.currentItemSelection}
           />
         </section>
         {this.state.deleteModal ? (
           <DeleteInventory
-            clicker={this.currentWarehouseSelection}
-            selectedWarehouse={this.state.selectedWarehouse}
+            clicker={this.currentItemSelection}
+            selectedItem={this.state.selectedItem}
             deleteCall={this.deleteCall}
           />
         ) : (
