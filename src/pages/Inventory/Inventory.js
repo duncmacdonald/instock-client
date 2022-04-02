@@ -6,7 +6,7 @@ import InventoryTable from "../../components/InventoryTable/InventoryTable";
 import Search from "../../components/Search/Search";
 import "./Inventory.css";
 import "../../index.css";
-import DeleteWarehouse from "../../components/DeleteWarehouse/warehouseComponents/DeleteWarehouse";
+import DeleteInventory from "../../components/WarehouseComponentsMain/warehouseComponents/DeleteInventory";
 const URL = "http://localhost:8080/inventory/";
 
 export default class Inventory extends React.Component {
@@ -73,7 +73,7 @@ export default class Inventory extends React.Component {
           />
         </section>
         {this.state.deleteModal ? (
-          <DeleteWarehouse
+          <DeleteInventory
             clicker={this.currentWarehouseSelection}
             selectedWarehouse={this.state.selectedWarehouse}
             deleteCall={this.deleteCall}
