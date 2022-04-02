@@ -2,7 +2,7 @@ import "./styles/App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Component } from "react";
 import Header from "./components/Header/Header.js";
-import Details from "./components/DeleteWarehouse/warehouseComponents/Details.js";
+import Details from "./components/WarehouseComponentsMain/warehouseComponents/Details";
 import Footer from "./components/Footer/Footer";
 import Warehouses from "./pages/Warehouses/Warehouses";
 import AddWarehouse from "./pages/AddWarehouse/AddWarehouse";
