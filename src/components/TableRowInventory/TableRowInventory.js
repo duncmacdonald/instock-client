@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ArrowLink from "../ArrowLink/ArrowLink";
 import trash from "../../assets/Icons/delete_outline-24px.svg";
 import pencil from "../../assets/Icons/edit-24px.svg";
@@ -11,12 +12,17 @@ export default function TableRowInventory({ warehouse, warehouseSelector }) {
       <div className="TableRow-Mobile">
         <div>
           <h4>Inventory Item</h4>
-          <ArrowLink text={warehouse.itemName} action={() => console.log("hi")} />
+          <Link to={"/inventory/" + warehouse.id}>
+            <ArrowLink
+              text={warehouse.itemName}
+              action={() => console.log("hi")}
+            />
+          </Link>
         </div>
 
         <div>
           <h4>Status</h4>
-          <Status state={warehouse.status}/>
+          <Status state={warehouse.status} />
         </div>
 
         <div>
@@ -52,16 +58,12 @@ export default function TableRowInventory({ warehouse, warehouseSelector }) {
           text={warehouse.itemName}
           action={() => console.log(`Link to ${warehouse.id}`)}
         />
-        <span>
-          {warehouse.category}
-        </span>
-        
+        <span>{warehouse.category}</span>
+
         <Status state={warehouse.status} />
-        
+
         <span>{warehouse.quantity}</span>
-        <span>
-          {warehouse.warehouseName}
-        </span>
+        <span>{warehouse.warehouseName}</span>
         <div className="narrow">
           <img
             src={trash}
