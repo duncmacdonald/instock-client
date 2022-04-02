@@ -37,13 +37,13 @@ export default class Inventory extends React.Component {
   };
 
   updateTable = () => {
-    axios.get(URL)
-    .then(result =>{
-      this.setState({data: result.data});
+    axios.get(URL).then((result) => {
+      console.log(result);
+      this.setState({ data: result.data });
     });
-  }
+  };
 
-  componentDidMount(){
+  componentDidMount() {
     this.updateTable();
   }
 
@@ -54,10 +54,9 @@ export default class Inventory extends React.Component {
           <section className="TitleBlock">
             <h1>Inventory</h1>
             <Search />
-            <Link to="/AddItem" ><Button
-              color="blue"
-              text="+ Add New Item"
-            /></Link>
+            <Link to="/AddItem">
+              <Button color="blue" text="+ Add New Item" />
+            </Link>
           </section>
 
           <InventoryTable

@@ -1,22 +1,38 @@
 import "./styles/App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Component } from "react";
-import Header from './components/Header/Header.js'
-import Details from './components/DeleteWarehouse/warehouseComponents/Details.js'
+import Header from "./components/Header/Header.js";
+import Details from "./components/DeleteWarehouse/warehouseComponents/Details.js";
 import Footer from "./components/Footer/Footer";
 import Warehouses from "./pages/Warehouses/Warehouses";
-import AddNewInventory from "./components/AddInventoryItem/AddNewInventory";
+import AddWarehouse from "./pages/AddWarehouse/AddWarehouse";
+import Inventory from "./pages/Inventory/Inventory";
+import InventoryDetails from "./pages/InventoryDetails/InventoryDetails";
 export default class App extends Component {
   render() {
     return (
       <Router>
-        <Header/>
+        <Header />
         <Switch>
           <Route exact path="/" component={Warehouses} />
           <Route path="/details" component={Details} />
-          <Route path="/addnewinventory" component={AddNewInventory} />
+          <Route path="/AddWarehouse" component={AddWarehouse} />
+          <Route exact path="/inventory" component={Inventory} />
+          <Route
+            path="/inventory/:inventoryid"
+            render={(RouterProps) => {
+              return (
+                <InventoryDetails
+                  routerprops={RouterProps.match.params.inventoryid}
+                />
+              );
+            }}
+          />
+          {/* <Header />
+            <Details /> */}
+          {/* </div> */}
         </Switch>
-        <Footer/>
+        <Footer />
       </Router>
     );
   }
