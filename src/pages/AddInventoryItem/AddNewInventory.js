@@ -4,10 +4,14 @@ import backArrow from "../../assets/Icons/arrow_back-24px.svg"
 import {Link} from 'react-router-dom'
 import './addNewInventory.scss'
 import TextInput from '../../components/TextInput/TextInput'
-const URL = "http://localhost:8080/warehouse/";
+import Button from '../../components/Button/Button'
+const URL = "http://localhost:8080/inventory/";
+const wareHouseUrl = "http://localhost:8080/warehouse/"
 
 export default class AddNewInventory extends Component {
   state = {
+    category: [],
+    warehouse: [],
     redirect: false,
     form: {
         id: "",
@@ -30,7 +34,27 @@ export default class AddNewInventory extends Component {
       quantity: false
     },
   };
-
+  //Axios Request to Get Data for Selections
+  componentDidMount() {
+    let categoriesArr = []; 
+    let warehouseArr = [];
+    axios.get(URL)
+    .then(result =>{
+      categoriesArr = result.data.map((inv)=> {
+        return inv.category;
+      })
+      warehouseArr = result.data.map((inv)=> {
+            return inv.warehouseName;
+          })
+      const nonDuplicatedCategories = categoriesArr.filter((categoryName, 
+        index) => categoriesArr.indexOf(categoryName) === index); 
+       this.setState({category: nonDuplicatedCategories});
+       const singleWarehouses = warehouseArr.filter((warehouseName, 
+        index) => warehouseArr.indexOf(warehouseName) === index); 
+       this.setState({warehouse: singleWarehouses});
+      });
+    
+  }
   formListener = (event) => {
     const key = event.target.name;
     this.setState({ form: {...this.state.form, [key]: event.target.value} });
@@ -77,14 +101,15 @@ export default class AddNewInventory extends Component {
     this.setState({ errors: errors });
 
     return rtrnValue;
-  };
-  //Quantity Check       
+  };  
+  
+
     render () {
-     
+ 
     return (
         <section className='addNewInventory'>
         <div className='titleBlock'>
-        <Link to='/'><img src={backArrow} className='backArrow'/></Link>
+        <Link to='/'><img src={backArrow} alt='arrow' className='backArrow'/></Link>
             <h1 className='invTitle'>Add New Inventory Item</h1>
         </div>
         <section className='formSection'>
@@ -100,17 +125,19 @@ export default class AddNewInventory extends Component {
               error={this.state.errors.itemName}
             />
             <label>Description</label>
-            <textarea 
+            <TextInput 
               placeholder="Description of item"
               name="description"
-              value={this.state.form.description}
+              // value={this.state.form.description}
               listener={this.formListener}
-              error={this.state.errors.description}
-            ></textarea>
+              error={this.state.errors.description} className='itemDetailstextarea'
+            />
         {/* Category Selection */}
            <label>Category</label> 
-          <select label='Category' name ='category' className='categorySelection' placeholder='Please Select'>
-            <option value={this.state.category}></option>
+          <select name ='category' className='categorySelection' onChange={(event)=>{this.setState({form: {category: event.target.value}})}}>
+           {this.state.category.map((category)=> {
+             return <option value={category}>{category}</option>
+           })}
           </select>
             </form>
             <form className='availabilityForm'>
@@ -130,9 +157,22 @@ export default class AddNewInventory extends Component {
               listener={this.formListener}
               error={this.state.errors.quantity}
             />
+            {/* Warehouse Selection */}
+            <label>Warehouse</label> 
+            <select name ='warehouse' className='warehouseSelection' onChange={(event)=>{this.setState({form: {warehouse: event.target.value}})}}>
+           {this.state.warehouse.map((warehouse)=> {
+             return <option value={warehouse}>{warehouse}</option>
+           })}
+          </select>
             <div className='buttonHolder'>
-                <button className='cancelButton'>Cancel</button>
-                <button className='addItemButton' action={this.addInventory}>+Add Item</button>
+            
+                <Link to='/' className='cancelLink'><button className='cancelButton'>Cancel</button></Link>
+                <Button 
+                 color='blue'
+                 text='+ Add Inventory'
+                 action={this.addInventory} 
+                />
+                {/* <button className='addItemButton' action={this.addInventory}>+Add Item</button> */}
             </div>
             </form>
         </div>

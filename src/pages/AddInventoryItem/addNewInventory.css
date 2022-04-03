@@ -19,7 +19,7 @@ html {
             flex-flow: column wrap;
     width: 90%;
     padding: 0 16px;
-    height: 800px;
+    height: 850px;
     margin: 2rem auto;
     margin-top: 0;
     position: relative;
@@ -92,6 +92,7 @@ html {
     border: 1px solid #bdc5d5;
     border-radius: 20px;
     height: 100px;
+    padding: 8px;
     font-family: "TitilliumWeb", sans-serif;
     resize: none;
   }
@@ -115,7 +116,13 @@ html {
   .addNewInventory .formSection .inventoryDetailsSection .availabilityForm .categorySelection {
     border: 1px solid #bdc5d5;
     border-radius: 20px;
-    height: 32px;
+    height: 40px;
+    margin-bottom: 16px;
+  }
+  .addNewInventory .formSection .inventoryDetailsSection .availabilityForm .warehouseSelection {
+    border: 1px solid #bdc5d5;
+    border-radius: 20px;
+    height: 40px;
     margin-bottom: 16px;
   }
   .addNewInventory .formSection .inventoryDetailsSection .availabilityForm .radioButton {
@@ -133,6 +140,9 @@ html {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .addNewInventory .formSection .inventoryDetailsSection .buttonHolder button {
     width: 25%;
@@ -141,8 +151,24 @@ html {
     font-size: 13px;
   }
   .addNewInventory .formSection .inventoryDetailsSection .cancelButton {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: #ffffff;
     border: 1px solid #bdc5d5;
     color: #5c667e;
+    height: 40px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 13px;
   }
   .addNewInventory .formSection .inventoryDetailsSection .addItemButton {
     border: 1px solid #2e66e5;

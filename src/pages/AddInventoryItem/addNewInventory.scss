@@ -128,7 +128,7 @@ html {
     background-color: $White;
     font-family: 'TitilliumWeb', sans-serif;
     display: flex; flex-flow: column wrap; width: 90%; 
-    padding: 0 16px; height: 800px; margin: 2rem auto;
+    padding: 0 16px; height: 850px; margin: 2rem auto;
     margin-top: 0;
     position: relative;
     top: -60px;
@@ -162,7 +162,7 @@ html {
                 margin-bottom: 16px;
             }
             .itemDetailstextarea {
-                border: 1px solid $Cloud; border-radius: 20px; height: 100px;
+                border: 1px solid $Cloud; border-radius: 20px; height: 100px; padding: 8px;
                 font-family: 'TitilliumWeb', sans-serif; resize: none;
             }
           }
@@ -176,9 +176,13 @@ html {
             padding-right: 16px;
             }
             .categorySelection {
-            border: 1px solid $Cloud; border-radius: 20px; height: 32px;
+            border: 1px solid $Cloud; border-radius: 20px; height: 40px;
             margin-bottom: 16px;
             }
+            .warehouseSelection {
+              border: 1px solid $Cloud; border-radius: 20px; height: 40px;
+              margin-bottom: 16px;
+              }
             .radioButton {
             margin-right: 8px;
             }
@@ -187,14 +191,25 @@ html {
             }
       }
       .buttonHolder {
-            display: flex; justify-content: center;
+            display: flex; justify-content: center; align-items: center;
             button {
             width: 25%; border-radius: 20px; 
             margin: 16px; font-size: 13px;
             }
     }
       .cancelButton {
-      border: 1px solid $Cloud; color: $Slate; 
+      // border: 1px solid $Cloud; color: $Slate; 
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: $White;
+    border: 1px solid $Cloud;
+    color:$Slate;
+    height: 40px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 13px;
       }
       .addItemButton {
         border: 1px solid $Instock-Indigo; 

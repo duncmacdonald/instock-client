@@ -13,24 +13,24 @@ export default class AddWarehouse extends React.Component {
   state = {
     redirect: false,
     form: {
-        id: "",
-        warehouseID: "",
-        warehouseName: "",
-        itemName: "",
-        description: "",
-        category: "",
-        status: "",
-        quantity: ""
+        name: "",
+        address: "",
+        city: "",
+        country: "",
+        contactName: "",
+        contactPosition: "",
+        contactPhone: "",
+        contactEmail: ""
     },
     errors: {
-      id: false,
-      warehouseID: false,
-      warehouseName: false,
-      itemName: false,
-      description: false,
-      category: false,
-      status: false,
-      quantity: false
+      name: false,
+      address: false,
+      city: false,
+      country: false,
+      contactName: false,
+      contactPosition: false,
+      contactPhone: false,
+      contactEmail: false,
     },
   };
 
