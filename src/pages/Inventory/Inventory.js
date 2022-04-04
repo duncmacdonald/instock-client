@@ -14,6 +14,51 @@ export default class Inventory extends React.Component {
     data: [],
     deleteModal: false,
     selectedItem: "",
+    sort: "",
+  };
+
+  sortData = (sortBy) => {
+    console.log(sortBy);
+    let sortedArray = [];
+
+    if (sortBy === this.state.sort) {
+      sortedArray = this.state.data.reverse();
+      this.setState({ sort: sortBy, data: sortedArray });
+    } else {
+      switch (sortBy) {
+        case "Inventory Item":
+          sortedArray = this.state.data.sort((a, b) => {
+            return a.itemName.localeCompare(b.itemName);
+          });
+          break;
+
+        case "Category":
+          sortedArray = this.state.data.sort((a, b) => {
+            return a.category.localeCompare(b.category);
+          });
+          break;
+
+        case "Status":
+          sortedArray = this.state.data.sort((a, b) => {
+            return a.status.localeCompare(b.status);
+          });
+          break;
+
+        case "QTY":
+          sortedArray = this.state.data.sort((a, b) => {
+            return a.quantity - b.quantity;
+          });
+          break;
+        
+          case "Warehouse":
+            sortedArray = this.state.data.sort((a, b) => {
+              return a.warehouseName.localeCompare(b.warehouseName);
+            });
+            break;
+      }
+
+      this.setState({ sort: sortBy, data: sortedArray });
+    }
   };
 
   modalClicker = () => {
@@ -70,6 +115,7 @@ export default class Inventory extends React.Component {
             ]}
             contentArray={this.state.data}
             itemSelector={this.currentItemSelection}
+            sortListener={this.sortData}
           />
         </section>
         {this.state.deleteModal ? (
