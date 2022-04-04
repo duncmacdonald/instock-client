@@ -29,10 +29,11 @@
   top: 0;
   left: 0;
   background-color: white;
+  z-index: 1;
 
   &-tablet {
     @include tablet() {
-      position: absolute;
+      position: fixed;
       height: 100%;
       width: 100%;
 

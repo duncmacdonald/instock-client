@@ -53,13 +53,21 @@ html {
 }
 
 .details {
-  height: 300px;
+  height: 700px;
+  background-color: #ffffff;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
 }
 
 .warehouseDetails,
 .contactDetails {
   font-family: "TitilliumWeb";
   margin: 0 16px;
+}
+
+.warehouseDetails {
+  border-bottom: solid 1px #bdc5d5;
 }
 
 .whDetailsForm,
@@ -86,6 +94,44 @@ hr {
   color: #bdc5d5;
 }
 
+.submissionSection {
+  background-color: #f7f8f9;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.submissionSection button {
+  margin: 8px;
+  border-radius: 20px;
+  font-family: "Titillium Web";
+  width: 35%;
+}
+.submissionSection .saveButton {
+  background-color: #2e66e5;
+  color: #ffffff;
+  border: solid 1px #2e66e5;
+}
+.submissionSection .cancelButton {
+  background-color: #ffffff;
+  color: #13182c;
+  border: solid 1px #bdc5d5;
+}
+
+.instockFooter {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+.instockFooter .copyright {
+  margin: 16px;
+  color: #5c667e;
+  font-weight: 400;
+  font-size: 11px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -103,11 +149,12 @@ hr {
   top: 0;
   left: 0;
   background-color: white;
+  z-index: 1;
   font-family: Titillium Web;
 }
 @media (min-width: 768px) {
   .delete-warehouse-tablet {
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     top: 0;

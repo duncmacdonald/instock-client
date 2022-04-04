@@ -94,7 +94,7 @@ $desktop-lower: 1280px;
   margin-bottom: 0;
 }
 //General Styling
-@media (min-width: $tablet-lower) and (max-width: $tablet-higher) {
+@media (min-width: $tablet-lower) {
   .headerSection {
     overflow: hidden;
     display: flex;
@@ -120,6 +120,43 @@ $desktop-lower: 1280px;
       width: 40%;
       padding: 8px 16px;
     }
+  }
+  .details {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    background-color: $White;
+    justify-content: center;
+    .warehouseDetails {
+      width: 40%;
+      margin: 0;
+      border-right: solid 1px $Cloud;
+      border-bottom: none;
+      padding: 0 16px;
+    }
+    .contactDetails {
+      width: 40%;
+      margin: 0;
+      padding: 0 16px;
+    }
+    form {
+      background-color: $White;
+    }
+    .submissionSection {
+      background-color: $Light-Grey;
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-end;
+      button {
+        width: 15%;
+      }
+    }
+  }
+  .instockFooter {
+    @include bodySmall()
   }
 }
 
@@ -148,6 +185,40 @@ $desktop-lower: 1280px;
     .directoryLink {
       width: 40%;
       padding: 8px 16px;
+    }
+  }
+  .directoryContainer {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0;
+    .directoryLink {
+      width: 40%;
+      padding: 8px 16px;
+    }
+  }
+  .details {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    background-color: $White;
+    justify-content: center;
+    .warehouseDetails {
+      width: 40%;
+      margin: 0;
+      border-right: solid 1px $Cloud;
+      border-bottom: none;
+      padding: 0 16px;
+    }
+    .contactDetails {
+      width: 40%;
+      margin: 0;
+      padding: 0 16px;
+    }
+    form {
+      background-color: $White;
     }
   }
 }

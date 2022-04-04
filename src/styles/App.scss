@@ -1,10 +1,4 @@
 //Variables, Mixins, etc.
-// @font-face {
-//   font-family: "TitilliumWeb";
-//   src: local("TitilliumWeb"),url("../assets/font/TitilliumWeb-Regular.ttf") format("truetype");
-//   font-family: "TitilliumWeb";
-//   src: local("TitilliumWeb"),url("../assets/font/TitilliumWeb-Regular.ttf") format("truetype");
-// }
 
 //Primary Colors
 $Instock-Black: #13182c;
@@ -171,12 +165,19 @@ html {
 }
 //Warehouse Details/Form Styling
 .details {
-  height: 300px;
+  height: 700px;
+  background-color: $White;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
 }
 .warehouseDetails,
 .contactDetails {
   font-family: "TitilliumWeb";
   @include mobilePaddingSides();
+}
+.warehouseDetails {
+  border-bottom: solid 1px $Cloud;
 }
 .whDetailsForm,
 .cDForm {
@@ -196,4 +197,41 @@ input {
 }
 hr {
   color: $Cloud;
+}
+.submissionSection {
+  background-color: $Light-Grey;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  button {
+    margin: 8px;
+    border-radius: 20px;
+    font-family: "Titillium Web";
+    width: 35%;
+  }
+  .saveButton {
+    background-color: $Instock-Indigo;
+    color: $White;
+    border: solid 1px $Instock-Indigo;
+  }
+  .cancelButton {
+    background-color: $White;
+    color: $Instock-Black;
+    border: solid 1px $Cloud;
+  }
+}
+.instockFooter {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  text-align: center;
+  .copyright {
+    margin: 16px;
+    color: $Slate;
+    font-weight: 400;
+    font-size: 11px;
+  }
 }

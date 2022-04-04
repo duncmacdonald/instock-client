@@ -1,4 +1,3 @@
-
 import WareHouseDetails from "./warehouseDetails";
 import ContactDetails from "./ContactDetails";
 import { Component } from "react";

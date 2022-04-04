@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import "./DeleteWarehouse.css";
-import "../../index.css";
 
 export class DeleteWarehouse extends Component {
   render() {

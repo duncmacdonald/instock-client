@@ -12,23 +12,23 @@ export default class Inventory extends React.Component {
   state = {
     data: [],
     deleteModal: false,
-    selectedInventory: "",
+    selectedItem: "",
   };
 
   modalClicker = () => {
     this.setState({ deleteModal: false });
   };
 
-  currentInventorySelection = (inventory, value) => {
+  currentItemSelection = (item, value) => {
     this.setState({
       deleteModal: value,
-      selectedInventory: inventory,
+      selectedItem: item,
     });
   };
 
-  deleteCall = (inventoryID) => {
+  deleteCall = (itemID) => {
     axios
-      .delete(URL + inventoryID)
+      .delete(URL + itemID)
       .then((success) => {
         this.updateTable();
       })
@@ -36,13 +36,13 @@ export default class Inventory extends React.Component {
   };
 
   updateTable = () => {
-    axios.get(URL)
-    .then(result =>{
-      this.setState({data: result.data});
+    axios.get(URL).then((result) => {
+      console.log(result);
+      this.setState({ data: result.data });
     });
-  }
+  };
 
-  componentDidMount(){
+  componentDidMount() {
     this.updateTable();
   }
 
@@ -53,10 +53,9 @@ export default class Inventory extends React.Component {
           <section className="TitleBlock">
             <h1>Inventory</h1>
             <Search />
-            <Link to="/AddItem" ><Button
-              color="blue"
-              text="+ Add New Item"
-            /></Link>
+            <Link to="/AddItem">
+              <Button color="blue" text="+ Add New Item" />
+            </Link>
           </section>
 
           <InventoryTable
@@ -69,18 +68,18 @@ export default class Inventory extends React.Component {
               "Actions",
             ]}
             contentArray={this.state.data}
-            inventorySelector={this.currentInventorySelection}
+            itemSelector={this.currentItemSelection}
           />
         </section>
-        {/* {this.state.deleteModal ? (
-          <DeleteWarehouse
-            clicker={this.currentWarehouseSelection}
-            selectedWarehouse={this.state.selectedWarehouse}
+        {this.state.deleteModal ? (
+          <DeleteInventory
+            clicker={this.currentItemSelection}
+            selectedItem={this.state.selectedItem}
             deleteCall={this.deleteCall}
           />
         ) : (
           ""
-        )} */}
+        )}
       </>
     );
   }

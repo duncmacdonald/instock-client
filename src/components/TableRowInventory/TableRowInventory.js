@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ArrowLink from "../ArrowLink/ArrowLink";
 import trash from "../../assets/Icons/delete_outline-24px.svg";
 import pencil from "../../assets/Icons/edit-24px.svg";
@@ -11,7 +12,12 @@ export default function TableRowInventory({ inventory, inventorySelector }) {
       <div className="TableRow-Mobile">
         <div>
           <h4>Inventory Item</h4>
-          <ArrowLink text={inventory.itemName} action={() => console.log("hi")} />
+          <Link to={"/inventory/" + warehouse.id}>
+            <ArrowLink
+              text={inventory.itemName}
+              action={() => console.log("hi")}
+            />
+          </Link>
         </div>
 
         <div>
@@ -48,26 +54,24 @@ export default function TableRowInventory({ inventory, inventorySelector }) {
       </div>
 
       <div className="TableRow-Tablet wide">
-        <ArrowLink
-          text={inventory.itemName}
-          action={() => console.log(`Link to ${inventory.id}`)}
-        />
-        <span>
-          {inventory.category}
-        </span>
-        
+        <Link to={"/inventory/" + inventory.id}>
+          <ArrowLink
+            text={inventory.itemName}
+            action={() => console.log(`Link to ${inventory.id}`)}
+          />
+        </Link>
+        <span>{inventory.category}</span>
+
         <Status state={inventory.status} />
-        
+
         <span>{inventory.quantity}</span>
-        <span>
-          {inventory.warehouseName}
-        </span>
+        <span>{inventory.warehouseName}</span>
         <div className="narrow">
           <img
             src={trash}
             alt="delete"
             className="TableRow__button"
-            onClick={() => inventorySelector(inventory, true)}
+            onClick={() => itemSelector(inventory, true)}
           ></img>
           <img
             src={pencil}
