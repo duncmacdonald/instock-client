@@ -6,30 +6,29 @@ import InventoryTable from "../../components/InventoryTable/InventoryTable";
 import Search from "../../components/Search/Search";
 import "./Inventory.css";
 import "../../index.css";
-import DeleteWarehouse from "../../components/DeleteWarehouse/warehouseComponents/DeleteWarehouse";
 const URL = "http://localhost:8080/inventory/";
 
 export default class Inventory extends React.Component {
   state = {
     data: [],
     deleteModal: false,
-    selectedWarehouse: "",
+    selectedInventory: "",
   };
 
   modalClicker = () => {
     this.setState({ deleteModal: false });
   };
 
-  currentWarehouseSelection = (warehouse, value) => {
+  currentInventorySelection = (inventory, value) => {
     this.setState({
       deleteModal: value,
-      selectedWarehouse: warehouse,
+      selectedInventory: inventory,
     });
   };
 
-  deleteCall = (warehouseID) => {
+  deleteCall = (inventoryID) => {
     axios
-      .delete(URL + warehouseID)
+      .delete(URL + inventoryID)
       .then((success) => {
         this.updateTable();
       })
@@ -50,7 +49,7 @@ export default class Inventory extends React.Component {
   render() {
     return (
       <>
-        <section className="Page">
+        <section className="Page Inventory">
           <section className="TitleBlock">
             <h1>Inventory</h1>
             <Search />
@@ -70,10 +69,10 @@ export default class Inventory extends React.Component {
               "Actions",
             ]}
             contentArray={this.state.data}
-            warehouseSelector={this.currentWarehouseSelection}
+            inventorySelector={this.currentInventorySelection}
           />
         </section>
-        {this.state.deleteModal ? (
+        {/* {this.state.deleteModal ? (
           <DeleteWarehouse
             clicker={this.currentWarehouseSelection}
             selectedWarehouse={this.state.selectedWarehouse}
@@ -81,7 +80,7 @@ export default class Inventory extends React.Component {
           />
         ) : (
           ""
-        )}
+        )} */}
       </>
     );
   }

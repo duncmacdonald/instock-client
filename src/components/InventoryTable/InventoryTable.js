@@ -6,7 +6,7 @@ import "../../index.css";
 export default function InventoryTable({
   titles,
   contentArray,
-  warehouseSelector,
+  inventorySelector,
   modalClicker,
 }) {
   //Rows
@@ -14,8 +14,8 @@ export default function InventoryTable({
     return (
       <TableRowInventory
         key={row.id}
-        warehouseSelector={warehouseSelector}
-        warehouse={row}
+        inventorySelector={inventorySelector}
+        inventory={row}
       />
     );
   });

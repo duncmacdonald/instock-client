@@ -162,29 +162,46 @@ hr {
     top: -100px;
   }
 }
+@media (min-width: 1280px) {
+  .Page {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
 
-.TitleBlock {
+.Inventory .TitleBlock {
   background-color: transparent;
   display: flex;
   flex-direction: column;
   padding: 24px;
   border-bottom: 1px solid #bdc5d5;
 }
-.TitleBlock .Search {
+@media (min-width: 1280px) {
+  .Inventory .TitleBlock {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+.Inventory .TitleBlock .Search {
   margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
-  .TitleBlock .Search {
+  .Inventory .TitleBlock .Search {
     margin-bottom: 0;
   }
 }
+@media (min-width: 1280px) {
+  .Inventory .TitleBlock .Search {
+    width: 274px;
+  }
+}
 @media (min-width: 768px) {
-  .TitleBlock .Button {
+  .Inventory .TitleBlock .Button {
     width: 168px;
   }
 }
 @media (min-width: 768px) {
-  .TitleBlock {
+  .Inventory .TitleBlock {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
@@ -193,7 +210,7 @@ hr {
     border-bottom: 1px solid transparent;
   }
 }
-.TitleBlock h1 {
+.Inventory .TitleBlock h1 {
   padding: 0;
   margin-right: auto;
   margin-top: 0;
@@ -204,9 +221,44 @@ hr {
   font-weight: 600;
 }
 @media (min-width: 768px) {
-  .TitleBlock h1 {
+  .Inventory .TitleBlock h1 {
     font-size: 32px;
     line-height: 40px;
     padding: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .Inventory .TableTitles, .Inventory .TableRow-Tablet {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+.Inventory .TableTitles > *, .Inventory .TableRow-Tablet > * {
+  width: 100px;
+}
+.Inventory .TableTitles > div:nth-child(1), .Inventory .TableRow-Tablet > *:nth-child(1) {
+  width: 125px;
+}
+@media (min-width: 1280px) {
+  .Inventory .TableTitles > div:nth-child(1), .Inventory .TableRow-Tablet > *:nth-child(1) {
+    margin-right: 100px;
+  }
+}
+@media (min-width: 1280px) {
+  .Inventory .TableTitles > div:nth-child(2), .Inventory .TableRow-Tablet > *:nth-child(2) {
+    margin-right: 100px;
+  }
+}
+.Inventory .TableTitles > div:nth-child(4), .Inventory .TableRow-Tablet > *:nth-child(4) {
+  width: 50px;
+}
+@media (min-width: 1280px) {
+  .Inventory .TableTitles > div:nth-child(4), .Inventory .TableRow-Tablet > *:nth-child(4) {
+    margin-left: 100px;
+  }
+}
+@media (min-width: 1280px) {
+  .Inventory .TableTitles > div:nth-child(5), .Inventory .TableRow-Tablet > *:nth-child(5) {
+    margin-right: 100px;
   }
 }/*# sourceMappingURL=Inventory.css.map */
