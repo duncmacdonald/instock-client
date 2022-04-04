@@ -6,13 +6,13 @@ import Status from "../Status/Status";
 import "./TableRowInventory.css";
 import "../../index.css";
 
-export default function TableRowInventory({ inventory, inventorySelector }) {
+export default function TableRowInventory({ inventory, itemSelector }) {
   return (
     <>
       <div className="TableRow-Mobile">
         <div>
           <h4>Inventory Item</h4>
-          <Link to={"/inventory/" + warehouse.id}>
+          <Link to={"/inventory/" + inventory.id}>
             <ArrowLink
               text={inventory.itemName}
               action={() => console.log("hi")}
@@ -45,7 +45,7 @@ export default function TableRowInventory({ inventory, inventorySelector }) {
 
         <img
           src={trash}
-          onClick={() => inventorySelector(inventory, true)}
+          onClick={() => itemSelector(inventory, true)}
           alt="delete"
           className="TableRow__button"
         ></img>

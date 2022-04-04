@@ -71,7 +71,7 @@ export default class Inventory extends React.Component {
             itemSelector={this.currentItemSelection}
           />
         </section>
-        {this.state.deleteModal ? (
+        {/* {this.state.deleteModal ? (
           <DeleteInventory
             clicker={this.currentItemSelection}
             selectedItem={this.state.selectedItem}
@@ -79,7 +79,7 @@ export default class Inventory extends React.Component {
           />
         ) : (
           ""
-        )}
+        )} */}
       </>
     );
   }
