@@ -54,7 +54,7 @@ export default class Inventory extends React.Component {
           <section className="TitleBlock">
             <h1>Inventory</h1>
             <Search />
-            <Link to="/AddItem" ><Button
+            <Link to="/addnewinventory" ><Button
               color="blue"
               text="+ Add New Item"
             /></Link>
