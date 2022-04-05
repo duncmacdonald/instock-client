@@ -6,7 +6,7 @@ import Details from './components/DeleteWarehouse/warehouseComponents/Details.js
 import Footer from "./components/Footer/Footer";
 import Warehouses from "./pages/Warehouses/Warehouses";
 import AddNewInventory from "./pages/AddInventoryItem/AddNewInventory";
-
+import Inventory from './pages/Inventory/Inventory'
 export default class App extends Component {
   render() {
     return (
@@ -16,6 +16,7 @@ export default class App extends Component {
           <Route exact path="/" component={Warehouses} />
           <Route path="/details" component={Details} />
           <Route path="/addnewinventory" component={AddNewInventory} />
+          <Route path="/inventory" component={Inventory} />
           {/* <Route path='/inventory' component={Inventory} /> */}
         </Switch>
         <Footer/>

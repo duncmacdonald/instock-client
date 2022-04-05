@@ -197,27 +197,16 @@ html {
             margin: 16px; font-size: 13px;
             }
     }
-      .cancelButton {
-      // border: 1px solid $Cloud; color: $Slate; 
-      display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    background-color: $White;
-    border: 1px solid $Cloud;
-    color:$Slate;
-    height: 40px;
-    border-radius: 20px;
-    font-weight: 600;
-    font-size: 13px;
-      }
+    .cancelButton {
+      border: 1px solid $Cloud; 
+      background-color: $White; color: $Slate;
+    }
       .addItemButton {
         border: 1px solid $Instock-Indigo; 
         background-color: $Instock-Indigo; color: $White;
       }
       }
     }
-    
   }
 }
 
