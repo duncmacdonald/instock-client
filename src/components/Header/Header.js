@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../../styles/App.css";
 import "../../index.css";
-import logo from '../../assets/images/InStock-Logo.svg';
+import logo from "../../assets/images/InStock-Logo.svg";
 export default function Header() {
   return (
     <section className="headerSection">

@@ -20,6 +20,10 @@
     font-size: 13px;
     line-height: 20px;
 
+    &:hover, &:active {
+        background-color: $Graphite;
+    }
+
     @include tablet{
         font-size: 14px;
         line-height: 22px;
@@ -37,5 +41,11 @@
     background-color: $White;
     border: 1px solid $Cloud;
 
-    color: $Slate
+    color: $Slate;
+
+    &:hover, &:active {
+        background-color: $White;
+        color: $Instock-Indigo;
+        border-color: $Instock-Indigo;
+    }
 }

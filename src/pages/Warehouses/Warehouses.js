@@ -6,7 +6,7 @@ import WarehousesTable from "../../components/WarehousesTable/WarehousesTable";
 import Search from "../../components/Search/Search";
 import "./Warehouses.css";
 import "../../index.css";
-import DeleteWarehouse from "../../components/DeleteWarehouse/warehouseComponents/DeleteWarehouse";
+import DeleteWarehouse from "../../components/WarehouseComponentsMain/warehouseComponents/DeleteWarehouse";
 const URL = "http://localhost:8080/warehouse/";
 
 export default class Warehouses extends React.Component {
@@ -37,13 +37,12 @@ export default class Warehouses extends React.Component {
   };
 
   updateTable = () => {
-    axios.get(URL)
-    .then(result =>{
-      this.setState({data: result.data});
+    axios.get(URL).then((result) => {
+      this.setState({ data: result.data });
     });
-  }
+  };
 
-  componentDidMount(){
+  componentDidMount() {
     this.updateTable();
   }
 
@@ -54,10 +53,9 @@ export default class Warehouses extends React.Component {
           <section className="TitleBlock">
             <h1>Warehouses</h1>
             <Search />
-            <Link to="/AddWarehouse" ><Button
-              color="blue"
-              text="+ Add New Warehouse"
-            /></Link>
+            <Link to="/AddWarehouse">
+              <Button color="blue" text="+ Add New Warehouse" />
+            </Link>
           </section>
 
           <WarehousesTable

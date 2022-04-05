@@ -1,8 +1,8 @@
-import "./styles/App.css";
+import "./styles/App.scss";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Component } from "react";
-import Header from './components/Header/Header.js'
-import Details from './components/DeleteWarehouse/warehouseComponents/Details.js'
+import Header from "./components/Header/Header.js";
+import Details from "./components/WarehouseComponentsMain/warehouseComponents/Details";
 import Footer from "./components/Footer/Footer";
 import Warehouses from "./pages/Warehouses/Warehouses";
 import AddNewInventory from "./pages/AddInventoryItem/AddNewInventory";
@@ -11,14 +11,14 @@ export default class App extends Component {
   render() {
     return (
       <Router>
-        <Header/>
+        <Header />
         <Switch>
           <Route exact path="/" component={Warehouses} />
           <Route path="/details" component={Details} />
           <Route path="/addnewinventory" component={AddNewInventory} />
           <Route path='/inventory' component={Inventory} />
         </Switch>
-        <Footer/>
+        <Footer />
       </Router>
     );
   }

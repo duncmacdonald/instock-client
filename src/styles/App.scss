@@ -222,8 +222,16 @@ hr {
   }
 }
 .instockFooter {
-  display: flex; flex-direction: row; justify-content: center; height: 150px; align-items: flex-end;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  text-align: center;
   .copyright {
-    margin: 16px; color: $Slate; font-weight: 400; font-size: 11px;
+    margin: 16px;
+    color: $Slate;
+    font-weight: 400;
+    font-size: 11px;
   }
 }
