@@ -1,0 +1,28 @@
+@import "../../styles/app.scss";
+
+
+.ArrowLink{
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: $Instock-Indigo;
+
+
+    span{
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+
+    img {
+        position: relative;
+        transition-duration: 0.5s;
+    }
+
+    &:hover {
+        :nth-child(2){
+            transform: translateX(4px);
+        }
+    }
+}

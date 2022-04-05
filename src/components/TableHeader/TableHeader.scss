@@ -1,0 +1,60 @@
+@media screen and (max-width:767px) {.table-Header{
+    display: none;
+}
+}
+
+ 
+.table-Header {
+    background-color: rgba(247, 248, 249, 0.6980392157);
+    padding: 10px 0;
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 36px;
+        li{
+            list-style: none;
+        }
+        h4{
+            font-weight: 600;
+            font-size: 11px;
+            line-height: 16px;
+            color: #5c667e;
+            padding: 0;
+            margin: 0;
+        }
+        .inventory-item {
+            display: flex;
+            img{
+                height: 20px;
+                width: 25px;
+            }
+        }
+        .category{
+            display: flex;
+            position: relative;
+            right: 20px;
+            img{
+                height: 20px;
+                width: 25px;
+            }
+        }
+        .status {
+            display: flex;
+            img{
+                height: 20px;
+                width: 25px;
+            }
+        }
+        .quantity {
+            display: flex;
+            img{
+                height: 20px;
+                width: 25px;
+            }
+        }
+        .actions{
+            display: flex;
+        }
+    }
+}

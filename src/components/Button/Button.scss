@@ -1,0 +1,41 @@
+@import "../../styles/app.scss";
+@import '../../styles/partials/breakpoints.scss';
+
+//default blue
+.Button{
+    font-family: "TitilliumWeb";
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: $Instock-Indigo;
+    border: 1px solid $Instock-Indigo;
+    color: white;
+    // padding: 1rem 2rem;
+
+    height: 40px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+
+    @include tablet{
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+
+}
+
+.red{
+    background-color: $Red;
+    border: 1px solid $Red;
+}
+
+.white{
+    background-color: $White;
+    border: 1px solid $Cloud;
+
+    color: $Slate
+}

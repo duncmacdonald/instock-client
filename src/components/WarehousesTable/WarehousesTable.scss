@@ -1,0 +1,24 @@
+@import  "../../styles/app.scss";
+
+
+.TableTitles > *, .TableRow-Tablet > * {
+    width: 16.6%;
+}
+
+.wide{
+    min-width: 160px;
+}
+
+.narrow{
+    max-width: 75px;
+    text-align: end;
+    justify-content: end;
+
+    & > img {
+        padding-left: 0.5rem;
+    } 
+}
+
+.TableRow-Tablet:last-of-type {
+    border-bottom: none;
+}

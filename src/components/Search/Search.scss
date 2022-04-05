@@ -1,0 +1,17 @@
+@import "../../styles/app.scss";
+
+.Search {
+    border: 1px solid $Cloud;
+    border-radius: 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+
+    input {
+        border: 0px;
+        outline: none;
+        margin-bottom: 0;
+    }
+}

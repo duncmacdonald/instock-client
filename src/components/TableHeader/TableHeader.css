@@ -1,0 +1,59 @@
+@media screen and (max-width: 767px) {
+  .table-Header {
+    display: none;
+  }
+}
+.table-Header {
+  background-color: rgba(247, 248, 249, 0.6980392157);
+  padding: 10px 0;
+}
+.table-Header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 36px;
+}
+.table-Header ul li {
+  list-style: none;
+}
+.table-Header ul h4 {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 16px;
+  color: #5c667e;
+  padding: 0;
+  margin: 0;
+}
+.table-Header ul .inventory-item {
+  display: flex;
+}
+.table-Header ul .inventory-item img {
+  height: 20px;
+  width: 25px;
+}
+.table-Header ul .category {
+  display: flex;
+  position: relative;
+  right: 20px;
+}
+.table-Header ul .category img {
+  height: 20px;
+  width: 25px;
+}
+.table-Header ul .status {
+  display: flex;
+}
+.table-Header ul .status img {
+  height: 20px;
+  width: 25px;
+}
+.table-Header ul .quantity {
+  display: flex;
+}
+.table-Header ul .quantity img {
+  height: 20px;
+  width: 25px;
+}
+.table-Header ul .actions {
+  display: flex;
+}/*# sourceMappingURL=TableHeader.css.map */

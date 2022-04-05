@@ -1,0 +1,18 @@
+.warehouseInventory {
+  border-top: solid 1px #bdc5d5;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 24px 0 24px 24px;
+}
+.warehouseInventory p {
+  font-size: 13px;
+}
+.warehouseInventory .warehouseInventory_Itemname {
+  margin-bottom: 24px;
+}
+.warehouseInventory .warehouseInventory_Itemname p {
+  width: 130px;
+}
+.warehouseInventory .warehouseInventory_Category p {
+  width: 130px;
+}/*# sourceMappingURL=warehouseInventory.css.map */
