@@ -1,5 +1,5 @@
 import sort from "../../assets/Icons/sort-24px.svg";
-import "../TableTitles/TableTitles.css";
+import "./TableTitles.css";
 
 export default function TableTitles({ titles }) {
   let columns = [...titles];

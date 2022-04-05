@@ -10,8 +10,13 @@ html {
   .addNewInventory {
     background-color: #ffffff;
     font-family: "TitilliumWeb", sans-serif;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
     width: 90%;
     padding: 0 16px;
     height: 800px;
@@ -19,13 +24,20 @@ html {
     margin-top: 0;
     position: relative;
     top: -60px;
-    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    -webkit-box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+            box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
   }
   .addNewInventory .titleBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 100px;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-bottom: 1px solid #bdc5d5;
   }
   .addNewInventory .titleBlock .backArrow {
@@ -38,8 +50,13 @@ html {
     font-weight: 600;
   }
   .addNewInventory .formSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
     height: 650px;
   }
   .addNewInventory .formSection label {
@@ -47,8 +64,13 @@ html {
     line-height: 28px;
   }
   .addNewInventory .formSection .inventoryDetailsSection .invDetailsForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
     border-bottom: 1px solid #bdc5d5;
   }
   .addNewInventory .formSection .inventoryDetailsSection .invDetailsForm h3 {
@@ -70,8 +92,13 @@ html {
     resize: none;
   }
   .addNewInventory .formSection .inventoryDetailsSection .availabilityForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
   }
   .addNewInventory .formSection .inventoryDetailsSection .availabilityForm h3 {
     font-size: 28px;
@@ -96,8 +123,12 @@ html {
     font-weight: 400;
   }
   .addNewInventory .formSection .inventoryDetailsSection .buttonHolder {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .addNewInventory .formSection .inventoryDetailsSection .buttonHolder button {
     width: 25%;
@@ -125,8 +156,13 @@ html {
     line-height: 22px;
   }
   .addNewInventory .formSection .inventoryDetailsSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
   }
   .addNewInventory .formSection .inventoryDetailsSection .invDetailsForm, .addNewInventory .formSection .inventoryDetailsSection .availabilityForm {
     width: 50%;

@@ -6,7 +6,7 @@ import WarehousesTable from "../../components/WarehousesTable/WarehousesTable";
 import Search from "../../components/Search/Search";
 import "./Warehouses.css";
 import "../../index.css";
-import DeleteWarehouse from "../../components/DeleteWarehouse/warehouseComponents/DeleteWarehouse";
+import DeleteWarehouse from "../../components/WarehouseComponentsMain/warehouseComponents/DeleteWarehouse";
 const URL = "http://localhost:8080/warehouse/";
 
 export default class Warehouses extends React.Component {

@@ -24,21 +24,22 @@ export default class WareHouseDetail extends Component {
     
     getWarehouseInventory(){
         let warehouseID = this.props.match.params.id;
-        fetch(`http://localhost:8080/inventory/warehousedetail/${warehouseID}`)
-        .then(res => res.json())
+        axios.get(`http://localhost:8080/inventory/warehousedetail/${warehouseID}`)
+        // .then(res => res.json())
         .then(warehouse => this.setState({
-            singleWarehouseInventory : warehouse,
+            
+            singleWarehouseInventory : warehouse.data,
         }))
     }
 
 
     componentDidMount(){
         let warehouseID = this.props.match.params.id;
-        fetch(`http://localhost:8080/warehouse/${warehouseID}`)
-        .then(res => res.json())
+        axios.get(`http://localhost:8080/warehouse/${warehouseID}`)
+        // .then(res => res.json())
         .then(warehouseData => this.setState({
-            singleWarehouseDetail : warehouseData,
-            contacts : warehouseData.contact
+            singleWarehouseDetail : warehouseData.data,
+            contacts : warehouseData.data.contact
         }),this.getWarehouseInventory())
     }
 

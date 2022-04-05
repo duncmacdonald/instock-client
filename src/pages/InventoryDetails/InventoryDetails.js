@@ -43,7 +43,7 @@ export class InventoryDetails extends Component {
           <Link to="/inventory">
             <div className="inventory-details-main__image-main">
               <img className="inventory-details-main__image" src={edit} />
-              <p2 className="inventory-details-main__edit-tablet">Edit</p2>
+              <p className="inventory-details-main__edit-tablet">Edit</p>
             </div>
           </Link>
         </div>
@@ -53,17 +53,17 @@ export class InventoryDetails extends Component {
               <h4 className="inventory-details-main__item-description-heading">
                 ITEM DESCRIPTION:
               </h4>
-              <p2 className="inventory-details-main__item-description">
+              <p className="inventory-details-main__item-description">
                 {this.state.data.description}
-              </p2>
+              </p>
             </div>
             <div className="inventory-details-main__category-main">
               <h4 className="inventory-details-main__category-description-heading">
                 CATEGORY:
               </h4>
-              <p2 className="inventory-details-main__category-description">
+              <p className="inventory-details-main__category-description">
                 {this.state.data.category}
-              </p2>
+              </p>
             </div>
           </div>
           <div className="inventory-details-main__tablet-right">
@@ -80,18 +80,18 @@ export class InventoryDetails extends Component {
                 <h4 className="inventory-details-main__quantity-description-heading">
                   QUANTITY:
                 </h4>
-                <p2 className="inventory-details-main__quantity-description">
+                <p className="inventory-details-main__quantity-description">
                   {this.state.data.quantity}
-                </p2>
+                </p>
               </div>
             </div>
             <div className="inventory-details-main__warehouse-info-container">
               <h4 className="inventory-details-main__warehouse-description-heading">
                 WAREHOUSE:
               </h4>
-              <p2 className="inventory-details-main__warehouse-description">
+              <p className="inventory-details-main__warehouse-description">
                 {this.state.data.warehouseName}
-              </p2>
+              </p>
             </div>
           </div>
         </div>

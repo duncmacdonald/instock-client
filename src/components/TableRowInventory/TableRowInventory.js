@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ArrowLink from "../ArrowLink/ArrowLink";
 import trash from "../../assets/Icons/delete_outline-24px.svg";
 import pencil from "../../assets/Icons/edit-24px.svg";
@@ -5,18 +6,23 @@ import Status from "../Status/Status";
 import "./TableRowInventory.css";
 import "../../index.css";
 
-export default function TableRowInventory({ warehouse, warehouseSelector }) {
+export default function TableRowInventory({ warehouse, itemSelector }) {
   return (
     <>
       <div className="TableRow-Mobile">
         <div>
           <h4>Inventory Item</h4>
-          <ArrowLink text={warehouse.itemName} action={() => console.log("hi")} />
+          <Link to={"/inventory/" + warehouse.id}>
+            <ArrowLink
+              text={warehouse.itemName}
+              action={() => console.log("hi")}
+            />
+          </Link>
         </div>
 
         <div>
           <h4>Status</h4>
-          <Status state={warehouse.status}/>
+          <Status state={warehouse.status} />
         </div>
 
         <div>
@@ -39,7 +45,7 @@ export default function TableRowInventory({ warehouse, warehouseSelector }) {
 
         <img
           src={trash}
-          onClick={() => warehouseSelector(warehouse, true)}
+          onClick={() => itemSelector(warehouse, true)}
           alt="delete"
           className="TableRow__button"
         ></img>
@@ -48,26 +54,24 @@ export default function TableRowInventory({ warehouse, warehouseSelector }) {
       </div>
 
       <div className="TableRow-Tablet wide">
-        <ArrowLink
-          text={warehouse.itemName}
-          action={() => console.log(`Link to ${warehouse.id}`)}
-        />
-        <span>
-          {warehouse.category}
-        </span>
-        
+        <Link to={"/inventory/" + warehouse.id}>
+          <ArrowLink
+            text={warehouse.itemName}
+            action={() => console.log(`Link to ${warehouse.id}`)}
+          />
+        </Link>
+        <span>{warehouse.category}</span>
+
         <Status state={warehouse.status} />
-        
+
         <span>{warehouse.quantity}</span>
-        <span>
-          {warehouse.warehouseName}
-        </span>
+        <span>{warehouse.warehouseName}</span>
         <div className="narrow">
           <img
             src={trash}
             alt="delete"
             className="TableRow__button"
-            onClick={() => warehouseSelector(warehouse, true)}
+            onClick={() => itemSelector(warehouse, true)}
           ></img>
           <img
             src={pencil}

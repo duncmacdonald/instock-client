@@ -1,11 +1,14 @@
 import React from 'react'
-import '../WarehouseInventory/warehouseInventory.css'
+import './warehouseInventory.css'
 import ArrowLink from "../ArrowLink/ArrowLink";
 import trash from "../../assets/Icons/delete_outline-24px.svg";
 import pencil from "../../assets/Icons/edit-24px.svg";
 import Status from "../Status/Status";
 // import "./TableRowWarehouse.css";
 import "../../index.css";
+import { Link } from 'react-router-dom';
+import '../InventoryTable/InventoryTable.css'
+import '../WarehousesTable/WarehousesTable.css'
 
 export default function WarehouseInventory ({inventoryData, warehouseSelector}){
   return (
@@ -49,18 +52,21 @@ export default function WarehouseInventory ({inventoryData, warehouseSelector}){
             </div>
       
             <div className="TableRow-Tablet wide">
+            <Link to={"/inventory/" + data.id}>
               <ArrowLink
                 text={data.itemName}
-                action={() => console.log(`Link to ${data.id}`)}
+                action={() => console.log(`Link to ${data.id}`)} 
               />
+              </Link>
               <span>
                 {data.category}
               </span>
               
               <Status state={data.status} />
               
+              <div className='dataQty'>
               <span className='dataQuantity'>{data.quantity}</span>
-              
+              </div>
               <div className="narrow">
                 <img
                   src={trash}
@@ -69,12 +75,13 @@ export default function WarehouseInventory ({inventoryData, warehouseSelector}){
                   onClick={() => console.log(`Delete ${data.id}`)}
                 //   onClick={() => warehouseSelector(warehouse, true)}
                 ></img>
-                <img
+                <Link to='/'><img
                   src={pencil}
                   alt="edit"
                   className="TableRow__button"
                   onClick={() => console.log(`Edit ${data.id}`)}
                 ></img>
+                </Link>
               </div>
             </div>
           </>

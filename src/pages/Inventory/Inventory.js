@@ -6,30 +6,30 @@ import InventoryTable from "../../components/InventoryTable/InventoryTable";
 import Search from "../../components/Search/Search";
 import "./Inventory.css";
 import "../../index.css";
-import DeleteWarehouse from "../../components/DeleteWarehouse/warehouseComponents/DeleteWarehouse";
+import DeleteInventory from "../../components/WarehouseComponentsMain/warehouseComponents/DeleteInventory";
 const URL = "http://localhost:8080/inventory/";
 
 export default class Inventory extends React.Component {
   state = {
     data: [],
     deleteModal: false,
-    selectedWarehouse: "",
+    selectedItem: "",
   };
 
   modalClicker = () => {
     this.setState({ deleteModal: false });
   };
 
-  currentWarehouseSelection = (warehouse, value) => {
+  currentItemSelection = (item, value) => {
     this.setState({
       deleteModal: value,
-      selectedWarehouse: warehouse,
+      selectedItem: item,
     });
   };
 
-  deleteCall = (warehouseID) => {
+  deleteCall = (itemID) => {
     axios
-      .delete(URL + warehouseID)
+      .delete(URL + itemID)
       .then((success) => {
         this.updateTable();
       })
@@ -69,13 +69,13 @@ export default class Inventory extends React.Component {
               "Actions",
             ]}
             contentArray={this.state.data}
-            warehouseSelector={this.currentWarehouseSelection}
+            itemSelector={this.currentItemSelection}
           />
         </section>
         {this.state.deleteModal ? (
-          <DeleteWarehouse
-            clicker={this.currentWarehouseSelection}
-            selectedWarehouse={this.state.selectedWarehouse}
+          <DeleteInventory
+            clicker={this.currentItemSelection}
+            selectedItem={this.state.selectedItem}
             deleteCall={this.deleteCall}
           />
         ) : (

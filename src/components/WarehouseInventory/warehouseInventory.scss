@@ -1,3 +1,92 @@
+@import "../../styles/app.scss";
+@import "../../styles/partials/breakpoints.scss";
+
+.TableRow-Tablet {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5rem;
+    @include twoRemPadding;
+    @include bodyMedium;
+
+    background-color: transparent;
+    border-bottom: 1px solid $Cloud;
+  }
+
+  &:hover {
+    background-color: rgba($Cloud, 0.7);
+  }
+
+  &__stacked {
+    display: none;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__button {
+    padding: 0.5rem;
+  }
+
+  // & > * {
+  //   background-color: transparent;
+  // }
+}
+
+.TableRow-Mobile {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 16px 24px 24px 24px;
+  @include bodyMedium;
+  background-color: transparent;
+  border-bottom: 1px solid $Cloud;
+
+  & > div {
+    width: 49%;
+    padding-bottom: 1rem;
+  }
+
+  & span {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  @include tablet {
+    display: none;
+  }
+
+  &:hover {
+    background-color: rgba($Cloud, 0.7);
+  }
+
+  &__stacked {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 16px;
+  color: $Slate;
+  padding: 0;
+  margin: 0;
+}
+
+
 .warehouseInventory{
     border-top: solid 1px #bdc5d5;
     display: flex;
@@ -19,4 +108,17 @@
         }
     }
     
+    
+}
+
+
+
+
+.narrow{
+    display: flex;
+    
+}
+
+.dataQty{
+  display: flex;
 }
