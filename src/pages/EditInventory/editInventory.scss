@@ -1,0 +1,244 @@
+//Variables, Mixins, etc.
+
+//Primary Colors
+$Instock-Black: #13182c;
+$Instock-Indigo: #2e66e5;
+$White: #ffffff;
+//Secondary Colors
+$Slate: #5c667e;
+$Cloud: #bdc5d5;
+//Background Colors
+$Graphite: #232940;
+$Light-Grey: #f7f8f9;
+//Supporting Colors
+$Green: #158463;
+$Red: #c94515;
+//Mixins:
+//Padding:
+@mixin mobilePadding {
+  margin: 16px;
+}
+@mixin tabletPaddingSides {
+  margin: 24px 32px;
+}
+@mixin desktopPaddingSides {
+  margin: 24px 63px;
+}
+//Font-Sizes:
+//Mobile
+@mixin mobileBodySmall {
+  font-size: 11px;
+  line-height: 16px;
+}
+@mixin mobileBodyMedium {
+  font-size: 13px;
+  line-height: 20px;
+}
+@mixin mobileBodyLarge {
+  font-size: 15px;
+  line-height: 26px;
+}
+@mixin mobileBodyTableHeader {
+  @include mobileBodySmall();
+}
+@mixin mobileBodyLabelsEtc {
+  @include mobileBodyMedium();
+}
+@mixin mobileSubheader {
+  font-size: 20px;
+  line-height: 28px;
+}
+@mixin mobilePageHeader {
+  font-size: 28px;
+  line-height: 36px;
+}
+//Tablet & Desktop
+@mixin bodySmall {
+  font-size: 12px;
+  line-height: 18px;
+}
+@mixin bodyMedium {
+  font-size: 14px;
+  line-height: 22px;
+}
+@mixin bodyLarge {
+  font-size: 16px;
+  line-height: 28px;
+}
+@mixin tableHeader {
+  @include bodySmall();
+}
+@mixin labelsEtc {
+  font-size: 14px;
+  line-height: 22px;
+}
+@mixin subHeader {
+  font-size: 24px;
+  line-height: 32px;
+}
+@mixin pageHeader {
+  font-size: 32px;
+  line-height: 40px;
+}
+//Convenience
+@mixin mobilePaddingSides {
+  margin: 0 16px;
+}
+@mixin tabletPaddingSides {
+  margin: 0 32px;
+}
+@mixin desktopPaddingSides {
+  margin: 0 63px;
+}
+@mixin clearVertPadding {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@mixin clearTopPadding {
+  margin-top: 0;
+}
+@mixin clearBottomPadding {
+  margin-bottom: 0;
+}
+
+@mixin twoRemPadding {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+//Screen-Sizing
+$mobile-lower: 320px;
+$mobile-higher: 767px;
+$tablet-lower: 768px;
+$tablet-higher: 1279px;
+$desktop-lower: 1280px;
+//End of Variables & Mixins
+//-----------------------------------------------------------
+//General Styling
+html {
+  font-family: "TitilliumWeb", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  background-color: $Light-Grey;
+}
+
+//New Inventory Styling
+@media (min-width: $mobile-lower) { 
+    .addNewInventory { 
+    background-color: $White;
+    font-family: 'TitilliumWeb', sans-serif;
+    display: flex; flex-flow: column wrap; width: 90%; 
+    padding: 0 16px; height: 850px; margin: 2rem auto;
+    margin-top: 0;
+    position: relative;
+    top: -60px;
+  
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    .titleBlock {
+      display: flex; height:100px; justify-content: center; 
+      align-items: center;
+      border-bottom: 1px solid $Cloud;
+      .backArrow {height:30px
+      }
+    .invTitle { 
+      display: inline-block; @include mobilePageHeader; 
+      font-weight: 600;}
+    }
+    .formSection { 
+      display: flex; flex-flow: column wrap; height: 650px;   
+      label {
+        @include mobileSubheader();
+    } 
+      .inventoryDetailsSection {
+        .invDetailsForm {
+        display: flex; flex-flow: column wrap;
+        border-bottom: 1px solid $Cloud;
+            h3 {
+                @include mobilePageHeader(); padding: 16px 0 ;
+            }
+          
+            .categorySelection {
+                border: 1px solid $Cloud; border-radius: 20px; height: 40px; padding: 0 1rem; align-items: center;
+                margin-bottom: 16px;
+            }
+            .itemDetailstextarea {
+                border: 1px solid $Cloud; border-radius: 20px; height: 100px; padding: 8px;
+                font-family: 'TitilliumWeb', sans-serif; resize: none;
+            }
+          }
+      .availabilityForm {
+            display: flex; flex-flow: column wrap; 
+            h3 {
+            @include mobilePageHeader(); padding: 16px 0 ;
+            }
+          
+            .radio {
+            padding-right: 16px;
+            }
+            .categorySelection {
+            border: 1px solid $Cloud; border-radius: 20px; height: 40px;
+            margin-bottom: 16px;
+            }
+            .warehouseSelection {
+              border: 1px solid $Cloud; border-radius: 20px; height: 40px;
+              margin-bottom: 16px;
+              }
+            .radioButton {
+            margin-right: 8px;
+            }
+            .radio {
+            @include mobileBodyLarge(); font-weight: 400;
+            }
+      }
+      .buttonHolder {
+            display: flex; justify-content: center; align-items: center;
+            button {
+            width: 25%; border-radius: 20px; 
+            margin: 16px; font-size: 13px;
+            }
+    }
+      .cancelButton {
+      // border: 1px solid $Cloud; color: $Slate; 
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: $White;
+    border: 1px solid $Cloud;
+    color:$Slate;
+    height: 40px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 13px;
+      }
+      .addItemButton {
+        border: 1px solid $Instock-Indigo; 
+        background-color: $Instock-Indigo; color: $White;
+      }
+      }
+    }
+    
+  }
+}
+
+@media (min-width: $tablet-lower) {
+    .addNewInventory { 
+        height: 550px; display: block;
+        .formSection {
+        label {
+                @include labelsEtc();
+            }
+        .inventoryDetailsSection {
+        display: flex; flex-flow: row wrap; 
+            .invDetailsForm, .availabilityForm {
+                width: 50%; padding: 1rem; 
+            }
+          
+            .invDetailsForm {
+            border-right: 1px solid $Cloud; 
+            border-bottom: none;
+            }
+        }
+    }
+}
+}

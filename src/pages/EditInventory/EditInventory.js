@@ -1,19 +1,22 @@
-import React, {Component} from "react"
+import React, { Component } from 'react'
+import '../AddInventoryItem/addNewInventory.scss'
+import './editInventory.scss'
 import axios from 'axios'
 import backArrow from "../../assets/Icons/arrow_back-24px.svg"
-import {Link, Redirect} from 'react-router-dom'
-import './addNewInventory.scss'
+import {Link} from 'react-router-dom'
 import TextInput from '../../components/TextInput/TextInput'
 import Button from '../../components/Button/Button'
 const URL = "http://localhost:8080/inventory/";
 
-export default class AddNewInventory extends Component {
+export default class EditInventory extends Component {
   state = {
     category: [],
     warehouse: [],
     status: '',
     redirect: false,
     form: {
+        id: "",
+        warehouseID: "",
         warehouseName: "",
         itemName: "",
         description: "",
@@ -59,10 +62,11 @@ export default class AddNewInventory extends Component {
   };
   //This is the function which adds all of the input data to a new inventory. 
   addInventory = () => {
-    console.log('add inventory');
     if (this.formValidator()) {
       
         const newInventory = {
+            id: this.state.form.id,
+            warehouseId: this.state.form.warehouseId,
             warehouseName: this.state.form.warehouseName,
             description: this.state.form.description,
             itemName: this.state.form.itemName,
@@ -73,14 +77,9 @@ export default class AddNewInventory extends Component {
 
         console.log("axios submit then link to main page");
 
-    //Axios Post Request
-      axios.post(URL, newInventory)
-    
-        .then(response => {
-          this.setState({redirect: true})
-          console.log(response)
-      })
-        .catch(response=> console.log(response));
+
+      axios.put(URL, newInventory)
+        .then(response => this.setState({redirect: true}));
 
     }
   };
@@ -105,24 +104,13 @@ export default class AddNewInventory extends Component {
 
     return rtrnValue;
   };  
-    // //Radio Button Function 
-    // updateStateRadio(event) {
-    //   this.setState({form: {
-    //     status: event.target.value
-    //   }});
-    // }
-  
-
-    render () {
-      if (this.state.redirect) {
-        return <Redirect to='/inventory' />;
-      }
-
+    render() {
+       
     return (
-        <section className='addNewInventory'>
+        <section className='editInventory'>
         <div className='titleBlock'>
-        <Link to='/inventory'><img src={backArrow} alt='arrow' className='backArrow'/></Link>
-            <h1 className='invTitle'>Add New Inventory Item</h1>
+        <Link to='/'><img src={backArrow} alt='arrow' className='backArrow'/></Link>
+            <h1 className='invTitle'>Edit Inventory Item</h1>
         </div>
         <section className='formSection'>
         <div className='inventoryDetailsSection'>
@@ -146,7 +134,7 @@ export default class AddNewInventory extends Component {
             />
         {/* Category Selection */}
            <label>Category</label> 
-          <select name ='category' value= {this.state.form.category} className='categorySelection' onChange={(event)=>this.setState({form: {...this.state.form, category: event.target.value}})}>
+          <select name ='category' className='categorySelection' onChange={(event)=>{this.setState({form: {category: event.target.value}})}}>
            {this.state.category.map((category)=> {
              return <option value={category}>{category}</option>
            })}
@@ -156,9 +144,9 @@ export default class AddNewInventory extends Component {
             <h3>Item Availability</h3>
             <label>Status</label>
             <span>
-            <input type='radio' className='radioButton' value='In Stock' checked={this.state.form.status === 'In Stock'} onChange={(event)=>this.setState({form: {...this.state.form, status: event.target.value}})}/>
+            <input type='radio' className='radioButton' value='In Stock' onChange={(event)=>this.setState({form: {status: 'In Stock'}})}/>
             <label className='radio inStock'>In Stock</label>
-            <input type='radio'  className='radioButton' value='Out of Stock' checked={this.state.form.status === 'Out of Stock'} onChange={(event)=>this.setState({form: {...this.state.form, status: event.target.value}})}/>
+            <input type='radio'  className='radioButton' value='Out of Stock' onChange={(event)=>this.setState({form: {status: 'Out of Stock'}})}/>
             <label className='radio outOfStock'>Out of Stock</label>
             </span>
             <TextInput
@@ -171,7 +159,7 @@ export default class AddNewInventory extends Component {
             />
             {/* Warehouse Selection */}
             <label>Warehouse</label> 
-            <select name ='warehouse' className='warehouseSelection' onChange={(event)=>this.setState({form: {...this.state.form, warehouseName: event.target.value}})}>
+            <select name ='warehouse' className='warehouseSelection' onChange={(event)=>{this.setState({form: {warehouse: event.target.value}})}}>
            {this.state.warehouse.map((warehouse)=> {
              return <option  value={warehouse}>{warehouse}</option>
            })}
@@ -181,8 +169,8 @@ export default class AddNewInventory extends Component {
             <Link to='/'><Button color="white" text="Cancel" /></Link>
                 <Button 
                  color='blue'
-                 text='+ Add Inventory'
-                 action={this.addInventory} 
+                 text='Save'
+                 action={this.editInventoryItem} 
                 />
                
             </div>
@@ -192,5 +180,5 @@ export default class AddNewInventory extends Component {
        
         </section>
     )
-   }
+    }
 }
