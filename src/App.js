@@ -10,6 +10,7 @@ import Inventory from "./pages/Inventory/Inventory";
 import EditInventory from "./pages/EditInventory/EditInventory";
 import AddWarehouse from "./pages/AddWarehouse/AddWarehouse";
 import InventoryDetails from "./pages/InventoryDetails/InventoryDetails";
+import WareHouseDetail from "./pages/WareHouseDetail/WarehouseDetail";
 export default class App extends Component {
   render() {
     return (
@@ -17,6 +18,7 @@ export default class App extends Component {
         <Header />
         <Switch>
           <Route exact path="/" component={Warehouses} />
+          <Route path="/:id" component={WareHouseDetail} />
           <Route path="/AddWarehouse" component={AddWarehouse} />
           <Route path="/details" component={Details} />
           <Route path="/add-new-inventory" component={AddNewInventory} />
