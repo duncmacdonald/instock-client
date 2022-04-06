@@ -5,9 +5,9 @@ import Header from "./components/Header/Header.js";
 import Details from "./components/WarehouseComponentsMain/warehouseComponents/Details";
 import Footer from "./components/Footer/Footer";
 import Warehouses from "./pages/Warehouses/Warehouses";
-import AddWarehouse from "./pages/AddWarehouse/AddWarehouse";
-import Inventory from "./pages/Inventory/Inventory";
-import InventoryDetails from "./pages/InventoryDetails/InventoryDetails";
+import AddNewInventory from "./pages/AddInventoryItem/AddNewInventory";
+import Inventory from './pages/Inventory/Inventory'
+import EditInventory from "./pages/EditInventory/EditInventory";
 export default class App extends Component {
   render() {
     return (
@@ -16,21 +16,9 @@ export default class App extends Component {
         <Switch>
           <Route exact path="/" component={Warehouses} />
           <Route path="/details" component={Details} />
-          <Route path="/AddWarehouse" component={AddWarehouse} />
-          <Route exact path="/inventory" component={Inventory} />
-          <Route
-            path="/inventory/:inventoryid"
-            render={(RouterProps) => {
-              return (
-                <InventoryDetails
-                  routerprops={RouterProps.match.params.inventoryid}
-                />
-              );
-            }}
-          />
-          {/* <Header />
-            <Details /> */}
-          {/* </div> */}
+          <Route path="/add-new-inventory" component={AddNewInventory} />
+          <Route path='/inventory' component={Inventory} />
+          <Route path ='/edit-inventory-item' component={EditInventory}/>
         </Switch>
         <Footer />
       </Router>

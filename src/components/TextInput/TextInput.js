@@ -17,7 +17,7 @@ export default function TextInput({ name, value, label, placeholder, listener, e
 
   return (
     <div className="TextInput">
-      <label for={name}>{label}</label>
+      <label htmlFor={name}>{label}</label>
       <input
         type="text"
         id={name}

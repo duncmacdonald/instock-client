@@ -12,6 +12,7 @@ export default function WarehousesTable({
 }) {
   //Rows
   const rowsJSX = contentArray.map((row) => {
+    console.log(contentArray)
     return (
       <TableRowWarehouse
         key={row.id}
