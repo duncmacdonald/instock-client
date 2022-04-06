@@ -106,12 +106,6 @@ export default class AddNewInventory extends Component {
 
     return rtrnValue;
   };  
-    // //Radio Button Function 
-    // updateStateRadio(event) {
-    //   this.setState({form: {
-    //     status: event.target.value
-    //   }});
-    // }
   
 
     render () {

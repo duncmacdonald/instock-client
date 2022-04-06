@@ -61,10 +61,10 @@ export default class EditInventory extends Component {
     this.setState({ form: {...this.state.form, [key]: event.target.value} });
   };
   //This is the function which adds all of the input data to a new inventory. 
-  addInventory = () => {
+  saveInventory = () => {
     if (this.formValidator()) {
       
-        const newInventory = {
+        const updatedInventory = {
             id: this.state.form.id,
             warehouseId: this.state.form.warehouseId,
             warehouseName: this.state.form.warehouseName,
@@ -78,7 +78,7 @@ export default class EditInventory extends Component {
         console.log("axios submit then link to main page");
 
 
-      axios.put(URL, newInventory)
+      axios.put(URL, updatedInventory)
         .then(response => this.setState({redirect: true}));
 
     }
@@ -92,7 +92,7 @@ export default class EditInventory extends Component {
 
     //Check that some data exists
     data.forEach((field, i) => {
-      if (field.length < 3) {
+      if (field.length < 1) {
         errors[keys[i]] = true;
         rtrnValue = false;
       } else {
@@ -170,7 +170,7 @@ export default class EditInventory extends Component {
                 <Button 
                  color='blue'
                  text='Save'
-                 action={this.editInventoryItem} 
+                 action={this.saveInventory} 
                 />
                
             </div>

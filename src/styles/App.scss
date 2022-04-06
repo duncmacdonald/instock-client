@@ -155,9 +155,9 @@ html {
   text-align: center;
   padding: 8px 16px;
   margin: 0;
-  width: 35%;
+  width: 100%;
   font-family: "TitilliumWeb";
-  font-weight: 600;
+  font-weight: 600; text-decoration: none; color: $White
 }
 .directoryLink:hover {
   background-color: $Instock-Black;
@@ -222,11 +222,6 @@ hr {
   }
 }
 .instockFooter {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
   text-align: center;
   .copyright {
     margin: 16px;
@@ -234,4 +229,7 @@ hr {
     font-weight: 400;
     font-size: 11px;
   }
+}
+a {
+  text-decoration: none; 
 }

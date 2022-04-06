@@ -64,9 +64,11 @@ html {
   text-align: center;
   padding: 8px 16px;
   margin: 0;
-  width: 35%;
+  width: 100%;
   font-family: "TitilliumWeb";
   font-weight: 600;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .directoryLink:hover {
@@ -155,26 +157,17 @@ hr {
 }
 
 .instockFooter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 150px;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  text-align: center;
 }
 .instockFooter .copyright {
   margin: 16px;
   color: #5c667e;
   font-weight: 400;
   font-size: 11px;
+}
+
+a {
+  text-decoration: none;
 }
 
 * {

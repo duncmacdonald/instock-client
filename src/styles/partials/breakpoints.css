@@ -39,7 +39,7 @@
     margin: 16px 0;
   }
   .directoryContainer .directoryLink {
-    width: 40%;
+    width: 100%;
     padding: 8px 16px;
   }
 
@@ -138,7 +138,7 @@
     margin: 16px 0;
   }
   .directoryContainer .directoryLink {
-    width: 40%;
+    width: 100%;
     padding: 8px 16px;
   }
 
