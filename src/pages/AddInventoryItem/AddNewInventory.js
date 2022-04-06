@@ -60,9 +60,10 @@ export default class AddNewInventory extends Component {
   //This is the function which adds all of the input data to a new inventory. 
   addInventory = () => {
     console.log('add inventory');
+    let newInventory = {}
     if (this.formValidator()) {
       
-        const newInventory = {
+         newInventory = {
             warehouseName: this.state.form.warehouseName,
             description: this.state.form.description,
             itemName: this.state.form.itemName,
@@ -75,10 +76,10 @@ export default class AddNewInventory extends Component {
 
     //Axios Post Request
       axios.post(URL, newInventory)
-    
         .then(response => {
-          this.setState({redirect: true})
-          console.log(response)
+          console.log('response')
+          this.setState({redirect: true});
+          return response
       })
         .catch(response=> console.log(response));
 
@@ -92,14 +93,14 @@ export default class AddNewInventory extends Component {
     let rtrnValue = true;
 
     //Check that some data exists
-    data.forEach((field, i) => {
-      if (field.length < 3) {
-        errors[keys[i]] = true;
-        rtrnValue = false;
-      } else {
-        errors[keys[i]] = false;
-      }
-    });
+    // data.forEach((field, i) => {
+    //   if (field.length < 3) {
+    //     errors[keys[i]] = true;
+    //     rtrnValue = false;
+    //   } else {
+    //     errors[keys[i]] = false;
+    //   }
+    // });
 
     this.setState({ errors: errors });
 
