@@ -9,61 +9,76 @@ import "../../index.css";
 import DeleteWarehouse from "../../components/WarehouseComponentsMain/warehouseComponents/DeleteWarehouse";
 const URL = "http://localhost:8080/warehouse/";
 
-
 export default class Warehouses extends React.Component {
   state = {
     data: [],
     deleteModal: false,
     selectedWarehouse: "",
     sort: "",
+    search: "",
+    dataBackup: [],
   };
-// const history = useHistory();
-  
 
-  sortData = (sortBy) => {
-    let sortedArray = [];
-    
-    if(sortBy === this.state.sort){
-      sortedArray = this.state.data.reverse();
+  searchListener = (event) => {
+    const temp = event.target.value.toLowerCase();
+    let filteredData = [...this.state.dataBackup].filter((list) => {
+      return (
+        list.name.toLowerCase().includes(temp) ||
+        list.address.toLowerCase().includes(temp) ||
+        list.contact.name.toLowerCase().includes(temp) ||
+        list.contact.phone.toLowerCase().includes(temp) ||
+        list.contact.email.toLowerCase().includes(temp)
+      );
+    });
+
+    window.history.pushState({},"",`?search=${event.target.value}&sort=${this.state.sort}`);
+
+    this.sortData(this.state.sort, filteredData);
+    this.setState({ search: temp });
+  }
+
+  sortData = (sortBy, data) => {
+    const temp = data ? data : this.state.data;
+    let sortedArray = temp;
+
+    if (data === undefined && sortBy === this.state.sort) {
+      sortedArray = temp.reverse();
     } else {
-
-      switch(sortBy){
+      switch (sortBy) {
         case "Warehouse":
-          sortedArray = this.state.data.sort((a, b) =>{
+          sortedArray = temp.sort((a, b) => {
             return a.name.localeCompare(b.name);
           });
           break;
-  
+
         case "Address":
-          sortedArray = this.state.data.sort((a, b) =>{
+          sortedArray = temp.sort((a, b) => {
             return a.address.localeCompare(b.address);
           });
           break;
-  
+
         case "Contact Name":
-          sortedArray = this.state.data.sort((a, b) =>{
+          sortedArray = temp.sort((a, b) => {
             return a.contact.name.localeCompare(b.contact.name);
           });
           break;
-  
+
         case "Contact Information":
-          sortedArray = this.state.data.sort((a, b) =>{
+          sortedArray = temp.sort((a, b) => {
             return a.contact.phone.localeCompare(b.contact.phone);
           });
           break;
       }
 
-      this.setState({sort: sortBy});
+      this.setState({ sort: sortBy });
     }
-    
-    
 
-    this.setState({data: sortedArray});
+    this.setState({ data: sortedArray });
     // history.push({
     //   pathname: '/',
     //   search: `?sort=warehouse`,
     // });
-  }
+  };
 
   modalClicker = () => {
     this.setState({ deleteModal: false });
@@ -87,11 +102,15 @@ export default class Warehouses extends React.Component {
 
   updateTable = () => {
     axios.get(URL).then((result) => {
-      this.setState({ data: result.data });
+      this.setState({ data: result.data, dataBackup: result.data });
     });
   };
 
   componentDidMount() {
+    // const { location } = this.props;
+    // const query = new URLSearchParams(location.search);
+    // console.log(query);
+
     this.updateTable();
   }
 
@@ -101,7 +120,7 @@ export default class Warehouses extends React.Component {
         <section className="Page Warehouse">
           <section className="TitleBlock">
             <h1>Warehouses</h1>
-            <Search />
+            <Search value={this.state.search} listener={this.searchListener} />
             <Link to="/AddWarehouse">
               <Button color="blue" text="+ Add New Warehouse" />
             </Link>
@@ -117,7 +136,7 @@ export default class Warehouses extends React.Component {
             ]}
             contentArray={this.state.data}
             warehouseSelector={this.currentWarehouseSelection}
-            sortListener = {this.sortData}
+            sortListener={this.sortData}
           />
         </section>
         {this.state.deleteModal ? (

@@ -13,47 +13,69 @@ export default class Inventory extends React.Component {
     data: [],
     deleteModal: false,
     selectedItem: "",
-    sort: "",
+    sort: "none",
+    search: "",
+    dataBackup: [],
   };
 
-  sortData = (sortBy) => {
-    console.log(sortBy);
-    let sortedArray = [];
+  searchListener = (event) => {
+    const temp = event.target.value.toLowerCase();
 
-    if (sortBy === this.state.sort) {
-      sortedArray = this.state.data.reverse();
+    window.history.pushState({},"",`?search=${event.target.value}&sort=${this.state.sort}`
+    );
+
+    let filteredData = [...this.state.dataBackup].filter((list) => {
+      return (
+        list.itemName.toLowerCase().includes(temp) ||
+        list.warehouseName.toLowerCase().includes(temp) ||
+        list.category.toLowerCase().includes(temp)
+      );
+    });
+
+    this.sortData(this.state.sort, filteredData);
+    this.setState({ search: event.target.value });
+  };
+
+  sortData = (sortBy, data) => {
+    const temp = data ? data : this.state.data;
+    let sortedArray = temp;
+
+    if (data === undefined && sortBy === this.state.sort) {
+      sortedArray = temp.reverse();
       this.setState({ sort: sortBy, data: sortedArray });
     } else {
       switch (sortBy) {
+        case "none":
+          break;
         case "Inventory Item":
-          sortedArray = this.state.data.sort((a, b) => {
+          sortedArray = temp.sort((a, b) => {
             return a.itemName.localeCompare(b.itemName);
           });
           break;
 
         case "Category":
-          sortedArray = this.state.data.sort((a, b) => {
+          sortedArray = temp.sort((a, b) => {
             return a.category.localeCompare(b.category);
           });
           break;
 
         case "Status":
-          sortedArray = this.state.data.sort((a, b) => {
+          sortedArray = temp.sort((a, b) => {
             return a.status.localeCompare(b.status);
           });
           break;
 
         case "QTY":
-          sortedArray = this.state.data.sort((a, b) => {
+          sortedArray = temp.sort((a, b) => {
             return a.quantity - b.quantity;
           });
           break;
-        
-          case "Warehouse":
-            sortedArray = this.state.data.sort((a, b) => {
-              return a.warehouseName.localeCompare(b.warehouseName);
-            });
-            break;
+
+        case "Warehouse":
+          sortedArray = temp.sort((a, b) => {
+            return a.warehouseName.localeCompare(b.warehouseName);
+          });
+          break;
       }
 
       this.setState({ sort: sortBy, data: sortedArray });
@@ -83,7 +105,7 @@ export default class Inventory extends React.Component {
   updateTable = () => {
     axios.get(URL).then((result) => {
       console.log(result);
-      this.setState({ data: result.data });
+      this.setState({ data: result.data, dataBackup: result.data });
     });
   };
 
@@ -97,11 +119,10 @@ export default class Inventory extends React.Component {
         <section className="Page Inventory">
           <section className="TitleBlock">
             <h1>Inventory</h1>
-            <Search />
-            <Link to="/add-new-inventory" ><Button
-              color="blue"
-              text="+ Add New Item"
-            /></Link>
+            <Search value={this.state.search} listener={this.searchListener} />
+            <Link to="/add-new-inventory">
+              <Button color="blue" text="+ Add New Item" />
+            </Link>
           </section>
 
           <InventoryTable
