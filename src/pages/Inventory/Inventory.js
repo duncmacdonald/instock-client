@@ -6,7 +6,6 @@ import InventoryTable from "../../components/InventoryTable/InventoryTable";
 import Search from "../../components/Search/Search";
 import "./Inventory.css";
 import "../../index.css";
-import DeleteInventory from "../../components/WarehouseComponentsMain/warehouseComponents/DeleteInventory";
 const URL = "http://localhost:8080/inventory/";
 
 export default class Inventory extends React.Component {
@@ -95,7 +94,7 @@ export default class Inventory extends React.Component {
   render() {
     return (
       <>
-        <section className="Page">
+        <section className="Page Inventory">
           <section className="TitleBlock">
             <h1>Inventory</h1>
             <Search />
@@ -118,7 +117,7 @@ export default class Inventory extends React.Component {
             sortListener={this.sortData}
           />
         </section>
-        {this.state.deleteModal ? (
+        {/* {this.state.deleteModal ? (
           <DeleteInventory
             clicker={this.currentItemSelection}
             selectedItem={this.state.selectedItem}
@@ -126,7 +125,7 @@ export default class Inventory extends React.Component {
           />
         ) : (
           ""
-        )}
+        )} */}
       </>
     );
   }

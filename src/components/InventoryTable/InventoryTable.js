@@ -11,7 +11,7 @@ export default function InventoryTable({ titles, contentArray, itemSelector, sor
       <TableRowInventory
         key={row.id}
         itemSelector={itemSelector}
-        warehouse={row}
+        inventory={row}
       />
     );
   });

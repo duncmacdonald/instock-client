@@ -98,7 +98,7 @@ export default class Warehouses extends React.Component {
   render() {
     return (
       <>
-        <section className="Page">
+        <section className="Page Warehouse">
           <section className="TitleBlock">
             <h1>Warehouses</h1>
             <Search />

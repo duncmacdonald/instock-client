@@ -5,8 +5,8 @@ export default function Status({ state }){
     
     
         if(state === "In Stock"){
-            return(<span className="Item greenItem">{state}</span>)
+            return(<div className="Item greenItem">{state}</div>)
         } else if(state === "Out of Stock"){
-            return(<span className="Item redItem">{state}</span>)
+            return(<div className="Item redItem">{state}</div>)
         } 
 }
