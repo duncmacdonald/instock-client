@@ -24,10 +24,6 @@ html {
   width: 100%;
   align-items: center;
 }
-.topClump .logoImg {
-  height: 45px;
-  margin: 16px;
-}
 
 .directoryContainer {
   display: flex;
@@ -88,6 +84,7 @@ input {
   box-sizing: border-box;
   padding: 8px;
   margin-bottom: 16px;
+  outline: none;
 }
 
 hr {
@@ -130,6 +127,10 @@ hr {
   color: #5c667e;
   font-weight: 400;
   font-size: 11px;
+}
+
+a {
+  text-decoration: none;
 }
 
 @media (min-width: 768px) {
