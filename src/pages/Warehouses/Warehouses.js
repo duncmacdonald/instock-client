@@ -18,7 +18,6 @@ export default class Warehouses extends React.Component {
     search: "",
     dataBackup: [],
   };
-  // const history = useHistory();
 
   searchListener = (event) => {
     const temp = event.target.value.toLowerCase();
@@ -32,13 +31,15 @@ export default class Warehouses extends React.Component {
       );
     });
 
+    window.history.pushState({},"",`?search=${event.target.value}&sort=${this.state.sort}`);
+
     this.sortData(this.state.sort, filteredData);
     this.setState({ search: temp });
   }
 
   sortData = (sortBy, data) => {
-    const temp = (data) ? data : this.state.data;
-    let sortedArray = [];
+    const temp = data ? data : this.state.data;
+    let sortedArray = temp;
 
     if (data === undefined && sortBy === this.state.sort) {
       sortedArray = temp.reverse();
@@ -106,6 +107,10 @@ export default class Warehouses extends React.Component {
   };
 
   componentDidMount() {
+    // const { location } = this.props;
+    // const query = new URLSearchParams(location.search);
+    // console.log(query);
+
     this.updateTable();
   }
 
