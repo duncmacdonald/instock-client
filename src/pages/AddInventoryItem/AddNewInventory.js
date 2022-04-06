@@ -93,14 +93,14 @@ export default class AddNewInventory extends Component {
     let rtrnValue = true;
 
     //Check that some data exists
-    // data.forEach((field, i) => {
-    //   if (field.length < 3) {
-    //     errors[keys[i]] = true;
-    //     rtrnValue = false;
-    //   } else {
-    //     errors[keys[i]] = false;
-    //   }
-    // });
+    data.forEach((field, i) => {
+      if (field.length < 1) {
+        errors[keys[i]] = true;
+        rtrnValue = false;
+      } else {
+        errors[keys[i]] = false;
+      }
+    });
 
     this.setState({ errors: errors });
 
