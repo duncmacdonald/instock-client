@@ -4,6 +4,7 @@ import axios from "axios";
 import Button from "../../components/Button/Button";
 import InventoryTable from "../../components/InventoryTable/InventoryTable";
 import Search from "../../components/Search/Search";
+import DeleteInventory from "../../components/WarehouseComponentsMain/warehouseComponents/DeleteInventory";
 import "./Inventory.css";
 import "../../index.css";
 const URL = "http://localhost:8080/inventory/";
@@ -48,12 +49,12 @@ export default class Inventory extends React.Component {
             return a.quantity - b.quantity;
           });
           break;
-        
-          case "Warehouse":
-            sortedArray = this.state.data.sort((a, b) => {
-              return a.warehouseName.localeCompare(b.warehouseName);
-            });
-            break;
+
+        case "Warehouse":
+          sortedArray = this.state.data.sort((a, b) => {
+            return a.warehouseName.localeCompare(b.warehouseName);
+          });
+          break;
       }
 
       this.setState({ sort: sortBy, data: sortedArray });
@@ -98,10 +99,9 @@ export default class Inventory extends React.Component {
           <section className="TitleBlock">
             <h1>Inventory</h1>
             <Search />
-            <Link to="/add-new-inventory" ><Button
-              color="blue"
-              text="+ Add New Item"
-            /></Link>
+            <Link to="/add-new-inventory">
+              <Button color="blue" text="+ Add New Item" />
+            </Link>
           </section>
 
           <InventoryTable
@@ -118,7 +118,7 @@ export default class Inventory extends React.Component {
             sortListener={this.sortData}
           />
         </section>
-        {/* {this.state.deleteModal ? (
+        {this.state.deleteModal ? (
           <DeleteInventory
             clicker={this.currentItemSelection}
             selectedItem={this.state.selectedItem}
@@ -126,7 +126,7 @@ export default class Inventory extends React.Component {
           />
         ) : (
           ""
-        )} */}
+        )}
       </>
     );
   }
