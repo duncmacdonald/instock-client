@@ -1,37 +1,27 @@
-import React from 'react'
-import './TableHeader.css'
-import Sort from '../../assets/Icons/sort-24px.svg'
+import TableTitles from "../TableTitles/TableTitles";
+import TableRowInventory from "../TableRowInventory/TableRowInventory";
+import WarehouseInventory from "../WarehouseInventory/WarehouseInventory";
+import "../InventoryTable/InventoryTable.css";
+import "../../index.css";
 
-const TableHeader = () => {
+
+
+export default function InventoryTable({ titles, contentArray, itemSelector, sortListener }) {
+  //Rows
+  const rowsJSX = contentArray.map((row) => {
+    return (
+      <WarehouseInventory
+        key={row.id}
+        itemSelector={itemSelector}
+        inventory={row}
+      />
+    );
+  });
+
   return (
-    <div className='table-Header'>
-        <ul>
-            <div className='inventory-item'>
-            <li><h4>INVENTORY ITEM</h4></li>
-            <img src={Sort}></img>
-            </div>
-            <div className='category'>
-            <li><h4>CATEGORY</h4></li>
-            <img src={Sort}></img>
-            </div>
-            <div className='status'>
-            <li><h4>STATUS</h4></li>
-            <img src={Sort}></img>
-            </div>
-            <div className='quantity'>
-            <li><h4>QUANTITY</h4></li>
-            <img src={Sort}></img>
-            </div>
-            <div className='actions'>
-            <li><h4>ACTIONS</h4></li>
-            
-            </div>
-        </ul>
-
-    </div>
-
-  )
+    <>
+      <TableTitles titles={titles} sortListener={sortListener} />
+      {rowsJSX}
+    </>
+  );
 }
-
-
-export default TableHeader

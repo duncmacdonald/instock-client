@@ -73,14 +73,14 @@ hr {
   border: solid 1px #bdc5d5;
 }
 
-.instockFooter {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.instockFooter2 {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  bottom: 50px;
   text-align: center;
 }
-.instockFooter .copyright {
+.instockFooter2 .copyright {
   margin: 16px;
   color: #5c667e;
   font-weight: 400;
