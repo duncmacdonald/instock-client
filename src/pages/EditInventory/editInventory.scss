@@ -124,7 +124,7 @@ html {
 
 //New Inventory Styling
 @media (min-width: $mobile-lower) { 
-    .addNewInventory { 
+    .editInventory { 
     background-color: $White;
     font-family: 'TitilliumWeb', sans-serif;
     display: flex; flex-flow: column wrap; width: 90%; 

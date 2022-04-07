@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../styles/App.css";
+import "../../styles/App.scss";
+import '../../styles/partials/breakpoints.scss'
 import "../../index.css";
 import "./Header.css";
 import logo from "../../assets/Images/InStock-Logo_1x.png";

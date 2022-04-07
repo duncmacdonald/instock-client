@@ -1,0 +1,102 @@
+@import '../../styles/App.scss';
+@import '../../styles/partials/breakpoints.scss';
+
+.Page-EditWarehouse{
+    margin: 2rem;
+    background-color: $White;
+    margin-top: 0;
+    position: relative;
+    top: -60px;
+
+    @include tablet{
+        top: -100px;
+    }
+
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba($color: $Instock-Black, $alpha: .1);
+    
+    .TitleBlock {
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 24px;
+        border-bottom: 1px solid #bdc5d5;
+
+
+        h1{
+            padding-bottom: 0;
+        }
+    }
+}
+
+
+
+.WarehouseData{
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+
+        &> section {
+            width: 50%;
+        }
+    }
+
+
+    section {
+        padding: 16px 24px 24px 24px;
+
+        @include tablet {
+            padding: 0 24px 0 24px;
+            margin: 24px 0;
+        }
+
+        &:first-child{
+            border-bottom: 1px solid #bdc5d5;
+
+            @include tablet {
+                border-bottom: none;
+                border-right: 1px solid #bdc5d5;
+            }
+        }
+        
+
+
+        h2{
+            padding-bottom: 1.5rem;
+        }
+
+    }
+}
+
+.ButtonFlex {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:1rem;
+    background: #F7F8F9B2;
+    border-radius: 0px 0px 3px 3px;
+
+    @include tablet{
+        justify-content: flex-end;
+    }
+    & > *{
+        width: 50%;
+
+        @include tablet {
+            max-width: 138px;
+            &:first-child {
+                max-width: 75px;
+            }
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+}
