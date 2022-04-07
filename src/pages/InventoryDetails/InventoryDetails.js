@@ -40,7 +40,7 @@ export class InventoryDetails extends Component {
               {this.state.data.itemName}
             </h1>
           </div>
-          <Link to="/inventory">
+          <Link to="/edit-inventory-item">
             <div className="inventory-details-main__image-main">
               <img className="inventory-details-main__image" src={edit} />
               <p className="inventory-details-main__edit-tablet">Edit</p>

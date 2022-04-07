@@ -22,7 +22,7 @@ export default function TableRowInventory({ inventory, itemSelector }) {
 
         <div>
           <h4>Status</h4>
-          <Status state={inventory.status}/>
+          <Status state={inventory.status} />
         </div>
 
         <div>
@@ -49,8 +49,9 @@ export default function TableRowInventory({ inventory, itemSelector }) {
           alt="delete"
           className="TableRow__button"
         ></img>
-
-        <img src={pencil} alt="edit" className="TableRow__button"></img>
+        <Link to={"/edit-inventory-item"}>
+          <img src={pencil} alt="edit" className="TableRow__button"></img>
+        </Link>
       </div>
 
       <div className="TableRow-Tablet wide">
@@ -73,12 +74,14 @@ export default function TableRowInventory({ inventory, itemSelector }) {
             className="TableRow__button"
             onClick={() => itemSelector(inventory, true)}
           ></img>
-          <img
-            src={pencil}
-            alt="edit"
-            className="TableRow__button"
-            onClick={() => console.log(`Edit ${inventory.id}`)}
-          ></img>
+          <Link to={"/edit-inventory-item"}>
+            <img
+              src={pencil}
+              alt="edit"
+              className="TableRow__button"
+              onClick={() => console.log(`Edit ${inventory.id}`)}
+            ></img>
+          </Link>
         </div>
       </div>
     </>
