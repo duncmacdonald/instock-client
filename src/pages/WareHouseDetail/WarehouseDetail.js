@@ -5,13 +5,14 @@ import backicon from "../../assets/Icons/arrow_back-24px.svg";
 import edit from "../../assets/Icons/edit-24px-white.svg";
 import WarehouseInventory from "../../components/WarehouseInventory/WarehouseInventory"
 import axios from "axios";
-import '../WareHouseDetail/WarehouseDetail.css'
+import './WarehouseDetail.css'
 import TableHeader from "../../components/TableHeader/TableHeader";
+import InventoryTable from "../../components/InventoryTable/InventoryTable";
+import DeleteInventory from "../../components/WarehouseComponentsMain/warehouseComponents/DeleteInventory";
+import '../../components/WarehouseInventory/warehouseInventory.css'
 
 
-
-
-const warehouse_URL = "http://localhost:8080/warehouse/";
+const URL = "http://localhost:8080/inventory/";
 
 
 export default class WareHouseDetail extends Component {
@@ -19,8 +20,82 @@ export default class WareHouseDetail extends Component {
         singleWarehouseDetail : [],
         singleWarehouseInventory : [],
         contacts :[],
+        deleteModal: false,
+        selectedItem: "",
+        sort: ""
     }
-
+    
+    sortData = (sortBy) => {
+      console.log(sortBy);
+      let sortedArray = [];
+  
+      if (sortBy === this.state.sort) {
+        sortedArray = this.state.singleWarehouseInventory.reverse();
+        this.setState({ sort: sortBy, singleWarehouseInventory: sortedArray });
+      } else {
+        switch (sortBy) {
+          case "Inventory Item":
+            sortedArray = this.state.singleWarehouseInventory.sort((a, b) => {
+              return a.itemName.localeCompare(b.itemName);
+            });
+            break;
+  
+          case "Category":
+            sortedArray = this.state.singleWarehouseInventory.sort((a, b) => {
+              return a.category.localeCompare(b.category);
+            });
+            break;
+  
+          case "Status":
+            sortedArray = this.state.singleWarehouseInventory.sort((a, b) => {
+              return a.status.localeCompare(b.status);
+            });
+            break;
+  
+          case "QTY":
+            sortedArray = this.state.singleWarehouseInventory.sort((a, b) => {
+              return a.quantity - b.quantity;
+            });
+            break;
+  
+          case "Warehouse":
+            sortedArray = this.state.singleWarehouseInventory.sort((a, b) => {
+              return a.warehouseName.localeCompare(b.warehouseName);
+            });
+            break;
+        }
+  
+        this.setState({ sort: sortBy, singleWarehouseInventory: sortedArray });
+      }
+    };
+  
+    modalClicker = () => {
+      this.setState({ deleteModal: false });
+    };
+  
+    currentItemSelection = (item, value) => {
+      this.setState({
+        deleteModal: value,
+        selectedItem: item,
+      });
+    };
+  
+    deleteCall = (itemID) => {
+      axios
+        .delete(URL + itemID)
+        .then((success) => {
+          this.updateTable();
+        })
+        .catch((error) => console.log(error));
+    };
+  
+    updateTable = () => {
+      axios.get(URL).then((result) => {
+        console.log(result);
+        this.setState({ data: result.data });
+      });
+    };
+  
     
     getWarehouseInventory(){
         let warehouseID = this.props.match.params.id;
@@ -35,12 +110,12 @@ export default class WareHouseDetail extends Component {
 
     componentDidMount(){
         let warehouseID = this.props.match.params.id;
-        axios.get(`http://localhost:8080/warehouse/${warehouseID}`)
-        // .then(res => res.json())
+        fetch(`http://localhost:8080/warehouse/${warehouseID}`)
+        .then(res => res.json())
         .then(warehouseData => this.setState({
-            singleWarehouseDetail : warehouseData.data,
-            contacts : warehouseData.data.contact
-        }),this.getWarehouseInventory())
+            singleWarehouseDetail : warehouseData,
+            contacts : warehouseData.contact
+        }),this.getWarehouseInventory(), this.updateTable())
     }
 
     render(){
@@ -61,7 +136,7 @@ export default class WareHouseDetail extends Component {
                     {this.state.singleWarehouseDetail.name}
                   </h1>
                 </div>
-                <Link to="/">
+                <Link to="/details">
                   <div className="warehouse-details-main__image-main">
                     <img className="warehouse-details-main__image" src={edit} />
                     <p2 className="warehouse-details-main__edit-tablet">Edit</p2>
@@ -103,8 +178,29 @@ export default class WareHouseDetail extends Component {
                   </div>
                 </div>
               </div>
-              <TableHeader />
-              <WarehouseInventory inventoryData={this.state.singleWarehouseInventory}/>
+              {/* <TableHeader /> */}
+              <TableHeader
+            titles={[
+              "Inventory Item",
+              "Category",
+              "Status",
+              "QTY",
+              "Actions",
+            ]}
+            contentArray={this.state.singleWarehouseInventory}
+            itemSelector={this.currentItemSelection}
+            sortListener={this.sortData}
+          />
+          {this.state.deleteModal ? (
+          <DeleteInventory
+            clicker={this.currentItemSelection}
+            selectedItem={this.state.selectedItem}
+            deleteCall={this.deleteCall}
+          />
+        ) : (
+          ""
+        )}
+              {/* <WarehouseInventory inventoryData={this.state.singleWarehouseInventory}/> */}
             </div>
           );
         }
