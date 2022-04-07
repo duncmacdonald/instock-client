@@ -270,6 +270,9 @@ a {
     width: 274px;
   }
 }
+.Warehouse .TitleBlock .Button {
+  width: 100%;
+}
 @media (min-width: 768px) {
   .Warehouse .TitleBlock .Button {
     width: 168px;

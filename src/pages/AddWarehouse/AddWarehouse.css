@@ -322,6 +322,10 @@ a {
   }
 }
 
+.white {
+  width: 100%;
+}
+
 a {
   text-decoration: none;
 }/*# sourceMappingURL=AddWarehouse.css.map */

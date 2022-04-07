@@ -42,8 +42,9 @@ export default function TableRowWarehouse({ warehouse, warehouseSelector }) {
           alt="delete"
           className="TableRow__button"
         ></img>
-
-        <img src={pencil} alt="edit" className="TableRow__button"></img>
+        <Link to={`details/${warehouse.id}`}>
+          <img src={pencil} alt="edit" className="TableRow__button"></img>
+        </Link>
       </div>
 
       <div className="TableRow-Tablet">
@@ -68,12 +69,14 @@ export default function TableRowWarehouse({ warehouse, warehouseSelector }) {
             className="TableRow__button"
             onClick={() => warehouseSelector(warehouse, true)}
           ></img>
+          <Link to={`details/${warehouse.id}`}>
           <img
             src={pencil}
             alt="edit"
             className="TableRow__button"
             onClick={() => console.log(`Edit ${warehouse.id}`)}
           ></img>
+          </Link>
         </div>
       </div>
     </>
