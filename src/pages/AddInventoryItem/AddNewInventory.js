@@ -75,7 +75,7 @@ export default class AddNewInventory extends Component {
       itemName: this.state.form.itemName,
       category: this.state.form.category,
       status: this.state.form.status,
-      quantity: this.state.form.quantity,
+      quantity: Number(this.state.form.quantity),
     };
     if (this.formValidator()) {
       const warehouseTempID = this.state.warehouseList.filter((warehouse) => {
