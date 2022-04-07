@@ -22,8 +22,9 @@ export default class App extends Component {
           <Route path="/AddWarehouse" component={AddWarehouse} />
           <Route path="/details" component={Details} />
           <Route path="/add-new-inventory" component={AddNewInventory} />
-          <Route exact path="/inventory" component={Inventory} />
           <Route path="/edit-inventory-item" component={EditInventory} />
+          <Route exact path="/inventory" component={Inventory} />
+          
           <Route
             path="/inventory/:inventoryid"
             render={(RouterProps) => {

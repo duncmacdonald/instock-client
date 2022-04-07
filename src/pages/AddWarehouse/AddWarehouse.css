@@ -74,8 +74,10 @@ hr {
 }
 
 .instockFooter2 {
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  bottom: 50px;
   text-align: center;
 }
 .instockFooter2 .copyright {
@@ -300,7 +302,7 @@ a {
   flex-direction: row;
   justify-content: space-between;
   gap: 1rem;
-  background: #F7F8F9B2;
+  background: rgba(247, 248, 249, 0.6980392157);
   border-radius: 0px 0px 3px 3px;
 }
 @media (min-width: 768px) {
