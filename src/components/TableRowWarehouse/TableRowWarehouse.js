@@ -11,7 +11,9 @@ export default function TableRowWarehouse({ warehouse, warehouseSelector }) {
       <div className="TableRow-Mobile">
         <div>
           <h4>Warehouse</h4>
-          <ArrowLink text={warehouse.name} action={() => console.log("hi")} />
+          <Link to={warehouse.id}>
+            <ArrowLink text={warehouse.name} action={() => console.log("hi")} />
+          </Link>
         </div>
 
         <div>
