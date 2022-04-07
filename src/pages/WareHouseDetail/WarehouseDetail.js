@@ -89,7 +89,7 @@ export default class WareHouseDetail extends Component {
 
   updateTable = () => {
     axios.get(URL).then((result) => {
-      console.log(result);
+      console.log(result.data);
       this.setState({ data: result.data });
     });
   };
@@ -122,7 +122,7 @@ export default class WareHouseDetail extends Component {
   }
 
   render() {
-    if (this.state.data === "") {
+    if (this.state.singleWarehouseDetail === []) {
       return <div>Loading....</div>;
     }
     return (

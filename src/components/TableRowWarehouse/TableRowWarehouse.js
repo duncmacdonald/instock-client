@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ArrowLink from "../ArrowLink/ArrowLink";
 import trash from "../../assets/Icons/delete_outline-24px.svg";
 import pencil from "../../assets/Icons/edit-24px.svg";
@@ -44,10 +45,12 @@ export default function TableRowWarehouse({ warehouse, warehouseSelector }) {
       </div>
 
       <div className="TableRow-Tablet">
-        <ArrowLink
-          text={warehouse.name}
-          action={() => console.log(`Link to ${warehouse.id}`)}
-        />
+        <Link to={warehouse.id}>
+          <ArrowLink
+            text={warehouse.name}
+            action={() => console.log(`Link to ${warehouse.id}`)}
+          />
+        </Link>
         <span>
           {warehouse.address}, {warehouse.city}, {warehouse.country}
         </span>
