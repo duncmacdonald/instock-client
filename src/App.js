@@ -19,7 +19,7 @@ export default class App extends Component {
         <Switch>
           <Route exact path="/" component={Warehouses} />
           <Route path="/AddWarehouse" component={AddWarehouse} />
-          <Route path="/details" component={Details} />
+          <Route path="/details/:id" component={Details} />
           <Route path="/add-new-inventory" component={AddNewInventory} />
           <Route path="/edit-inventory-item" component={EditInventory} />
 

@@ -139,7 +139,7 @@ export default class WareHouseDetail extends Component {
               {this.state.singleWarehouseDetail.name}
             </h1>
           </div>
-          <Link to="/details">
+          <Link to={`/details/${this.state.singleWarehouseDetail.id}`}>
             <div className="warehouse-details-main__image-main">
               <img className="warehouse-details-main__image" src={edit} />
               <p2 className="warehouse-details-main__edit-tablet">Edit</p2>

@@ -276,6 +276,9 @@ a {
     width: 274px;
   }
 }
+.Inventory .TitleBlock .Button {
+  width: 100%;
+}
 @media (min-width: 768px) {
   .Inventory .TitleBlock .Button {
     width: 168px;
