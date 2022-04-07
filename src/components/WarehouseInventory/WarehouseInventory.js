@@ -12,7 +12,7 @@ export default function WarehouseInventory({ inventory, itemSelector }) {
     <>
       <div className="TableRow-Mobile">
         <div>
-          <h4>Inventory Item</h4>
+          <h4>INVENTORY ITEM</h4>
           <Link to={"/inventory/" + inventory.id}>
             <ArrowLink
               text={inventory.itemName}
@@ -22,12 +22,12 @@ export default function WarehouseInventory({ inventory, itemSelector }) {
         </div>
 
         <div>
-          <h4>Status</h4>
+          <h4>STATUS</h4>
           <Status state={inventory.status}/>
         </div>
 
         <div>
-          <h4>Category</h4>
+          <h4>CATEGORY</h4>
           <span>{inventory.category}</span>
         </div>
 
@@ -37,10 +37,7 @@ export default function WarehouseInventory({ inventory, itemSelector }) {
               <h4>QTY</h4>
               <span>{inventory.quantity}</span>
             </div>
-            <div>
-              <h4>Warehouse</h4>
-              <span>{inventory.warehouseName}</span>
-            </div>
+            
           </div>
         </div>
 
@@ -50,8 +47,8 @@ export default function WarehouseInventory({ inventory, itemSelector }) {
           alt="delete"
           className="TableRow__button"
         ></img>
-
-        <img src={pencil} alt="edit" className="TableRow__button"></img>
+        <Link to='/edit-inventory-item'>
+        <img src={pencil} alt="edit" className="TableRow__button"></img></Link>
       </div>
 
       <div className="TableRow-Tablet wide">
