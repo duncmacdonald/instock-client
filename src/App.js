@@ -12,6 +12,7 @@ import EditWarehouse from './pages/EditWarehouse/EditWarehouse'
 import AddWarehouse from "./pages/AddWarehouse/AddWarehouse";
 import InventoryDetails from "./pages/InventoryDetails/InventoryDetails";
 import WareHouseDetail from "./pages/WareHouseDetail/WarehouseDetail";
+import EditWarehouse2 from "./pages/EditWarehouse2/EditWarehouse2";
 export default class App extends Component {
   render() {
     return (
@@ -20,11 +21,12 @@ export default class App extends Component {
         <Switch>
           <Route exact path="/" component={Warehouses} />
           <Route path="/AddWarehouse" component={AddWarehouse} />
-          <Route path="/details/:id" component={Details} />
+          {/* <Route path="/details/:id" component={Details} /> */}
+          <Route path="/details/:id" component={EditWarehouse2} />
           <Route path="/add-new-inventory" component={AddNewInventory} />
           <Route path='/inventory' component={Inventory} />
           <Route path ='/edit-inventory-item' component={EditInventory}/>
-          <Route path ='/edit-warehouse' component={EditWarehouse}/>
+          {/* <Route path ='/edit-warehouse' component={EditWarehouse}/> */}
           <Route
             path="/inventory/:inventoryid"
             render={(RouterProps) => {
