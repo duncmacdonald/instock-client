@@ -22,8 +22,6 @@ export default class App extends Component {
           <Route path="/details" component={Details} />
           <Route path="/add-new-inventory" component={AddNewInventory} />
           <Route path="/edit-inventory-item" component={EditInventory} />
-          <Route exact path="/inventory" component={Inventory} />
-          <Route path="/:id" component={WareHouseDetail} />
 
           <Route
             path="/inventory/:inventoryid"
@@ -35,6 +33,8 @@ export default class App extends Component {
               );
             }}
           />
+          <Route path="/inventory" component={Inventory} />
+          <Route path="/:id" component={WareHouseDetail} />
         </Switch>
         <Footer />
       </Router>
