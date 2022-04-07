@@ -1,0 +1,273 @@
+html {
+  font-family: "TitilliumWeb", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f8f9;
+}
+
+.details {
+  height: 700px;
+  background-color: #ffffff;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+}
+
+.warehouseDetails,
+.contactDetails {
+  font-family: "TitilliumWeb";
+  margin: 0 16px;
+}
+
+.warehouseDetails {
+  border-bottom: solid 1px #bdc5d5;
+}
+
+.whDetailsForm,
+.cDForm {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+label {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+input {
+  border: #bdc5d5 1px solid;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-bottom: 16px;
+  outline: none;
+}
+
+hr {
+  color: #bdc5d5;
+}
+
+.submissionSection {
+  background-color: #f7f8f9;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.submissionSection button {
+  margin: 8px;
+  border-radius: 20px;
+  font-family: "Titillium Web";
+  width: 35%;
+}
+.submissionSection .saveButton {
+  background-color: #2e66e5;
+  color: #ffffff;
+  border: solid 1px #2e66e5;
+}
+.submissionSection .cancelButton {
+  background-color: #ffffff;
+  color: #13182c;
+  border: solid 1px #bdc5d5;
+}
+
+.instockFooter2 {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  bottom: 50px;
+  text-align: center;
+}
+.instockFooter2 .copyright {
+  margin: 16px;
+  color: #5c667e;
+  font-weight: 400;
+  font-size: 11px;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .headerSection {
+    overflow: hidden;
+    display: flex;
+    margin: 0;
+  }
+
+  .topClump {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 0 32px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .topClump .logoImg {
+    width: 30%;
+    margin: 16px 0;
+  }
+
+  .directoryContainer {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0;
+  }
+  .directoryContainer .directoryLink {
+    width: 40%;
+    padding: 8px 16px;
+  }
+
+  .details {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    justify-content: center;
+  }
+  .details .warehouseDetails {
+    width: 40%;
+    margin: 0;
+    border-right: solid 1px #bdc5d5;
+    border-bottom: none;
+    padding: 0 16px;
+  }
+  .details .contactDetails {
+    width: 40%;
+    margin: 0;
+    padding: 0 16px;
+  }
+  .details form {
+    background-color: #ffffff;
+  }
+  .details .submissionSection {
+    background-color: #f7f8f9;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+  }
+  .details .submissionSection button {
+    width: 15%;
+  }
+
+  .instockFooter {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@media (min-width: 1280px) {
+  .headerSection {
+    overflow: hidden;
+    display: flex;
+    margin: 0;
+  }
+
+  .topClump {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 63px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .topClump .logoImg {
+    width: 30%;
+    margin: 16px 0;
+  }
+
+  .directoryContainer {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0;
+  }
+  .directoryContainer .directoryLink {
+    width: 40%;
+    padding: 8px 16px;
+  }
+
+  .directoryContainer {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0;
+  }
+  .directoryContainer .directoryLink {
+    width: 40%;
+    padding: 8px 16px;
+  }
+
+  .details {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    justify-content: center;
+  }
+  .details .warehouseDetails {
+    width: 40%;
+    margin: 0;
+    border-right: solid 1px #bdc5d5;
+    border-bottom: none;
+    padding: 0 16px;
+  }
+  .details .contactDetails {
+    width: 40%;
+    margin: 0;
+    padding: 0 16px;
+  }
+  .details form {
+    background-color: #ffffff;
+  }
+}
+.Item {
+  border-radius: 50%;
+  height: 26px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 0.35rem;
+  font-size: 11px;
+  line-height: 16px;
+}
+@media (min-width: 768px) {
+  .Item {
+    padding-top: 0.25rem;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.greenItem {
+  background-color: rgba(21, 132, 99, 0.07);
+  color: #158463;
+  max-width: 61px;
+  margin-right: 25px;
+}
+@media (min-width: 768px) {
+  .greenItem {
+    max-width: 65px;
+    margin-right: 27px;
+  }
+}
+
+.redItem {
+  background-color: rgba(201, 69, 21, 0.07);
+  color: #c94515;
+  max-width: 86px;
+}
+@media (min-width: 768px) {
+  .redItem {
+    max-width: 92px;
+  }
+}/*# sourceMappingURL=Status.css.map */

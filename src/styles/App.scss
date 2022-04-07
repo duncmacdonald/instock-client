@@ -1,0 +1,203 @@
+//Variables, Mixins, etc.
+
+//Primary Colors
+$Instock-Black: #13182c;
+$Instock-Indigo: #2e66e5;
+$White: #ffffff;
+//Secondary Colors
+$Slate: #5c667e;
+$Cloud: #bdc5d5;
+//Background Colors
+$Graphite: #232940;
+$Light-Grey: #f7f8f9;
+//Supporting Colors
+$Green: #158463;
+$Red: #c94515;
+//Mixins:
+//Padding:
+@mixin mobilePadding {
+  margin: 16px;
+}
+@mixin tabletPaddingSides {
+  margin: 24px 32px;
+}
+@mixin desktopPaddingSides {
+  margin: 24px 63px;
+}
+//Font-Sizes:
+//Mobile
+@mixin mobileBodySmall {
+  font-size: 11px;
+  line-height: 16px;
+}
+@mixin mobileBodyMedium {
+  font-size: 13px;
+  line-height: 20px;
+}
+@mixin mobileBodyLarge {
+  font-size: 15px;
+  line-height: 26px;
+}
+@mixin mobileBodyTableHeader {
+  @include mobileBodySmall();
+}
+@mixin mobileBodyLabelsEtc {
+  @include mobileBodyMedium();
+}
+@mixin mobileSubheader {
+  font-size: 20px;
+  line-height: 28px;
+}
+@mixin mobilePageHeader {
+  font-size: 28px;
+  line-height: 36px;
+}
+//Tablet & Desktop
+@mixin bodySmall {
+  font-size: 12px;
+  line-height: 18px;
+}
+@mixin bodyMedium {
+  font-size: 14px;
+  line-height: 22px;
+}
+@mixin bodyLarge {
+  font-size: 16px;
+  line-height: 28px;
+}
+@mixin tableHeader {
+  @include bodySmall();
+}
+@mixin labelsEtc {
+  font-size: 14px;
+  line-height: 22px;
+}
+@mixin subHeader {
+  font-size: 24px;
+  line-height: 32px;
+}
+@mixin pageHeader {
+  font-size: 32px;
+  line-height: 40px;
+}
+//Convenience
+@mixin mobilePaddingSides {
+  margin: 0 16px;
+}
+@mixin tabletPaddingSides {
+  margin: 0 32px;
+}
+@mixin desktopPaddingSides {
+  margin: 0 63px;
+}
+@mixin clearVertPadding {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@mixin clearTopPadding {
+  margin-top: 0;
+}
+@mixin clearBottomPadding {
+  margin-bottom: 0;
+}
+
+@mixin twoRemPadding {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+//Screen-Sizing
+$mobile-lower: 320px;
+$mobile-higher: 767px;
+$tablet-lower: 768px;
+$tablet-higher: 1279px;
+$desktop-lower: 1280px;
+//End of Variables & Mixins
+//-----------------------------------------------------------
+//General Styling
+html {
+  font-family: "TitilliumWeb", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  background-color: $Light-Grey;
+}
+
+
+//Warehouse Details/Form Styling
+.details {
+  height: 700px;
+  background-color: $White;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+}
+.warehouseDetails,
+.contactDetails {
+  font-family: "TitilliumWeb";
+  @include mobilePaddingSides();
+}
+.warehouseDetails {
+  border-bottom: solid 1px $Cloud;
+}
+.whDetailsForm,
+.cDForm {
+  display: flex;
+  flex-flow: column wrap;
+}
+label {
+  @include labelsEtc();
+  font-weight: 600;
+}
+input {
+  border: $Cloud 1px solid;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-bottom: 16px;
+  outline: none;
+}
+hr {
+  color: $Cloud;
+}
+.submissionSection {
+  background-color: $Light-Grey;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  button {
+    margin: 8px;
+    border-radius: 20px;
+    font-family: "Titillium Web";
+    width: 35%;
+  }
+  .saveButton {
+    background-color: $Instock-Indigo;
+    color: $White;
+    border: solid 1px $Instock-Indigo;
+  }
+  .cancelButton {
+    background-color: $White;
+    color: $Instock-Black;
+    border: solid 1px $Cloud;
+  }
+}
+.instockFooter2 {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  bottom: 50px;
+
+
+  text-align: center;
+  .copyright {
+    margin: 16px;
+    color: $Slate;
+    font-weight: 400;
+    font-size: 11px;
+  }
+}
+
+a {
+  text-decoration: none;
+}

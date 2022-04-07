@@ -1,0 +1,331 @@
+html {
+  font-family: "TitilliumWeb", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f8f9;
+}
+
+.details {
+  height: 700px;
+  background-color: #ffffff;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+}
+
+.warehouseDetails,
+.contactDetails {
+  font-family: "TitilliumWeb";
+  margin: 0 16px;
+}
+
+.warehouseDetails {
+  border-bottom: solid 1px #bdc5d5;
+}
+
+.whDetailsForm,
+.cDForm {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+label {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+input {
+  border: #bdc5d5 1px solid;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-bottom: 16px;
+  outline: none;
+}
+
+hr {
+  color: #bdc5d5;
+}
+
+.submissionSection {
+  background-color: #f7f8f9;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.submissionSection button {
+  margin: 8px;
+  border-radius: 20px;
+  font-family: "Titillium Web";
+  width: 35%;
+}
+.submissionSection .saveButton {
+  background-color: #2e66e5;
+  color: #ffffff;
+  border: solid 1px #2e66e5;
+}
+.submissionSection .cancelButton {
+  background-color: #ffffff;
+  color: #13182c;
+  border: solid 1px #bdc5d5;
+}
+
+.instockFooter2 {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  bottom: 50px;
+  text-align: center;
+}
+.instockFooter2 .copyright {
+  margin: 16px;
+  color: #5c667e;
+  font-weight: 400;
+  font-size: 11px;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .headerSection {
+    overflow: hidden;
+    display: flex;
+    margin: 0;
+  }
+
+  .topClump {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 0 32px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .topClump .logoImg {
+    width: 30%;
+    margin: 16px 0;
+  }
+
+  .directoryContainer {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0;
+  }
+  .directoryContainer .directoryLink {
+    width: 40%;
+    padding: 8px 16px;
+  }
+
+  .details {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    justify-content: center;
+  }
+  .details .warehouseDetails {
+    width: 40%;
+    margin: 0;
+    border-right: solid 1px #bdc5d5;
+    border-bottom: none;
+    padding: 0 16px;
+  }
+  .details .contactDetails {
+    width: 40%;
+    margin: 0;
+    padding: 0 16px;
+  }
+  .details form {
+    background-color: #ffffff;
+  }
+  .details .submissionSection {
+    background-color: #f7f8f9;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+  }
+  .details .submissionSection button {
+    width: 15%;
+  }
+
+  .instockFooter {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@media (min-width: 1280px) {
+  .headerSection {
+    overflow: hidden;
+    display: flex;
+    margin: 0;
+  }
+
+  .topClump {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 63px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .topClump .logoImg {
+    width: 30%;
+    margin: 16px 0;
+  }
+
+  .directoryContainer {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0;
+  }
+  .directoryContainer .directoryLink {
+    width: 40%;
+    padding: 8px 16px;
+  }
+
+  .directoryContainer {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0;
+  }
+  .directoryContainer .directoryLink {
+    width: 40%;
+    padding: 8px 16px;
+  }
+
+  .details {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    justify-content: center;
+  }
+  .details .warehouseDetails {
+    width: 40%;
+    margin: 0;
+    border-right: solid 1px #bdc5d5;
+    border-bottom: none;
+    padding: 0 16px;
+  }
+  .details .contactDetails {
+    width: 40%;
+    margin: 0;
+    padding: 0 16px;
+  }
+  .details form {
+    background-color: #ffffff;
+  }
+}
+a {
+  color: #bdc5d5;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.headerSection2 {
+  background-color: #232940;
+  color: #ffffff;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+}
+@media (min-width: 768px) {
+  .headerSection2 {
+    height: 186px;
+  }
+}
+
+.topClump2 {
+  padding: 0;
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .topClump2 {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width: 1280px) {
+  .topClump2 {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+.topClump2 .logoImage {
+  height: 28px;
+  width: 125px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+@media (min-width: 768px) {
+  .topClump2 .logoImage {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.directoryContainer2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .directoryContainer2 {
+    width: 220px;
+    font-size: 14px;
+    transform: translateX(22px);
+  }
+}
+@media (min-width: 1280px) {
+  .directoryContainer2 {
+    transform: translateX(0);
+  }
+}
+.directoryContainer2 > * {
+  width: 45%;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .directoryContainer2 > * {
+    width: 110px;
+  }
+}
+
+.directoryLink2 {
+  width: 100%;
+  font-size: 15px;
+  line-height: 26px;
+  text-align: center;
+  padding: 8px 16px;
+  margin: 0;
+  padding-left: auto;
+  padding-right: auto;
+  font-weight: 600;
+  border-radius: 50px;
+}
+.directoryLink2:hover {
+  background-color: #13182c;
+  color: #ffffff;
+}/*# sourceMappingURL=Header.css.map */

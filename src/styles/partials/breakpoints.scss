@@ -1,0 +1,226 @@
+//Variables, Mixins, etc.
+//Primary Colors
+$Instock-Black: #13182c;
+$Instock-Indigo: #2e66e5;
+$White: #ffffff;
+//Secondary Colors
+$Slate: #5c667e;
+$Cloud: #bdc5d5;
+//Background Colors
+$Graphite: #232940;
+$Light-Grey: #f7f8f9;
+//Supporting Colors
+$Green: #158463;
+$Red: #c94515;
+//Mixins:
+//Padding:
+@mixin mobilePadding {
+  margin: 16px;
+}
+@mixin tabletPaddingSides {
+  margin: 24px 32px;
+}
+@mixin desktopPaddingSides {
+  margin: 24px 63px;
+}
+//Font-Sizes:
+//Tablet & Desktop
+@mixin bodySmall {
+  font-size: 12px;
+  line-height: 18px;
+}
+@mixin bodyMedium {
+  font-size: 14px;
+  line-height: 22px;
+}
+@mixin bodyLarge {
+  font-size: 16px;
+  line-height: 28px;
+}
+@mixin tableHeader {
+  @include bodySmall();
+}
+@mixin labelsEtc {
+  font-size: 14px;
+  line-height: 22px;
+}
+@mixin subHeader {
+  font-size: 24px;
+  line-height: 32px;
+}
+@mixin pageHeader {
+  font-size: 32px;
+  line-height: 40px;
+}
+//Screen-Sizes
+$tablet-lower: 768px;
+$tablet-higher: 1279px;
+$desktop-lower: 1280px;
+
+// Tablet+ sized screens
+@mixin tablet {
+  @media (min-width: $tablet-lower) {
+      @content;
+  }
+}
+
+// Desktop sized screens
+@mixin desktop {
+  @media (min-width: $desktop-lower) {
+      @content;
+  }
+}
+
+
+
+//Convenience
+@mixin mobilePaddingSides {
+  padding: 0 16px;
+}
+@mixin tabletPaddingSides {
+  padding: 0 32px;
+}
+@mixin desktopPaddingSides {
+  margin: 0 63px;
+}
+@mixin clearVertPadding {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@mixin clearTopPadding {
+  margin-top: 0;
+}
+@mixin clearBottomPadding {
+  margin-bottom: 0;
+}
+//General Styling
+@media (min-width: $tablet-lower) {
+  .headerSection {
+    overflow: hidden;
+    display: flex;
+    margin: 0;
+  }
+  .topClump {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    @include tabletPaddingSides();
+    @include bodyLarge();
+    .logoImg {
+      width: 30%;
+      margin: 16px 0;
+    }
+  }
+  .directoryContainer {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0;
+    .directoryLink {
+      width: 40%;
+      padding: 8px 16px;
+    }
+  }
+  .details {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    background-color: $White;
+    justify-content: center;
+    .warehouseDetails {
+      width: 40%;
+      margin: 0;
+      border-right: solid 1px $Cloud;
+      border-bottom: none;
+      padding: 0 16px;
+    }
+    .contactDetails {
+      width: 40%;
+      margin: 0;
+      padding: 0 16px;
+    }
+    form {
+      background-color: $White;
+    }
+    .submissionSection {
+      background-color: $Light-Grey;
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-end;
+      button {
+        width: 15%;
+      }
+    }
+  }
+  .instockFooter {
+    @include bodySmall()
+  }
+}
+
+@media (min-width: $desktop-lower) {
+  .headerSection {
+    overflow: hidden;
+    display: flex;
+    margin: 0;
+  }
+  .topClump {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    @include desktopPaddingSides();
+    @include bodyLarge();
+    .logoImg {
+      width: 30%;
+      margin: 16px 0;
+    }
+  }
+  .directoryContainer {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0;
+    .directoryLink {
+      width: 40%;
+      padding: 8px 16px;
+    }
+  }
+  .directoryContainer {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0;
+    .directoryLink {
+      width: 40%;
+      padding: 8px 16px;
+    }
+  }
+  .details {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    background-color: $White;
+    justify-content: center;
+    .warehouseDetails {
+      width: 40%;
+      margin: 0;
+      border-right: solid 1px $Cloud;
+      border-bottom: none;
+      padding: 0 16px;
+    }
+    .contactDetails {
+      width: 40%;
+      margin: 0;
+      padding: 0 16px;
+    }
+    form {
+      background-color: $White;
+    }
+  }
+}
+
+

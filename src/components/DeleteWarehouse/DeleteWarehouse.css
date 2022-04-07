@@ -1,0 +1,241 @@
+html {
+  font-family: "TitilliumWeb", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f8f9;
+}
+
+.details {
+  height: 700px;
+  background-color: #ffffff;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+}
+
+.warehouseDetails,
+.contactDetails {
+  font-family: "TitilliumWeb";
+  margin: 0 16px;
+}
+
+.warehouseDetails {
+  border-bottom: solid 1px #bdc5d5;
+}
+
+.whDetailsForm,
+.cDForm {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+label {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+input {
+  border: #bdc5d5 1px solid;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-bottom: 16px;
+  outline: none;
+}
+
+hr {
+  color: #bdc5d5;
+}
+
+.submissionSection {
+  background-color: #f7f8f9;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.submissionSection button {
+  margin: 8px;
+  border-radius: 20px;
+  font-family: "Titillium Web";
+  width: 35%;
+}
+.submissionSection .saveButton {
+  background-color: #2e66e5;
+  color: #ffffff;
+  border: solid 1px #2e66e5;
+}
+.submissionSection .cancelButton {
+  background-color: #ffffff;
+  color: #13182c;
+  border: solid 1px #bdc5d5;
+}
+
+.instockFooter2 {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  bottom: 50px;
+  text-align: center;
+}
+.instockFooter2 .copyright {
+  margin: 16px;
+  color: #5c667e;
+  font-weight: 400;
+  font-size: 11px;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.delete-warehouse {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  font-family: Titillium Web;
+}
+@media (min-width: 768px) {
+  .delete-warehouse-tablet {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(19, 24, 24, 0.7);
+    padding: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .delete-warehouse {
+    background: white;
+    height: 262px;
+    width: 672px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.delete-warehouse__top-section {
+  height: 50px;
+  margin-bottom: 85vh;
+}
+@media (min-width: 768px) {
+  .delete-warehouse__top-section {
+    height: 0;
+    margin-bottom: 0;
+  }
+}
+.delete-warehouse__close-button-top {
+  margin: 16px;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  cursor: pointer;
+}
+.delete-warehouse__close-button-top:hover {
+  color: #13182c;
+}
+@media (min-width: 768px) {
+  .delete-warehouse__close-button-top {
+    padding-top: 10px;
+    width: 10px;
+    margin-left: 90%;
+  }
+}
+.delete-warehouse__heading {
+  font-family: Titillium Web-Semi;
+  font-size: 28px;
+  line-height: 36px;
+  margin: 16px;
+}
+@media (min-width: 768px) {
+  .delete-warehouse__heading {
+    font-size: 32px;
+    line-height: 40px;
+    min-height: 0%;
+    margin: 0 48px;
+  }
+}
+.delete-warehouse__confirmation-message {
+  font-size: 15px;
+  line-height: 26px;
+  margin: 16px;
+}
+@media (min-width: 768px) {
+  .delete-warehouse__confirmation-message {
+    font-size: 16px;
+    line-height: 28px;
+    min-height: 0%;
+    margin-left: 48px;
+    margin-right: 48px;
+  }
+}
+.delete-warehouse__button-container {
+  margin: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .delete-warehouse__button-container {
+    justify-content: end;
+  }
+}
+.delete-warehouse__cancel-button {
+  width: 163px;
+  height: 36px;
+  border: 1px solid #bdc5d5;
+  border-radius: 20px;
+  margin-right: 17px;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+  font-family: Titillium Web-Semi;
+}
+@media (min-width: 768px) {
+  .delete-warehouse__cancel-button {
+    width: 71px;
+    height: 38px;
+  }
+}
+.delete-warehouse__delete-button {
+  width: 163px;
+  height: 36px;
+  border: 1px solid #bdc5d5;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+  font-family: Titillium Web-Semi;
+  background-color: #c94515;
+  color: white;
+}
+@media (min-width: 768px) {
+  .delete-warehouse__delete-button {
+    margin-bottom: 0;
+    width: 71px;
+    height: 38px;
+    margin-right: 30px;
+  }
+}
+.delete-warehouse__mobile {
+  height: 80%;
+}/*# sourceMappingURL=DeleteWarehouse.css.map */
