@@ -229,85 +229,103 @@ a {
     background-color: #ffffff;
   }
 }
-.Page {
-  margin: 2rem;
-  background-color: #ffffff;
-  margin-top: 0;
-  position: relative;
-  top: -60px;
-  border-radius: 3px;
-  box-shadow: 0 2px 5px rgba(19, 24, 44, 0.1);
+a {
+  color: #bdc5d5;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.headerSection2 {
+  background-color: #232940;
+  color: #ffffff;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 100%;
+  height: 200px;
 }
 @media (min-width: 768px) {
-  .Page {
-    top: -100px;
+  .headerSection2 {
+    height: 186px;
   }
 }
 
-.Warehouse .TitleBlock {
-  background-color: transparent;
+.topClump2 {
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  padding: 24px;
-  border-bottom: 1px solid #bdc5d5;
-}
-@media (min-width: 1280px) {
-  .Warehouse .TitleBlock {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-.Warehouse .TitleBlock .Search {
-  margin-bottom: 1rem;
+  flex-flow: column wrap;
+  width: 100%;
+  align-items: center;
 }
 @media (min-width: 768px) {
-  .Warehouse .TitleBlock .Search {
-    margin-bottom: 0;
+  .topClump2 {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 @media (min-width: 1280px) {
-  .Warehouse .TitleBlock .Search {
-    width: 274px;
+  .topClump2 {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
-.Warehouse .TitleBlock .Button {
+.topClump2 .logoImage {
+  height: 28px;
+  width: 125px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+@media (min-width: 768px) {
+  .topClump2 .logoImage {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.directoryContainer2 {
+  display: flex;
+  justify-content: center;
   width: 100%;
 }
 @media (min-width: 768px) {
-  .Warehouse .TitleBlock .Button {
-    width: 168px;
-  }
-}
-@media (min-width: 768px) {
-  .Warehouse .TitleBlock {
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 1rem;
-    padding-top: 32px;
-    border-bottom: 1px solid transparent;
-  }
-}
-.Warehouse .TitleBlock h1 {
-  padding: 0;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 28px;
-  line-height: 36px;
-  padding-bottom: 12px;
-  font-weight: 600;
-}
-@media (min-width: 768px) {
-  .Warehouse .TitleBlock h1 {
-    font-size: 32px;
-    line-height: 40px;
-    padding: 0;
+  .directoryContainer2 {
+    width: 220px;
+    font-size: 14px;
+    transform: translateX(22px);
   }
 }
 @media (min-width: 1280px) {
-  .Warehouse .TableTitles, .Warehouse .TableRow-Tablet {
-    padding-left: 40px;
-    padding-right: 40px;
+  .directoryContainer2 {
+    transform: translateX(0);
   }
-}/*# sourceMappingURL=Warehouses.css.map */
+}
+.directoryContainer2 > * {
+  width: 45%;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .directoryContainer2 > * {
+    width: 110px;
+  }
+}
+
+.directoryLink2 {
+  width: 100%;
+  font-size: 15px;
+  line-height: 26px;
+  text-align: center;
+  padding: 8px 16px;
+  margin: 0;
+  padding-left: auto;
+  padding-right: auto;
+  font-weight: 600;
+  border-radius: 50px;
+}
+.directoryLink2:hover {
+  background-color: #13182c;
+  color: #ffffff;
+}/*# sourceMappingURL=Header.css.map */

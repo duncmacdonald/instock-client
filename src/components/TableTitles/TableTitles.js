@@ -1,7 +1,7 @@
 import sort from "../../assets/Icons/sort-24px.svg";
 import "./TableTitles.css";
 
-export default function TableTitles({ titles }) {
+export default function TableTitles({ titles, sortListener }) {
   let columns = [...titles];
 
   //Row Headings
@@ -11,14 +11,14 @@ export default function TableTitles({ titles }) {
         return (
           <div className="wide">
             <span>{title}</span>
-            <img src={sort} alt="sort"></img>
+            <img src={sort} alt="sort" onClick={()=>{sortListener(title)}}></img>
           </div>
         );
       } else {
         return (
           <div>
             <span>{title}</span>
-            <img src={sort} alt="sort"></img>
+            <img src={sort} alt="sort" onClick={()=>{sortListener(title)}}></img>
           </div>
         );
       }

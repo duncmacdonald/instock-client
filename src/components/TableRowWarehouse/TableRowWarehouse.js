@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ArrowLink from "../ArrowLink/ArrowLink";
 import trash from "../../assets/Icons/delete_outline-24px.svg";
 import pencil from "../../assets/Icons/edit-24px.svg";
@@ -10,7 +11,9 @@ export default function TableRowWarehouse({ warehouse, warehouseSelector }) {
       <div className="TableRow-Mobile">
         <div>
           <h4>Warehouse</h4>
-          <ArrowLink text={warehouse.name} action={() => console.log("hi")} />
+          <Link to={warehouse.id}>
+            <ArrowLink text={warehouse.name} action={() => console.log("hi")} />
+          </Link>
         </div>
 
         <div>
@@ -39,15 +42,18 @@ export default function TableRowWarehouse({ warehouse, warehouseSelector }) {
           alt="delete"
           className="TableRow__button"
         ></img>
-
-        <img src={pencil} alt="edit" className="TableRow__button"></img>
+        <Link to={`details/${warehouse.id}`}>
+          <img src={pencil} alt="edit" className="TableRow__button"></img>
+        </Link>
       </div>
 
       <div className="TableRow-Tablet">
-        <ArrowLink
-          text={warehouse.name}
-          action={() => console.log(`Link to ${warehouse.id}`)}
-        />
+        <Link to={warehouse.id}>
+          <ArrowLink
+            text={warehouse.name}
+            action={() => console.log(`Link to ${warehouse.id}`)}
+          />
+        </Link>
         <span>
           {warehouse.address}, {warehouse.city}, {warehouse.country}
         </span>
@@ -63,12 +69,14 @@ export default function TableRowWarehouse({ warehouse, warehouseSelector }) {
             className="TableRow__button"
             onClick={() => warehouseSelector(warehouse, true)}
           ></img>
+          <Link to={`details/${warehouse.id}`}>
           <img
             src={pencil}
             alt="edit"
             className="TableRow__button"
             onClick={() => console.log(`Edit ${warehouse.id}`)}
           ></img>
+          </Link>
         </div>
       </div>
     </>

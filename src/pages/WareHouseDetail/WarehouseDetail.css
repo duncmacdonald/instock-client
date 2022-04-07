@@ -240,7 +240,7 @@ a {
   display: flex;
 }
 
-.inventory-details-main {
+.warehouse-details-main {
   margin: 0 16px;
   background-color: white;
   box-shadow: 0px 2px 5px 0px rgba(19, 24, 44, 0.1);
@@ -249,63 +249,63 @@ a {
   border-radius: 3px;
 }
 @media (min-width: 768px) {
-  .inventory-details-main {
+  .warehouse-details-main {
     top: -100px;
   }
 }
 @media (min-width: 1279px) {
-  .inventory-details-main {
+  .warehouse-details-main {
     margin: 0 130px;
   }
 }
-.inventory-details-main__header-main {
+.warehouse-details-main__header-main {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: solid 1px #bdc5d5;
 }
-.inventory-details-main__header-name {
+.warehouse-details-main__header-name {
   font-weight: 600;
   font-size: 28px;
   line-height: 36px;
 }
 @media (min-width: 768px) {
-  .inventory-details-main__header-name {
+  .warehouse-details-main__header-name {
     font-size: 32px;
     line-height: 40px;
   }
 }
-.inventory-details-main__left-section {
+.warehouse-details-main__left-section {
   margin: 32px 28px 24px 28px;
   display: flex;
   justify-content: space-between;
 }
-.inventory-details-main__back-icon {
+.warehouse-details-main__back-icon {
   margin-right: 12px;
   min-height: 16px;
   min-width: 16px;
 }
-.inventory-details-main__image-main {
+.warehouse-details-main__image-main {
   background-color: #2e66e5;
   border-radius: 20px;
   height: 36px;
   width: 36px;
   display: flex;
   justify-content: center;
-  margin: 24px;
+  margin: 24px 24px 24px 0;
   align-items: center;
 }
 @media (min-width: 768px) {
-  .inventory-details-main__image-main {
+  .warehouse-details-main__image-main {
     width: 81px;
     height: 38px;
   }
 }
-.inventory-details-main__edit-tablet {
+.warehouse-details-main__edit-tablet {
   display: none;
 }
 @media (min-width: 768px) {
-  .inventory-details-main__edit-tablet {
+  .warehouse-details-main__edit-tablet {
     display: flex;
     color: white;
     font-size: 14px;
@@ -313,161 +313,164 @@ a {
     padding-left: 10px;
   }
 }
-.inventory-details-main__image {
+.warehouse-details-main__image {
   height: 15px;
   width: 15px;
 }
 @media (min-width: 768px) {
-  .inventory-details-main__tablet-main {
+  .warehouse-details-main__tablet-main {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 }
 @media (min-width: 768px) {
-  .inventory-details-main__tablet-left {
+  .warehouse-details-main__tablet-left {
     width: 50%;
     border-right: solid 1px #bdc5d5;
     margin: 24px;
   }
 }
 @media (min-width: 768px) {
-  .inventory-details-main__tablet-right {
+  .warehouse-details-main__tablet-right {
     width: 40%;
     margin: 24px;
   }
 }
-.inventory-details-main__item-description-main {
+.warehouse-details-main__item-description-main {
   margin: 16px 24px;
 }
 @media (min-width: 768px) {
-  .inventory-details-main__item-description-main {
+  .warehouse-details-main__item-description-main {
     margin: 16px 32px;
   }
 }
-.inventory-details-main__item-description-heading {
+.warehouse-details-main__item-description-heading {
   margin-bottom: 4px;
   font-weight: 600;
   font-size: 11px;
   line-height: 16px;
 }
 @media (min-width: 768px) {
-  .inventory-details-main__item-description-heading {
+  .warehouse-details-main__item-description-heading {
     font-size: 12px;
     line-height: 18px;
   }
 }
-.inventory-details-main__item-description {
+.warehouse-details-main__item-description {
   font-size: 13px;
   line-height: 20px;
 }
 @media (min-width: 768px) {
-  .inventory-details-main__item-description {
+  .warehouse-details-main__item-description {
     font-size: 14px;
     line-height: 22px;
   }
 }
-.inventory-details-main__category-main {
+.warehouse-details-main__category-main {
   margin: 16px 24px;
 }
 @media (min-width: 768px) {
-  .inventory-details-main__category-main {
+  .warehouse-details-main__category-main {
     margin: 16px 32px;
   }
 }
-.inventory-details-main__category-description-heading {
+.warehouse-details-main__category-description-heading {
   margin-bottom: 4px;
   font-weight: 600;
   font-size: 11px;
   line-height: 16px;
 }
 @media (min-width: 768px) {
-  .inventory-details-main__category-description-heading {
+  .warehouse-details-main__category-description-heading {
     font-size: 12px;
     line-height: 18px;
   }
 }
-.inventory-details-main__category-description {
+.warehouse-details-main__category-description {
   font-size: 13px;
   line-height: 20px;
 }
 @media (min-width: 768px) {
-  .inventory-details-main__category-description {
+  .warehouse-details-main__category-description {
     font-size: 14px;
     line-height: 22px;
   }
 }
-.inventory-details-main__status-quantity-container {
+.warehouse-details-main__status-quantity-container {
   margin: 16px 24px;
   display: flex;
 }
 @media (min-width: 768px) {
-  .inventory-details-main__status-quantity-container {
+  .warehouse-details-main__status-quantity-container {
     display: flex;
     justify-content: space-between;
     margin-right: 102px;
   }
 }
-.inventory-details-main__status-description-heading {
+.warehouse-details-main__status-description-heading {
   margin-bottom: 4px;
   font-weight: 600;
   font-size: 11px;
   line-height: 16px;
 }
 @media (min-width: 768px) {
-  .inventory-details-main__status-description-heading {
+  .warehouse-details-main__status-description-heading {
     font-size: 12px;
     line-height: 18px;
   }
 }
-.inventory-details-main__status-container {
+.warehouse-details-main__status-description {
+  font-size: 13px;
+}
+.warehouse-details-main__status-container {
   margin-right: 25%;
 }
-.inventory-details-main__quantity-description-heading {
+.warehouse-details-main__quantity-description-heading {
   margin-bottom: 4px;
   font-weight: 600;
   font-size: 11px;
   line-height: 16px;
 }
 @media (min-width: 768px) {
-  .inventory-details-main__quantity-description-heading {
+  .warehouse-details-main__quantity-description-heading {
     font-size: 12px;
     line-height: 18px;
   }
 }
-.inventory-details-main__quantity-description {
+.warehouse-details-main__quantity-description {
   font-size: 13px;
   line-height: 20px;
 }
 @media (min-width: 768px) {
-  .inventory-details-main__quantity-description {
+  .warehouse-details-main__quantity-description {
     font-size: 14px;
     line-height: 22px;
   }
 }
-.inventory-details-main__warehouse-info-container {
+.warehouse-details-main__warehouse-info-container {
   margin: 0 24px;
   padding-bottom: 16px;
 }
-.inventory-details-main__warehouse-description-heading {
+.warehouse-details-main__warehouse-description-heading {
   margin-bottom: 4px;
   font-weight: 600;
   font-size: 11px;
   line-height: 16px;
 }
 @media (min-width: 768px) {
-  .inventory-details-main__warehouse-description-heading {
+  .warehouse-details-main__warehouse-description-heading {
     font-size: 12px;
     line-height: 18px;
   }
 }
-.inventory-details-main__warehouse-description {
+.warehouse-details-main__warehouse-description {
   font-size: 13px;
   line-height: 20px;
 }
 @media (min-width: 768px) {
-  .inventory-details-main__warehouse-description {
+  .warehouse-details-main__warehouse-description {
     font-size: 14px;
     line-height: 22px;
   }
-}/*# sourceMappingURL=InventoryDetails.css.map */
+}/*# sourceMappingURL=WarehouseDetail.css.map */

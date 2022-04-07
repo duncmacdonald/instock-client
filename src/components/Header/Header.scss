@@ -1,0 +1,115 @@
+@import "../../styles/app.scss";
+@import "../../styles/partials/breakpoints.scss";
+
+a{
+  color: $Cloud;
+
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+
+.headerSection2 {
+  background-color: $Graphite;
+  color: $White;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+
+
+
+  @include tablet{
+    height: 186px;
+  }
+
+
+}
+
+
+
+
+.topClump2{
+  padding: 0;
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  align-items: center;
+
+  @include tablet {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include desktop{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .logoImage {
+    height: 28px;
+    width: 125px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    
+    @include tablet{
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+
+
+.directoryContainer2{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  
+  @include tablet{
+    width: 220px;
+    font-size: 14px;
+    transform: translateX(22px);
+  }
+
+  @include desktop{
+    transform: translateX(0);
+  }
+  
+
+
+
+  & > * {
+    width: 45%;
+    padding: 0;
+
+    @include tablet{
+      width: 110px;
+      
+    }
+  }
+}
+
+.directoryLink2{
+  width: 100%;
+  @include mobileBodyLarge();
+  text-align: center;
+  padding: 8px 16px;
+  margin: 0;
+  padding-left: auto;
+  padding-right: auto;
+  font-weight: 600;
+  border-radius: 50px;
+
+  &:hover{
+    background-color: $Instock-Black;
+    color: $White;
+    
+  }
+}

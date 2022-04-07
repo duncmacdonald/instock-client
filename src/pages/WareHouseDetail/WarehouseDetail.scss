@@ -1,0 +1,239 @@
+@import "../../styles/App.scss";
+@import "../../styles/partials/breakpoints.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "TitilliumWeb";
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-lower) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $tablet-higher) {
+    @content;
+  }
+}
+
+a {
+  display: flex;
+}
+
+.warehouse-details-main {
+  margin: 0 16px;
+  background-color: white;
+  box-shadow: 0px 2px 5px 0px rgba(19, 24, 44, 0.1);
+  position: relative;
+  top: -60px;
+  border-radius: 3px;
+
+  @include tablet() {
+    top: -100px;
+  }
+
+  @include desktop() {
+    margin: 0 130px;
+  }
+  &__header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px $Cloud;
+  }
+  &__header-name {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    @include tablet() {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+  &__left-section {
+    margin: 32px 28px 24px 28px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__back-icon {
+    margin-right: 12px;
+    min-height: 16px;
+    min-width: 16px;
+  }
+  &__image-main {
+    background-color: $Instock-Indigo;
+    border-radius: 20px;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    margin: 24px 24px 24px 0;
+
+    align-items: center;
+
+    @include tablet() {
+      width: 81px;
+      height: 38px;
+    }
+  }
+
+  &__edit-tablet {
+    display: none;
+    @include tablet() {
+      display: flex;
+      color: white;
+      font-size: 14px;
+      line-height: 22px;
+      padding-left: 10px;
+    }
+  }
+
+  &__image {
+    height: 15px;
+    width: 15px;
+  }
+
+  &__tablet-main {
+    @include tablet() {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__tablet-left {
+    @include tablet() {
+      width: 50%;
+      border-right: solid 1px $Cloud;
+      margin: 24px;
+    }
+  }
+
+  &__tablet-right {
+    @include tablet() {
+      width: 40%;
+      margin: 24px;
+    }
+  }
+  &__item-description-main {
+    margin: 16px 24px;
+    @include tablet() {
+      margin: 16px 32px;
+    }
+  }
+
+  &__item-description-heading {
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+    @include tablet() {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+  &__item-description {
+    font-size: 13px;
+    line-height: 20px;
+    @include tablet() {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+  &__category-main {
+    margin: 16px 24px;
+    @include tablet() {
+      margin: 16px 32px;
+    }
+  }
+  &__category-description-heading {
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+    @include tablet() {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+  &__category-description {
+    font-size: 13px;
+    line-height: 20px;
+    @include tablet() {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+  &__status-quantity-container {
+    margin: 16px 24px;
+    display: flex;
+    @include tablet() {
+      display: flex;
+      justify-content: space-between;
+      margin-right: 102px;
+    }
+  }
+  &__status-description-heading {
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+    @include tablet() {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+  &__status-description{
+    font-size: 13px;
+  }
+  &__status-container {
+    margin-right: 25%;
+  }
+
+  &__quantity-description-heading {
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+    @include tablet() {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+  &__quantity-description {
+    font-size: 13px;
+    line-height: 20px;
+    @include tablet() {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  &__warehouse-info-container {
+    margin: 0 24px;
+    padding-bottom: 16px;
+  }
+  &__warehouse-description-heading {
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+    @include tablet() {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+  &__warehouse-description {
+    font-size: 13px;
+    line-height: 20px;
+    @include tablet() {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}
+

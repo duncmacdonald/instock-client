@@ -1,7 +1,7 @@
 @import "../../styles/app.scss";
 @import "../../styles/partials/breakpoints.scss";
 
-.TableRow-Tablet {
+.table-Tablet {
   display: none;
 
   @include tablet {
@@ -38,11 +38,11 @@
   // }
 }
 
-.TableRow-Mobile {
+.table-Mobile {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   padding: 16px 24px 24px 24px;
   @include bodyMedium;
   background-color: transparent;
@@ -85,3 +85,50 @@ h4 {
   padding: 0;
   margin: 0;
 }
+
+
+
+.warehouseInventory{
+    border-top: solid 1px #bdc5d5;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 24px 0 24px 24px;
+    p{
+        font-size: 13px;
+    }
+    .warehouseInventory_Itemname { 
+        margin-bottom: 24px;
+     p{
+        width: 130px;
+     }
+    }
+    
+    .warehouseInventory_Category {
+        p {
+            width: 130px;
+        }
+    }
+    
+}
+
+.narrow{
+    display: flex;
+    
+}
+
+.TableRow-Tablet.wide{
+  a{
+    width: 21%;
+  }
+  .inventory{
+    width: 16%;
+    display: flex;
+    justify-content: center;
+  }
+  .category{
+    width: 16%;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+

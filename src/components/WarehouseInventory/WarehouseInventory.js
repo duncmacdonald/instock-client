@@ -3,10 +3,11 @@ import ArrowLink from "../ArrowLink/ArrowLink";
 import trash from "../../assets/Icons/delete_outline-24px.svg";
 import pencil from "../../assets/Icons/edit-24px.svg";
 import Status from "../Status/Status";
-import "./TableRowInventory.css";
-import "../../index.css";
+// import "../TableRowInventory/TableRowInventory.css";
+// import "../../index.css";
+import "./warehouseInventory.css"
 
-export default function TableRowInventory({ inventory, itemSelector }) {
+export default function WarehouseInventory({ inventory, itemSelector }) {
   return (
     <>
       <div className="TableRow-Mobile">
@@ -22,7 +23,7 @@ export default function TableRowInventory({ inventory, itemSelector }) {
 
         <div>
           <h4>Status</h4>
-          <Status state={inventory.status} />
+          <Status state={inventory.status}/>
         </div>
 
         <div>
@@ -49,9 +50,8 @@ export default function TableRowInventory({ inventory, itemSelector }) {
           alt="delete"
           className="TableRow__button"
         ></img>
-        <Link to={"/edit-inventory-item"}>
-          <img src={pencil} alt="edit" className="TableRow__button"></img>
-        </Link>
+
+        <img src={pencil} alt="edit" className="TableRow__button"></img>
       </div>
 
       <div className="TableRow-Tablet wide">
@@ -61,12 +61,14 @@ export default function TableRowInventory({ inventory, itemSelector }) {
             action={() => console.log(`Link to ${inventory.id}`)}
           />
         </Link>
-        <span>{inventory.category}</span>
+        <div className="category">
+        <span>{inventory.category}</span></div>
 
         <Status state={inventory.status} />
 
-        <span>{inventory.quantity}</span>
-        <span>{inventory.warehouseName}</span>
+        <div className="inventory">
+        <span>{inventory.quantity}</span></div>
+
         <div className="narrow">
           <img
             src={trash}
@@ -74,16 +76,16 @@ export default function TableRowInventory({ inventory, itemSelector }) {
             className="TableRow__button"
             onClick={() => itemSelector(inventory, true)}
           ></img>
-          <Link to={"/edit-inventory-item"}>
-            <img
-              src={pencil}
-              alt="edit"
-              className="TableRow__button"
-              onClick={() => console.log(`Edit ${inventory.id}`)}
-            ></img>
-          </Link>
+          <Link to='/edit-inventory-item'>
+          <img
+            src={pencil}
+            alt="edit"
+            className="TableRow__button"
+            onClick={() => console.log(`Edit ${inventory.id}`)}
+          ></img></Link>
         </div>
       </div>
     </>
   );
 }
+

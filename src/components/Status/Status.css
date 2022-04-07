@@ -6,81 +6,12 @@ html {
   background-color: #f7f8f9;
 }
 
-.headerSection {
-  background-color: #232940;
-  color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 200px;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.topClump {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.topClump .logoImg {
-  height: 45px;
-  margin: 16px;
-}
-
-.directoryContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-}
-
-.directoryLink {
-  font-size: 15px;
-  line-height: 26px;
-  text-align: center;
-  padding: 8px 16px;
-  margin: 0;
-  width: 35%;
-  font-family: "TitilliumWeb";
-  font-weight: 600;
-}
-
-.directoryLink:hover {
-  background-color: #13182c;
-  border-radius: 50px;
-}
-
 .details {
   height: 700px;
   background-color: #ffffff;
   width: 80%;
   margin: 0 auto;
-  -webkit-box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
-          box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
 }
 
 .warehouseDetails,
@@ -95,13 +26,8 @@ html {
 
 .whDetailsForm,
 .cDForm {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+  flex-flow: column wrap;
 }
 
 label {
@@ -113,10 +39,10 @@ label {
 input {
   border: #bdc5d5 1px solid;
   border-radius: 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 8px;
   margin-bottom: 16px;
+  outline: none;
 }
 
 hr {
@@ -126,16 +52,9 @@ hr {
 .submissionSection {
   background-color: #f7f8f9;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 .submissionSection button {
   margin: 8px;
@@ -154,48 +73,201 @@ hr {
   border: solid 1px #bdc5d5;
 }
 
-.instockFooter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 150px;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+.instockFooter2 {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  bottom: 50px;
+  text-align: center;
 }
-.instockFooter .copyright {
+.instockFooter2 .copyright {
   margin: 16px;
   color: #5c667e;
   font-weight: 400;
   font-size: 11px;
 }
 
+a {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .headerSection {
+    overflow: hidden;
+    display: flex;
+    margin: 0;
+  }
+
+  .topClump {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 0 32px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .topClump .logoImg {
+    width: 30%;
+    margin: 16px 0;
+  }
+
+  .directoryContainer {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0;
+  }
+  .directoryContainer .directoryLink {
+    width: 40%;
+    padding: 8px 16px;
+  }
+
+  .details {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    justify-content: center;
+  }
+  .details .warehouseDetails {
+    width: 40%;
+    margin: 0;
+    border-right: solid 1px #bdc5d5;
+    border-bottom: none;
+    padding: 0 16px;
+  }
+  .details .contactDetails {
+    width: 40%;
+    margin: 0;
+    padding: 0 16px;
+  }
+  .details form {
+    background-color: #ffffff;
+  }
+  .details .submissionSection {
+    background-color: #f7f8f9;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+  }
+  .details .submissionSection button {
+    width: 15%;
+  }
+
+  .instockFooter {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@media (min-width: 1280px) {
+  .headerSection {
+    overflow: hidden;
+    display: flex;
+    margin: 0;
+  }
+
+  .topClump {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 63px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .topClump .logoImg {
+    width: 30%;
+    margin: 16px 0;
+  }
+
+  .directoryContainer {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0;
+  }
+  .directoryContainer .directoryLink {
+    width: 40%;
+    padding: 8px 16px;
+  }
+
+  .directoryContainer {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0;
+  }
+  .directoryContainer .directoryLink {
+    width: 40%;
+    padding: 8px 16px;
+  }
+
+  .details {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    justify-content: center;
+  }
+  .details .warehouseDetails {
+    width: 40%;
+    margin: 0;
+    border-right: solid 1px #bdc5d5;
+    border-bottom: none;
+    padding: 0 16px;
+  }
+  .details .contactDetails {
+    width: 40%;
+    margin: 0;
+    padding: 0 16px;
+  }
+  .details form {
+    background-color: #ffffff;
+  }
+}
 .Item {
   border-radius: 50%;
   height: 26px;
   border-radius: 20px;
-  padding-top: 0.25rem;
   font-size: 12px;
   font-weight: 600;
-  line-height: 18px;
   text-align: center;
+  padding-top: 0.35rem;
+  font-size: 11px;
+  line-height: 16px;
+}
+@media (min-width: 768px) {
+  .Item {
+    padding-top: 0.25rem;
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
 
 .greenItem {
   background-color: rgba(21, 132, 99, 0.07);
   color: #158463;
-  max-width: 65px;
+  max-width: 61px;
+  margin-right: 25px;
+}
+@media (min-width: 768px) {
+  .greenItem {
+    max-width: 65px;
+    margin-right: 27px;
+  }
 }
 
 .redItem {
   background-color: rgba(201, 69, 21, 0.07);
   color: #c94515;
-  max-width: 92px;
+  max-width: 86px;
+}
+@media (min-width: 768px) {
+  .redItem {
+    max-width: 92px;
+  }
 }/*# sourceMappingURL=Status.css.map */

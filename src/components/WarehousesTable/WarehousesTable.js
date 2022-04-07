@@ -8,6 +8,7 @@ export default function WarehousesTable({
   contentArray,
   warehouseSelector,
   modalClicker,
+  sortListener,
 }) {
   //Rows
   const rowsJSX = contentArray.map((row) => {
@@ -23,7 +24,7 @@ export default function WarehousesTable({
 
   return (
     <>
-      <TableTitles titles={titles} />
+      <TableTitles titles={titles} sortListener={sortListener}/>
       {rowsJSX}
     </>
   );

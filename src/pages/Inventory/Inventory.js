@@ -4,9 +4,9 @@ import axios from "axios";
 import Button from "../../components/Button/Button";
 import InventoryTable from "../../components/InventoryTable/InventoryTable";
 import Search from "../../components/Search/Search";
+import DeleteInventory from "../../components/WarehouseComponentsMain/warehouseComponents/DeleteInventory";
 import "./Inventory.css";
 import "../../index.css";
-import DeleteInventory from "../../components/WarehouseComponentsMain/warehouseComponents/DeleteInventory";
 const URL = "http://localhost:8080/inventory/";
 
 export default class Inventory extends React.Component {
@@ -14,6 +14,51 @@ export default class Inventory extends React.Component {
     data: [],
     deleteModal: false,
     selectedItem: "",
+    sort: "",
+  };
+
+  sortData = (sortBy) => {
+    console.log(sortBy);
+    let sortedArray = [];
+
+    if (sortBy === this.state.sort) {
+      sortedArray = this.state.data.reverse();
+      this.setState({ sort: sortBy, data: sortedArray });
+    } else {
+      switch (sortBy) {
+        case "Inventory Item":
+          sortedArray = this.state.data.sort((a, b) => {
+            return a.itemName.localeCompare(b.itemName);
+          });
+          break;
+
+        case "Category":
+          sortedArray = this.state.data.sort((a, b) => {
+            return a.category.localeCompare(b.category);
+          });
+          break;
+
+        case "Status":
+          sortedArray = this.state.data.sort((a, b) => {
+            return a.status.localeCompare(b.status);
+          });
+          break;
+
+        case "QTY":
+          sortedArray = this.state.data.sort((a, b) => {
+            return a.quantity - b.quantity;
+          });
+          break;
+
+        case "Warehouse":
+          sortedArray = this.state.data.sort((a, b) => {
+            return a.warehouseName.localeCompare(b.warehouseName);
+          });
+          break;
+      }
+
+      this.setState({ sort: sortBy, data: sortedArray });
+    }
   };
 
   modalClicker = () => {
@@ -50,14 +95,13 @@ export default class Inventory extends React.Component {
   render() {
     return (
       <>
-        <section className="Page">
+        <section className="Page Inventory">
           <section className="TitleBlock">
             <h1>Inventory</h1>
             <Search />
-            <Link to="/add-new-inventory" ><Button
-              color="blue"
-              text="+ Add New Item"
-            /></Link>
+            <Link to="/add-new-inventory">
+              <Button color="blue" text="+ Add New Item" />
+            </Link>
           </section>
 
           <InventoryTable
@@ -71,6 +115,7 @@ export default class Inventory extends React.Component {
             ]}
             contentArray={this.state.data}
             itemSelector={this.currentItemSelection}
+            sortListener={this.sortData}
           />
         </section>
         {this.state.deleteModal ? (

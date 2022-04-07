@@ -229,85 +229,120 @@ a {
     background-color: #ffffff;
   }
 }
-.Page {
-  margin: 2rem;
-  background-color: #ffffff;
-  margin-top: 0;
-  position: relative;
-  top: -60px;
-  border-radius: 3px;
-  box-shadow: 0 2px 5px rgba(19, 24, 44, 0.1);
+.table-Tablet {
+  display: none;
 }
 @media (min-width: 768px) {
-  .Page {
-    top: -100px;
+  .table-Tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 14px;
+    line-height: 22px;
+    background-color: transparent;
+    border-bottom: 1px solid #bdc5d5;
+  }
+}
+.table-Tablet:hover {
+  background-color: rgba(189, 197, 213, 0.7);
+}
+.table-Tablet__stacked {
+  display: none;
+}
+@media (min-width: 768px) {
+  .table-Tablet__stacked {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.table-Tablet__button {
+  padding: 0.5rem;
+}
+
+.table-Mobile {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 16px 24px 24px 24px;
+  font-size: 14px;
+  line-height: 22px;
+  background-color: transparent;
+  border-bottom: 1px solid #bdc5d5;
+}
+.table-Mobile > div {
+  width: 49%;
+  padding-bottom: 1rem;
+}
+.table-Mobile span {
+  font-size: 13px;
+  line-height: 20px;
+}
+@media (min-width: 768px) {
+  .table-Mobile {
+    display: none;
+  }
+}
+.table-Mobile:hover {
+  background-color: rgba(189, 197, 213, 0.7);
+}
+.table-Mobile__stacked {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media (min-width: 768px) {
+  .table-Mobile__stacked {
+    display: none;
   }
 }
 
-.Warehouse .TitleBlock {
-  background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  padding: 24px;
-  border-bottom: 1px solid #bdc5d5;
-}
-@media (min-width: 1280px) {
-  .Warehouse .TitleBlock {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-.Warehouse .TitleBlock .Search {
-  margin-bottom: 1rem;
-}
-@media (min-width: 768px) {
-  .Warehouse .TitleBlock .Search {
-    margin-bottom: 0;
-  }
-}
-@media (min-width: 1280px) {
-  .Warehouse .TitleBlock .Search {
-    width: 274px;
-  }
-}
-.Warehouse .TitleBlock .Button {
-  width: 100%;
-}
-@media (min-width: 768px) {
-  .Warehouse .TitleBlock .Button {
-    width: 168px;
-  }
-}
-@media (min-width: 768px) {
-  .Warehouse .TitleBlock {
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 1rem;
-    padding-top: 32px;
-    border-bottom: 1px solid transparent;
-  }
-}
-.Warehouse .TitleBlock h1 {
-  padding: 0;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 28px;
-  line-height: 36px;
-  padding-bottom: 12px;
+h4 {
   font-weight: 600;
+  font-size: 11px;
+  line-height: 16px;
+  color: #5c667e;
+  padding: 0;
+  margin: 0;
 }
-@media (min-width: 768px) {
-  .Warehouse .TitleBlock h1 {
-    font-size: 32px;
-    line-height: 40px;
-    padding: 0;
-  }
+
+.warehouseInventory {
+  border-top: solid 1px #bdc5d5;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 24px 0 24px 24px;
 }
-@media (min-width: 1280px) {
-  .Warehouse .TableTitles, .Warehouse .TableRow-Tablet {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}/*# sourceMappingURL=Warehouses.css.map */
+.warehouseInventory p {
+  font-size: 13px;
+}
+.warehouseInventory .warehouseInventory_Itemname {
+  margin-bottom: 24px;
+}
+.warehouseInventory .warehouseInventory_Itemname p {
+  width: 130px;
+}
+.warehouseInventory .warehouseInventory_Category p {
+  width: 130px;
+}
+
+.narrow {
+  display: flex;
+}
+
+.TableRow-Tablet.wide a {
+  width: 21%;
+}
+.TableRow-Tablet.wide .inventory {
+  width: 16%;
+  display: flex;
+  justify-content: center;
+}
+.TableRow-Tablet.wide .category {
+  width: 16%;
+  display: flex;
+  justify-content: flex-start;
+}/*# sourceMappingURL=warehouseInventory.css.map */

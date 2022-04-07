@@ -6,52 +6,6 @@ html {
   background-color: #f7f8f9;
 }
 
-.headerSection {
-  background-color: #232940;
-  color: #ffffff;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  width: 100%;
-  height: 200px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.topClump {
-  display: flex;
-  flex-flow: column wrap;
-  width: 100%;
-  align-items: center;
-}
-.topClump .logoImg {
-  height: 45px;
-  margin: 16px;
-}
-
-.directoryContainer {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  width: 100%;
-}
-
-.directoryLink {
-  font-size: 15px;
-  line-height: 26px;
-  text-align: center;
-  padding: 8px 16px;
-  margin: 0;
-  width: 35%;
-  font-family: "TitilliumWeb";
-  font-weight: 600;
-}
-
-.directoryLink:hover {
-  background-color: #13182c;
-  border-radius: 50px;
-}
-
 .details {
   height: 700px;
   background-color: #ffffff;
@@ -88,6 +42,7 @@ input {
   box-sizing: border-box;
   padding: 8px;
   margin-bottom: 16px;
+  outline: none;
 }
 
 hr {
@@ -118,18 +73,22 @@ hr {
   border: solid 1px #bdc5d5;
 }
 
-.instockFooter {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.instockFooter2 {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  bottom: 50px;
   text-align: center;
 }
-.instockFooter .copyright {
+.instockFooter2 .copyright {
   margin: 16px;
   color: #5c667e;
   font-weight: 400;
   font-size: 11px;
+}
+
+a {
+  text-decoration: none;
 }
 
 * {

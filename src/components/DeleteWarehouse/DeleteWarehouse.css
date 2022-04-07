@@ -6,81 +6,12 @@ html {
   background-color: #f7f8f9;
 }
 
-.headerSection {
-  background-color: #232940;
-  color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 200px;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.topClump {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.topClump .logoImg {
-  height: 45px;
-  margin: 16px;
-}
-
-.directoryContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-}
-
-.directoryLink {
-  font-size: 15px;
-  line-height: 26px;
-  text-align: center;
-  padding: 8px 16px;
-  margin: 0;
-  width: 35%;
-  font-family: "TitilliumWeb";
-  font-weight: 600;
-}
-
-.directoryLink:hover {
-  background-color: #13182c;
-  border-radius: 50px;
-}
-
 .details {
   height: 700px;
   background-color: #ffffff;
   width: 80%;
   margin: 0 auto;
-  -webkit-box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
-          box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
 }
 
 .warehouseDetails,
@@ -95,13 +26,8 @@ html {
 
 .whDetailsForm,
 .cDForm {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+  flex-flow: column wrap;
 }
 
 label {
@@ -113,10 +39,10 @@ label {
 input {
   border: #bdc5d5 1px solid;
   border-radius: 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 8px;
   margin-bottom: 16px;
+  outline: none;
 }
 
 hr {
@@ -126,16 +52,9 @@ hr {
 .submissionSection {
   background-color: #f7f8f9;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 .submissionSection button {
   margin: 8px;
@@ -154,49 +73,35 @@ hr {
   border: solid 1px #bdc5d5;
 }
 
-.instockFooter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 150px;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+.instockFooter2 {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  bottom: 50px;
+  text-align: center;
 }
-.instockFooter .copyright {
+.instockFooter2 .copyright {
   margin: 16px;
   color: #5c667e;
   font-weight: 400;
   font-size: 11px;
 }
 
+a {
+  text-decoration: none;
+}
+
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .delete-warehouse {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -224,8 +129,7 @@ hr {
     position: fixed;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 }
 .delete-warehouse__top-section {
@@ -240,15 +144,9 @@ hr {
 }
 .delete-warehouse__close-button-top {
   margin: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  justify-content: end;
+  align-items: flex-end;
   cursor: pointer;
 }
 .delete-warehouse__close-button-top:hover {
@@ -291,18 +189,12 @@ hr {
 }
 .delete-warehouse__button-container {
   margin: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 @media (min-width: 768px) {
   .delete-warehouse__button-container {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
+    justify-content: end;
   }
 }
 .delete-warehouse__cancel-button {

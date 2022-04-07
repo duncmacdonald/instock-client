@@ -191,10 +191,21 @@ html {
             }
       }
       .buttonHolder {
-            display: flex; justify-content: center; align-items: center;
+            display: flex; 
+            justify-content: flex-end; 
+            align-items: center;
+            gap: 1rem;
+
+            & > * {
+              width: 125px;
+            }
+
             button {
-            width: 25%; border-radius: 20px; 
-            margin: 16px; font-size: 13px;
+            border-radius: 20px; 
+            margin: 16px; 
+            font-size: 13px;
+
+
             }
     }
       .cancelButton {
