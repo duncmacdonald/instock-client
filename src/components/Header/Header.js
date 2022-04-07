@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../styles/App.css";
+import "../../styles/App.scss";
+import '../../styles/partials/breakpoints.scss'
 import "../../index.css";
 import logo from "../../assets/images/InStock-Logo.svg";
 export default function Header() {
